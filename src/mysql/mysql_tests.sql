@@ -23,3 +23,6 @@ SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID ASC;
 
 -- Max Longitude to 4 decimal places that is lesser than 137.2345
 SELECT FORMAT(MAX(LAT_N), 4) FROM STATION WHERE LAT_N < 137.2345;
+
+-- ROUND UP, get AVG and REPLACE a character with another
+SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary, '0',''))) FROM EMPLOYEES;

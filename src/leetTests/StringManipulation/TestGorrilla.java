@@ -17,7 +17,7 @@ public class TestGorrilla {
             java.time.Period yearsLeft = java.time.Period.between(date.get(),now);
 
             int dateIndex = event.indexOf(date.get().format(formatter));
-            String title = event.substring(0, dateIndex - 2);
+            String title = event.substring(0, dateIndex).trim();
             StringBuilder sb = new StringBuilder();
             sb.append(yearsLeft.getYears()).append("years;");
             sb.append(yearsLeft.getMonths()).append("months;");
@@ -42,7 +42,7 @@ public class TestGorrilla {
 
     public static void main(String[] args) {
 
-        String[] events = {"The date is 30-12-1963"};
+        String[] events = {"The date is 30-12-1963", "We have celebrated new year, back to work 01-02-2020"};
         System.out.println(Arrays.toString(TestGorrilla.sorted(events)));
     }
 }

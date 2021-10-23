@@ -1,8 +1,6 @@
-package leetTests.StringManipulation;
+package leetTests.string_manipulation;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class TestGorrilla {
     public static String[] sorted( String[] events ) {

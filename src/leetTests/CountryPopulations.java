@@ -1,5 +1,9 @@
 package leetTests;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,6 +11,13 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * I want to assume they pass two arguments
+ * 1. country and
+ * 2. minimum population per "state"
+ *
+ * Find the number of states that meet this criteria
+ */
 public class CountryPopulations {
 
     private static HttpURLConnection con;
@@ -16,7 +27,7 @@ public class CountryPopulations {
 
         try {
             URL myURL = new URL("https://jsonmock.hackerrank.com/api/countries/search?name="+s);
-
+            con = (HttpURLConnection) myURL.openConnection();
             StringBuilder content;
 
             try (BufferedReader in = new BufferedReader(
@@ -26,28 +37,46 @@ public class CountryPopulations {
                 content = new StringBuilder();
 
                 while ((line = in.readLine()) != null) {
-
                     content.append(line);
                     content.append(System.lineSeparator());
                 }
 
-//                JSONObject obj = new JSONObject(content.toString());
-//                arr = obj.getJSONArray("data");
-//                for (int i = 0; i < arr.length(); i++) {
-//                    int post_id = arr.getJSONObject(i).getInt("population");
-//                    if(post_id > p){
-//                        c++;
-//                    }
-//                }
+                System.out.println("" + content.toString());
+
+                JSONObject strToJSON = new JSONObject(content.toString());
+                JSONArray dataArray = strToJSON.getJSONArray("data");
+                StringBuilder statesWithPop = new StringBuilder();
+                statesWithPop.append("Countries with population > ");
+                statesWithPop.append(p);
+                statesWithPop.append(" are ");
+                for (int i = 0; i < dataArray.length(); i++) {
+                    int population = dataArray.getJSONObject(i).getInt("population");
+                    if (population > p) {
+                        total++;
+                        statesWithPop.append(" name: ");
+                        statesWithPop.append(dataArray.getJSONObject(i).getString("name"));
+                        statesWithPop.append(" population: ");
+                        statesWithPop.append(dataArray.getJSONObject(i).getString("population"));
+                    }
+                }
+
+                System.out.println(statesWithPop.toString());
             } catch (IOException ex) {
                 ex.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-            //System.out.println(c);
 
+            System.out.println("Total= " + total);
+        } catch (IOException e) {
+            e.printStackTrace();
         } finally {
-
             con.disconnect();
         }
+    }
+
+    public static void main(String[] args) throws MalformedURLException {
+        CountryPopulations.getCountries("india", 1);
     }
 
 }

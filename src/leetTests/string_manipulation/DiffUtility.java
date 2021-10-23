@@ -1,4 +1,4 @@
-package leetTests.StringManipulation;
+package leetTests.string_manipulation;
 
 /**
  * https://algomart.quora.com/Interview-Problem-Diff-Utility

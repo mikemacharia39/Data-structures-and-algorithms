@@ -64,8 +64,6 @@ public class ValidParenthesis {
 
         }
 
-        //System.out.println(!stack.empty() ? stack.peek() : 'A');
-
         return stack.empty();
 
     }

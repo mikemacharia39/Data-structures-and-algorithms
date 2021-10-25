@@ -25,9 +25,6 @@ V
 &src/leetTests/ValidAnagramStrings.java,5\7\57e22d9faf46b09ab80b081fdc4700d2dc4cacfd
 `
 0src/leetTests/NumberOfGoodWaysToSplitString.java,7\3\73483f81e0c6120134d8bd9503fc21ab984829a2
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 R
 "src/leetTests/AnagramGrouping.java,8\4\84d8eba496f7f765861c573bf9fde776e7eacb7e
 i

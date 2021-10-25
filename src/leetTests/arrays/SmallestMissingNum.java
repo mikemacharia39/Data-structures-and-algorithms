@@ -16,7 +16,12 @@ import java.util.Arrays;
 
 public class SmallestMissingNum {
 
-
+    /**
+     * Time complexity is 0 (2 * (n))
+     * Space complexity is 0 (1)
+     * @param nums array
+     * @return missing num
+     */
     public int solution(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 1;
@@ -24,6 +29,7 @@ public class SmallestMissingNum {
 
         int expectedStart = 0;
 
+        // does the element start with 1.
         for (int j : nums) {
             if (j == 1) {
                 expectedStart = 1;
@@ -31,12 +37,15 @@ public class SmallestMissingNum {
             }
         }
 
+        // If not, return 1
         if (expectedStart == 0) {
             return 1;
         }
 
         Arrays.sort(nums);
 
+        // if the difference between 2 consecutive elements > 1, then add 1 to the
+        // smallest number
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] > 0) {
                 int diff = nums[i + 1] - nums[i];
@@ -46,6 +55,7 @@ public class SmallestMissingNum {
             }
         }
 
+        // Otherwise, increment the last number by 1
         return nums[nums.length-1] + 1;
     }
 

@@ -19,8 +19,6 @@ O
 src/leetTests/BinarySearch.java,8\0\8000c3ef0721d564a3129a0a4ab6ad928e98297d
 S
 #src/leetTests/ValidParenthesis.java,3\7\375eb283c80646bf32042d740fa1705750d7eb89
-\
-,src/leetTests/arrays/SmallestMissingNum.java,1\a\1ab9071b170b62308eda781e07abf78e49527cf4
 a
 1src/leetTests/linkedLists/MiddleOfLinkedList.java,9\5\95259d8c0f96f6679b2523b5363f7c27a2956de7
 V

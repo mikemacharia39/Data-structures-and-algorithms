@@ -58,3 +58,41 @@ BEGIN
         VALUES(new.id,CONCAT('Hi ', NEW.name, ', please update your date of birth.'));
     END IF;
 END
+
+
+# A country is big if it has an area of bigger than 3 million square km or a population of
+# more than 25 million.
+
+SELECT name, population, area FROM World WHERE (area > 3000000 OR population > 25000000);
+
+# This is 70% faster
+SELECT name,population,area from World where area>3000000 UNION
+SELECT name,population,area from World where population >25000000;
+
+
+# There is a table courses with columns: student and class,
+# list out all classes which have more than or equal to 5 students.
+# The students should not be counted duplicate in each course.
+For example, the table:
+
++---------+------------+
+| student | class      |
++---------+------------+
+| A       | Math       |
+| B       | English    |
+| C       | Math       |
+| E       | Math       |
+| G       | Math       |
+| H       | Math       |
+| I       | Math       |
++---------+------------+
+
+# Should output:
+
++---------+
+| class   |
++---------+
+| Math    |
++---------+
+
+SELECT class FROM courses GROUP BY class HAVING COUNT(DISTINCT(student)) >= 5;

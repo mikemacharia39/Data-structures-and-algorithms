@@ -37,8 +37,6 @@ e
 5src/leetTests/string_manipulation/IntegerToRoman.java,f\3\f3afbaf2326dbdf47059722b164e681a9496fe7d
 I
 src/mysql/mysql_tests.sql,8\2\82b43db8f502ea478656b8fdb0072891ff699886
-f
-6src/leetTests/arrays/LongestHarmoniousSubsequence.java,7\3\7357cdc68b2961054f466d4ec96439403f2a4599
 \
 ,src/leetTests/arrays/SmallestMissingNum.java,1\a\1ab9071b170b62308eda781e07abf78e49527cf4
 h
@@ -48,7 +46,5 @@ S
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-f
-6src/leetTests/arrays/LongestIncreasingSubsequence.java,e\f\ef8f81c4c9d370f48c157f967eac6c98f74c5342
 n
 >src/leetTests/arrays/NumberOfLongestIncreasingSubsequence.java,0\c\0c252eb233b5ecff76d4875fd63e01303ce76b30

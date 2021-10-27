@@ -29,7 +29,7 @@ public class SortArray {
      * @param nums nums
      * @return sorted nums
      */
-    public int[] sortArray(int[] nums) {
+    public int[] sortArray1(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] > nums[i+1]) {
                 int temp = nums[i];
@@ -42,6 +42,44 @@ public class SortArray {
 
         return nums;
     }
+
+    public int[] sortArray(int[] nums) {
+        mergesort(nums, 0, nums.length-1);
+        return nums;
+    }
+
+    public void mergesort(int[] nums, int start, int end){
+        if(start < end){
+            int mid = (start + end) / 2;
+            mergesort(nums, start, mid);
+            mergesort(nums, mid+1, end);
+            merge(nums, start, mid, end);
+        }
+    }
+
+    public void merge(int[] nums, int start, int mid, int end) {
+        int i = start;
+        int j = mid + 1;
+        int[] temp = new int[end - start + 1];
+        int k = 0;
+        while (i <= mid && j <= end) {
+            if (nums[i] < nums[j])
+                temp[k++] = nums[i++];
+            else
+                temp[k++] = nums[j++];
+        }
+        while (i <= mid) {
+            temp[k++] = nums[i++];
+        } //copy remaining elements
+        while (j <= end) {
+            temp[k++] = nums[j++];
+        } //copy remaining elements
+        for (int pointer = start; pointer <= end; pointer++) {
+            nums[pointer] = temp[pointer - start];
+        }
+    }
+
+
 
     public static void main(String[] args) {
         SortArray sortArray = new SortArray();

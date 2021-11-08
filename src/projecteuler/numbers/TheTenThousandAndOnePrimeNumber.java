@@ -12,7 +12,13 @@ import java.util.logging.Logger;
  */
 public class TheTenThousandAndOnePrimeNumber {
 
-
+    /**
+     * Time complexity O (n)
+     * Space complexity 0 (1)
+     *
+     * @param maxPosition the max pos
+     * @return long
+     */
     public long the10001PrimeNumber(int maxPosition) {
 
         long count = 0;

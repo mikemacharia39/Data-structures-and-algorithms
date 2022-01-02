@@ -11,7 +11,39 @@ import java.util.logging.Logger;
  */
 class NaturalNumbersBelow1000 {
 
+    /**
+     * Alternative solution
+     *
+     * Output SumDivisibleBy(3)+SumDivisibleBy(5)-SumDivisibleBy(15)
+     * @param num1 3
+     * @param num2 5
+     * @param max 1000
+     * @return ans
+     */
     public int numbersBelow1000(int num1, int num2, int max) {
+
+        return calculateSumOnNum(num1, max - 1) + calculateSumOnNum(num2, max - 1) -
+                calculateSumOnNum(num1 * num2, max - 1);
+    }
+
+    /**
+     * target=999
+     * Function SumDivisibleBy(n)
+     * p=target div n
+     * return n*(p*(p+1)) div 2
+     * EndFunction
+     *
+     *
+     * @param num the num
+     * @param max max
+     * @return ans
+     */
+    private int calculateSumOnNum(int num, int max) {
+        max = max/num;
+        return (num * (max * (max + 1)))/2;
+    }
+
+    public int numbersBelow1000Sln2(int num1, int num2, int max) {
 
         int sum = 0;
         for (int i = 0; i < max; i++) {

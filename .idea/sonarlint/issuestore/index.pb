@@ -76,3 +76,13 @@ d
 4src/projecteuler/numbers/LargestProductInSeries.java,c\c\cc54d233aed5e33ef96a2f00d4b277cc868995fa
 `
 0src/hackerrank/string/LovePalindromeMystery.java,0\c\0c76631bd33078bcce82e647c6f6d4b107860756
+O
+src/leettests/BinarySearch.java,5\1\5142c501711052aea2fa4abacfb4d257cd1060c9
+Y
+)src/hackerrank/arrays/InsertionSort1.java,4\9\49e821be112030e507ab381194d708e3d5ec1fc4
+a
+1src/leettests/ValidPalindromeByRemoveOneChar.java,9\c\9ca2f1c564d2433bb4a6809ba240b25fbd3e2e8b
+]
+-src/hackerrank/arrays/AnagramMidEquality.java,4\b\4b4c5c4197a5dbad3a37d868ddc5eef6414b3bb4
+j
+:src/leettests/arrayandstrings/ReverseStringWordByWord.java,f\f\fffd9efd1abf202bc65686040c235e6624c3ea5c

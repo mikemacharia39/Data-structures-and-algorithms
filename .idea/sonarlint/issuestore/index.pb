@@ -86,3 +86,13 @@ a
 -src/hackerrank/arrays/AnagramMidEquality.java,4\b\4b4c5c4197a5dbad3a37d868ddc5eef6414b3bb4
 j
 :src/leettests/arrayandstrings/ReverseStringWordByWord.java,f\f\fffd9efd1abf202bc65686040c235e6624c3ea5c
+Z
+*src/hackerrank/string/PalindromeIndex.java,4\9\492e5b07ad5bb4185adbc452e3e70e62f4d5d28a
+f
+6src/hackerrank/string/CommonSubstringOfTwoStrings.java,b\3\b3b02bda0eb51e3cb995eb9777def2ba8fa5e644
+W
+'src/hackerrank/string/CeasarCipher.java,3\f\3f1741a8f007ff0d8fe0601b53523b40231b2bc8
+O
+src/leettests/maps/SortMap.java,e\c\ec59f5a78ac6cc2908ff317d4cee435559880d5c
+X
+(src/leettests/FirstNonRepeatingChar.java,e\b\eb016ab108ef259511ef3c06a2bc96a2d9801eba

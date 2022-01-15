@@ -53,6 +53,8 @@ public class ConvertSortedArrayToBinarySearchTree {
 
         int mid = (start + end)/2;
 
+        // 1. Assign the middle of the array to the root of the tree
+        // 2. The mid is shifted
         TreeNode root = new TreeNode(nums[mid]);
 
         root.left = toTree(nums, start, mid-1);

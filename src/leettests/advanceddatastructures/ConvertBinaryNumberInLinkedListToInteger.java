@@ -4,17 +4,17 @@ package leettests.advanceddatastructures;
  * Given head which is a reference node to a singly-linked list.
  * The value of each node in the linked list is either 0 or 1.
  * The linked list holds the binary representation of a number.
- *
+ * <p>
  * Return the decimal value of the number in the linked list.
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: head = [1,0,1]
  * Output: 5
  * Explanation: (101) in base 2 = (5) in base 10
- *
+ * <p>
  * Example 2:
- *
+ * <p>
  * Input: head = [0]
  * Output: 0
  */
@@ -26,9 +26,18 @@ public class ConvertBinaryNumberInLinkedListToInteger {
     static class ListNode {
         int val;
         ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 
 

@@ -18,7 +18,8 @@ public class NextWordPredictor {
      *
      */
 
-    HashMap<String, List<HashMap<String, Integer>>> searchMap = new HashMap<>();
+    private HashMap<String, List<HashMap<String, Integer>>> searchMap = new HashMap<>();
+
 
     public NextWordPredictor() {
         List<List<String>> dictionary = Arrays.asList(
@@ -41,6 +42,7 @@ public class NextWordPredictor {
     }
 
     /**
+     * Load set of words into an easily extracted data structure
      * {"I" => [{"am" => 2}, "will" => 1], "am" => [{"Mike" => 1}, {"the" => 1}]}
      * @param parentWord preceding
      * @param nextWord next
@@ -67,6 +69,11 @@ public class NextWordPredictor {
         }
     }
 
+    /**
+     * returns next word
+     * @param searchWord search string
+     * @return next word
+     */
     public String nextWord(String searchWord) {
         String nextWord = "";
 
@@ -85,6 +92,12 @@ public class NextWordPredictor {
         return nextWord;
     }
 
+    /**
+     *
+     * @param searchWord search
+     * @param nWords count of sequence after initial search input
+     * @return next set of words separated by space
+     */
     public String nextWord(String searchWord, int nWords) {
         StringBuilder stringBuilder = new StringBuilder();
 

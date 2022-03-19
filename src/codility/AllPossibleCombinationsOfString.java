@@ -3,6 +3,11 @@ package codility;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Given a string e.g. WXYZ, find all possible combinations
+ * [W, WX, WXY, WXYZ, WXZ, WY, WYZ, WZ, X, XY, XYZ, XZ, Y, YZ, Z]
+ *
+ */
 public class AllPossibleCombinationsOfString {
     List<String> stringList = new ArrayList<>();
     StringBuilder sb = new StringBuilder();

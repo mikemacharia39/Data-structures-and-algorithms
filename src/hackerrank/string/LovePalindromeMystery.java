@@ -11,7 +11,8 @@ import java.util.logging.Logger;
  *
  * He can only reduce the value of a letter by , i.e. he can change d to c, but he cannot change c to d or d to b.
  * The letter  may not be reduced any further.
- * Each reduction in the value of any letter is counted as a single operation. Find the minimum number of operations required to convert a given string into a palindrome.
+ * Each reduction in the value of any letter is counted as a single operation.
+ * Find the minimum number of operations required to convert a given string into a palindrome.
  *
  * Example
  * cde

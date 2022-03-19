@@ -1,6 +1,8 @@
 package codility;
 
 /**
+ * https://app.codility.com/cert/view/certYH3NQA-CDP76M444PGQHUGC/details/
+ * 
  * You are given a string S of length N consisting of characters 'a' and 'b' with additional empty gaps represented by '?'.
  * Your task is to replace every such gap with either an 'a' character or a 'b' character so that the longest fragment of S, consisting only of 'a' characters or 'b' characters, is as short as possible.
  *
@@ -33,4 +35,58 @@ package codility;
  * N is an integer within the range [1..100,000].
  */
 public class FillTheGaps {
+
+    public static String solution(String s) {
+        char a = 'a';
+        char b = 'b';
+
+        int qPos = s.indexOf("?");
+
+        while (qPos != -1) {
+            if (qPos - 1 >= 0 && qPos + 1 < s.length()) {
+                if (s.charAt(qPos - 1) == a && s.charAt(qPos + 1) == b) {
+                    s = s.substring(0, qPos) + a + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos - 1) == a && s.charAt(qPos + 1) == a) {
+                    s = s.substring(0, qPos) + b + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos - 1) == a && s.charAt(qPos + 1) == '?') {
+                    s = s.substring(0, qPos) + a + s.substring(qPos + 1);
+                }
+
+
+                if (s.charAt(qPos - 1) == b && s.charAt(qPos + 1) == a) {
+                    s = s.substring(0, qPos) + b + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos - 1) == b && s.charAt(qPos + 1) == b) {
+                    s = s.substring(0, qPos) + a + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos - 1) == b && s.charAt(qPos + 1) == '?') {
+                    s = s.substring(0, qPos) + b + s.substring(qPos + 1);
+                }
+            }
+            if (s.indexOf("?") == 0) {
+                if (s.charAt(qPos + 1) == b) {
+                    s = s.substring(0, qPos) + a + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos + 1) == 'a') {
+                    System.out.println("s: " + s);
+                    s = s.substring(0, qPos) + b + s.substring(qPos + 1);
+                }
+                if (s.charAt(qPos + 1) == '?') {
+                    s = s.substring(0, qPos) + b + s.substring(qPos + 1);
+                }
+            }
+            qPos = s.indexOf("?");
+        }
+
+        return s;
+    }
+
+    public static void main(String[] args) {
+        String[] strings = {"aa??bbb", "aa?b?aa", "a?b?aa?b?a"};
+        for (String str : strings) {
+            System.out.println("Str " + str + " is now " + FillTheGaps.solution(str));
+        }
+    }
 }

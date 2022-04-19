@@ -10,6 +10,7 @@ public class RotateMatrix {
      * [4,5,6],
      * [7,8,9]
      * ]
+     * When rotating clockwise row becomes column and vise versa
      *
      * @return 90deg rotated matrix
      */

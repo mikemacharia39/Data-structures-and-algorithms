@@ -37,10 +37,9 @@ import java.util.List;
  */
 public class PairsByDifference {
     public int pairs(int k, List<Integer> arr) {
-        int len = arr.size();
         int count = 0;
-        for (int i = 0; i < len; i++) {
-            if (arr.contains(Math.abs(arr.get(i) + k))) {
+        for (int num : arr) {
+            if (arr.contains(Math.abs(num + k))) {
                 count++;
             }
         }

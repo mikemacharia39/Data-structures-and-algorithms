@@ -10,6 +10,7 @@ import java.util.Map;
 public class NextWordPredictor {
 
     /**
+     * [["I", "am", "a", "dev"],["","",""]]
      * Organize into an easy to search pattern
      * This pattern shows the preceding word and subsequent words that come after them base on the
      * frequency of occurrence

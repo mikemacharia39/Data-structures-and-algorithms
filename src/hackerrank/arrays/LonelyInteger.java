@@ -1,5 +1,9 @@
 package hackerrank.arrays;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * Given an array of integers, where all elements but one occur twice, find the unique element.
  *
@@ -20,4 +24,16 @@ package hackerrank.arrays;
  */
 public class LonelyInteger {
 
+    public static int lonelyInteger(List<Integer> a) {
+        Set<Integer> set = new HashSet<>();
+        a.forEach(num -> {
+            if (set.contains(num)) {
+                set.remove(num);
+            } else {
+                set.add(num);
+            }
+        });
+
+        return set.iterator().next();
+    }
 }

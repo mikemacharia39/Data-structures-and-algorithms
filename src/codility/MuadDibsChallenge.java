@@ -44,6 +44,69 @@ import java.util.Arrays;
  */
 public class MuadDibsChallenge {
 
+
+    public static int cost()
+    {
+        int[] A = { 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 29, 30 };
+        int res = MinCostWithDP(A);
+
+        return Math.min(res, 25); //for buying a ticket for the whole month
+    }
+
+    private static int MinCostWithDP(int[] A)
+    {
+        int[] dp = new int[A.length];
+        dp[0] = 2;
+
+        for (int i = 1; i < A.length; i++)
+        {
+            int oneDay = 2 + dp[i - 1];
+            int j = i - 1; //find the day before being able to buy a 7-day ticket
+
+            while (j >= 0 && A[j] >= A[i] - 6)
+                j--;
+
+            int sevenDay = 7;
+            if (j >= 0)
+                sevenDay += dp[j];
+
+            dp[i] = Math.min(oneDay, sevenDay);
+        }
+
+        System.out.println(Arrays.toString(dp));
+
+        return dp[dp.length - 1];
+    }
+
+    private static int MinTicketCostHelper(int[] A, int index)
+    {
+        if (index >= A.length)
+            return 0;
+
+        ///choices we have area:
+        /// 1. buy a 1-day ticket that costs 2
+        /// 2. buy a 7-day-consecutive ticket that costs 7
+        /// for each of those choices
+        ///   choose
+        ///   explore
+        ///   unchoose
+        ///
+
+        int oneDayTicketCost = 2 + MinTicketCostHelper(A, index + 1);
+
+        //if we want to buy seven day ticket, go until X + 6 since they must be consecutive
+        int sevenDayTicketIndex = index + 1;
+        while (sevenDayTicketIndex < A.length && A[sevenDayTicketIndex] <= A[index] + 6)
+            sevenDayTicketIndex++;
+
+        int seveDayTicketCost = 7 + MinTicketCostHelper(A, sevenDayTicketIndex);
+
+        return Math.min(oneDayTicketCost, seveDayTicketCost);
+    }
+
+    //=====================================================================
+
+
     static int nums(int[] dates, int start, int end) {
         int count = 0;
         for (int i = 0; i < dates.length; i++) {
@@ -55,7 +118,7 @@ public class MuadDibsChallenge {
     }
 
 
-    public static int cost() {
+    public static int cost2() {
         //                                           i   k
         int[] dates = {1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 29, 30};
         //int[] dates = {1, 3, 5, 8, 9, 10};

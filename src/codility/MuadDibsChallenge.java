@@ -1,5 +1,7 @@
 package codility;
 
+import java.util.Arrays;
+
 /**
  * https://app.codility.com/c/run/cert3E6ZVD-6BW5KH6CS9SY6GC5/
  *
@@ -41,4 +43,57 @@ package codility;
  * the elements of A are all distinct.
  */
 public class MuadDibsChallenge {
+
+    static int nums(int[] dates, int start, int end) {
+        int count = 0;
+        for (int i = 0; i < dates.length; i++) {
+            if (i >= start && start <= end && i <= end) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    public static int cost() {
+        //                                           i   k
+        int[] dates = {1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 29, 30};
+        //int[] dates = {1, 3, 5, 8, 9, 10};
+                    // k 1+6
+                    //              7
+                    //  2, 4, 6, 8,
+                    //              7
+                    //                 9   11
+        int n = dates.length;
+        int min = 0;
+        int k = n-1;
+        int cost_for_1_day = 0;
+        int cost_for_7_day = 0;
+        for (int i = n-1; i >= 0; i--) {
+            cost_for_1_day = cost_for_1_day + 2;
+            if (dates[k] <= dates[i]+6 && nums(dates, i, k)%7 >= 4) {
+                cost_for_7_day = 7;
+                k = i;
+            } else {
+                k--;
+            }
+
+            if (cost_for_1_day < cost_for_7_day) {
+                min = cost_for_1_day;
+
+                System.out.println("Here: " + min + " | Date: " + dates[i]);
+            } else if (cost_for_7_day < cost_for_1_day) {
+                min = cost_for_7_day;
+                System.out.println("Here 2: " + min + " | Date: " + dates[i]);
+                cost_for_1_day = cost_for_7_day;
+                cost_for_7_day = cost_for_7_day + 7;
+            }
+        }
+
+        return Math.min(min, 25);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Cost: " + MuadDibsChallenge.cost());
+    }
 }

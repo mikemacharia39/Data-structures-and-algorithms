@@ -1,9 +1,12 @@
 package leettests.trie;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
+ * https://leetcode.com/problems/replace-words/
+ *
  * In English, we have a concept called root, which can be followed by some other word to form another
  * longer word - let's call this word successor. For example, when the root "an" is followed by the successor word "other",
  * we can form a new word "another".
@@ -36,16 +39,27 @@ public class ReplaceWords {
      * Handles solution to this question without knowledge of Trie
      */
     static class ItWorks {
+        /**
+         * Runtime: 621 ms, faster than 5.11% of Java online submissions for Replace Words.
+         * Memory Usage: 170.3 MB, less than 6.41% of Java online submissions for Replace Words.
+         *
+         * Entry point
+         * @param dictionary list of roots
+         * @param sentence string
+         * @return string with roots
+         */
         public String replaceWords(List<String> dictionary, String sentence) {
-            for (String word : dictionary) {
-                sentence = replaceWord(sentence, word);
+            Iterator<String> it = dictionary.iterator();
+            while(it.hasNext()) {
+                String word = it.next();
+                sentence = replaceWord(sentence, word, word.length());
             }
 
             return sentence;
         }
 
-        public String replaceWord(String sentence, String dictionaryWord) {
-            String[] strArr = sentence.split("\\s+");
+        public String replaceWord(String sentence, String dictionaryWord, final int len) {
+            String[] strArr = sentence.split(" ");
             int counter = 0;
             for (String str : strArr) {
                 if (str.startsWith(dictionaryWord)) {
@@ -61,7 +75,7 @@ public class ReplaceWords {
         }
 
         public int estimatePOS(int counter, String sentence) {
-            String[] strArr = sentence.split("\\s+");
+            String[] strArr = sentence.split(" ");
             int sum = 0;
             for (int i = 0; i < counter; i++) {
                 sum += strArr[i].length();

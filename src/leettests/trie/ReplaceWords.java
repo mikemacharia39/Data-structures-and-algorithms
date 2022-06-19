@@ -1,6 +1,6 @@
 package leettests.trie;
 
-import java.util.Iterator;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -25,6 +25,9 @@ import java.util.List;
  */
 public class ReplaceWords {
 
+    /**
+     * With knowledge of tries
+     */
     static class TrieSolution {
 
     }
@@ -69,6 +72,11 @@ public class ReplaceWords {
     }
 
     public static void main(String[] args) {
+        List<String> replace = Arrays.asList("cat","bat","rat");
+        String sentence = "the cattle was rattled by the battery";
 
+        ReplaceWords.ItWorks replaceWords = new ReplaceWords.ItWorks();
+
+        System.out.println(replaceWords.replaceWords(replace, sentence));
     }
 }

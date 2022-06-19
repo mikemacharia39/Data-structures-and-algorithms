@@ -25,6 +25,13 @@ import java.util.List;
  */
 public class ReplaceWords {
 
+    static class TrieSolution {
+
+    }
+
+    /**
+     * Handles solution to this question without knowledge of Trie
+     */
     static class ItWorks {
         public String replaceWords(List<String> dictionary, String sentence) {
             for (String word : dictionary) {
@@ -59,5 +66,9 @@ public class ReplaceWords {
 
             return sum+counter;
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }

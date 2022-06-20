@@ -1,11 +1,10 @@
 package leettests.trie;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
- * https://leetcode.com/problems/replace-words/
+ * <a href="https://leetcode.com/problems/replace-words/">replace-words</a>
  *
  * In English, we have a concept called root, which can be followed by some other word to form another
  * longer word - let's call this word successor. For example, when the root "an" is followed by the successor word "other",
@@ -31,8 +30,34 @@ public class ReplaceWords {
     /**
      * With knowledge of tries
      */
-    static class TrieSolution {
+    static class HashTableSolution {
 
+        /**
+         * A better solution
+         * Entry point
+         * @param dictionary list of roots
+         * @param sentence string
+         * @return string with roots
+         */
+        public String replaceWords(List<String> dictionary, String sentence) {
+            Set<String> set = new HashSet<>(dictionary);
+            StringBuilder newSentence = new StringBuilder();
+            Arrays.stream(sentence.split("\\s+")).forEach(str -> {
+                String prefix = "";
+                for (int i = 1; i <= str.length(); i++) {
+                    prefix = str.substring(0, i);
+                    if (set.contains(prefix)) {
+                        break;
+                    }
+                }
+                if (newSentence.length() > 0) {
+                    newSentence.append(" ");
+                }
+                newSentence.append(prefix);
+            });
+
+            return newSentence.toString();
+        }
     }
 
     /**
@@ -92,5 +117,9 @@ public class ReplaceWords {
         ReplaceWords.ItWorks replaceWords = new ReplaceWords.ItWorks();
 
         System.out.println(replaceWords.replaceWords(replace, sentence));
+
+        ReplaceWords.HashTableSolution hashTableSolution = new ReplaceWords.HashTableSolution();
+
+        System.out.println(hashTableSolution.replaceWords(replace, sentence));
     }
 }

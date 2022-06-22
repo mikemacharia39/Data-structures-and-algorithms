@@ -1,6 +1,58 @@
 package leettests;
 
+import java.util.HashMap;
+
 public class TwoSum {
+
+    /**
+     * Time complexity O(n)
+     * @param nums input
+     * @param target target
+     * @return ans
+     */
+    public int[] twoSum(int[] nums, int target) {
+
+        int numsSize = nums.length;
+        int[] output = new int[2];
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < numsSize; i++) {
+            int rem = target - nums[i];
+
+            if (map.containsKey(rem)) {
+                output[0] = i;
+                output[1] = map.get(rem);
+                return output;
+            }
+            map.put(nums[i], i);
+
+        }
+
+        return output;
+    }
+
+    /**
+     * Time complexity O(n^2)
+     * @param nums input
+     * @param target target
+     * @return ans
+     */
+    public int[] twoSum1(int[] nums, int target) {
+
+        int numsSize = nums.length;
+        int[] output = new int[2];
+
+        for (int i = 0; i < numsSize; i++) {
+            for (int j = i+1; j < numsSize; j++) {
+                if ((target - nums[i]) == nums[j]) {
+                    output[0] = i;
+                    output[1] = j;
+                }
+            }
+        }
+
+        return output;
+    }
 
     public static void main(String[] args) {
 
@@ -11,20 +63,5 @@ public class TwoSum {
         int[] vals = twoSum.twoSum(nums, target);
 
         System.out.println();
-    }
-
-    public int[] twoSum(int[] nums, int target) {
-
-        int numsSize = nums.length;
-        int[] output = new int[2];
-        for (int i = 0; i < numsSize; i++) {
-            if ((nums[i] + nums[i+1]) == target) {
-                output[0] = i;
-                output[1] = i+1;
-                System.out.println("Output1: " + output[0] +" Output2: "+ output[1]);
-                break;
-            }
-        }
-        return output;
     }
 }

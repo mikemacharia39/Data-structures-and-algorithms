@@ -13,9 +13,55 @@ import java.util.List;
  *  - int top() gets the top element of the stack.
  *  - int getMin() retrieves the minimum element in the stack.
  */
-public class MinStack {
+public class MinStackSolutions {
 
+    static class StackNode {
+        int val;
+        StackNode next;
+        int min;
 
+        StackNode(int val) {
+            this.val = val;
+        }
+        StackNode() {
+        }
+    }
+
+    static class MinStack {
+
+        StackNode head;
+
+        public MinStack() {
+            head = new StackNode();
+        }
+
+        public void push(int val) {
+            StackNode newNode = new StackNode(val);
+            newNode.next = head;
+
+            int prevMin = Integer.MAX_VALUE;
+
+            if (head != null) {
+                prevMin = head.min;
+            }
+
+            newNode.min = Math.min(val, prevMin);
+
+            head = newNode;
+        }
+
+        public void pop() {
+            head = head.next;
+        }
+
+        public int top() {
+            return head.val;
+        }
+
+        public int getMin() {
+            return head.min;
+        }
+    }
 
     /**
      * using list

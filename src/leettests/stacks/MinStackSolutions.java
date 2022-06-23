@@ -18,7 +18,7 @@ public class MinStackSolutions {
     static class StackNode {
         int val;
         StackNode next;
-        int min;
+        int min = Integer.MAX_VALUE;
 
         StackNode(int val) {
             this.val = val;

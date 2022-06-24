@@ -22,7 +22,21 @@ import java.util.Map;
  */
 public class JewelsAndStones {
 
-
+    /**
+     * Solution 1
+     * Time complexity O(n^2)
+     */
+    public int numJewelsInStones(String jewels, String stones) {
+        int count = 0;
+        for (char jewel : jewels.toCharArray()) {
+            for (char stone : stones.toCharArray()) {
+                if (jewel == stone) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 
     /**
      * Solution 2

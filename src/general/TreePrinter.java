@@ -1,6 +1,6 @@
 package general;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Write a java function, printTree(), which prints a given tree to stdout;
@@ -33,25 +33,89 @@ import java.util.List;
  */
 public class TreePrinter {
 
+    public static Map<String, List<String>> treeMap = new HashMap<>();
+    public static Set<String> allChildren = new HashSet<>();
 
     public static void printTree(List<Relation> rs) {
-        StringBuilder sb = new StringBuilder();
+        defineTree(rs);
 
-        rs.forEach(relation -> {
+        String root = findRoot();
 
+        Set<String> seen = new HashSet<>();
+        seen.add(root);
+
+        for(String key : treeMap.keySet()) {
+            if (!seen.contains(key)) {
+                dfs(treeMap, 0, root, seen);
+            }
+        }
+
+    }
+
+
+    private static void dfs(Map<String, List<String>> treeMap, int level, String root, Set<String> seen) {
+        if (root.equals("")) return;
+
+        for (int i = 0; i < level; i++) {
+            System.out.print("\t");
+        }
+        System.out.println(root);
+
+        seen.add(root);
+
+        List<String> childList = treeMap.get(root);
+
+        if (childList == null) return;
+
+        childList.forEach(child -> {
+            if (!seen.contains(child)) {
+                dfs(treeMap, level + 1, child, seen);
+            }
         });
+    }
 
+    private static void dfs1(Map<String, List<String>> treeMap, int level, String root) {
+        for (int i = 0; i < level; i++) {
+            System.out.print("\t");
+        }
+        System.out.println(root);
+
+        if (!treeMap.containsKey(root)) return;
+
+        List<String> childList = treeMap.get(root);
+
+        childList.forEach(child -> dfs1(treeMap, level+1, child));
     }
 
 
 
 
-    /**
-     * animal -> mammal -> bird -> fish
-     * lifeform -> animal
-     * cat -> lion
-     * mammal -> cat
-     */
+    public static void defineTree(List<Relation> rs) {
+        rs.forEach(relation -> {
+            if (!treeMap.containsKey(relation.getParent())) {
+                treeMap.put(relation.getParent(), new ArrayList<>());
+            }
+            List<String> childList = treeMap.get(relation.getParent());
+            childList.add(relation.getChild());
+            treeMap.put(relation.getParent(), childList);
+
+            allChildren.addAll(childList);
+        });
+
+    }
+
+    public static String findRoot() {
+        for(String key : treeMap.keySet()) {
+            if (!allChildren.contains(key)) {
+                return key;
+            }
+        }
+        return "";
+    }
+
+
+
+
     static class Relation {
         private final String parent;
         private final String child;
@@ -70,5 +134,19 @@ public class TreePrinter {
         }
 
 
+    }
+
+    public static void main(String[] args) {
+        List<Relation> input = new ArrayList<>();
+        input.add(new Relation("animal", "mammal"));
+        input.add(new Relation("animal", "bird"));
+        input.add(new Relation("lifeform", "animal"));
+        input.add(new Relation("cat", "lion"));
+        input.add(new Relation("mammal", "cat"));
+        input.add(new Relation("animal", "fish"));
+        input.add(new Relation("cat", "cheater"));
+        input.add(new Relation("fish", "tilapia"));
+
+        printTree(input);
     }
 }

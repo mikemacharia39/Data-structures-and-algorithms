@@ -15,7 +15,7 @@ public class KthSmallestElementInBST {
         }
     }
 
-    static class Solution1 {
+    static class Solution {
         List<Integer> list = new ArrayList<>();
         public int kthSmallest(TreeNode root, int k) {
 
@@ -32,6 +32,31 @@ public class KthSmallestElementInBST {
             helper(root.left);
             list.add(root.val);
             helper(root.right);
+        }
+    }
+
+    class Solution2 {
+        int counter = 0;
+        int val;
+        public int kthSmallest(TreeNode root, int k) {
+
+            help(root, k);
+
+            return val;
+        }
+
+        public void help(TreeNode root, int k) {
+            if (root == null) {
+                return;
+            }
+
+            help(root.left, k);
+            counter++;
+            if (counter == k) {
+                val = root.val;
+                return;
+            }
+            help(root.right, k);
         }
     }
 }

@@ -1,9 +1,7 @@
 package general;
 
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -57,6 +55,12 @@ public class StreamingConcepts {
                                            .sorted()
                                            .collect(Collectors.toList());
         Logger.getLogger(StreamingConcepts.class.getName()).log(Level.INFO, "Max even number value is: {0}", evenNums);
+    }
+
+    public void arrayToSet() {
+        int[] nums = new int[5];
+        Set<Integer> set = new HashSet<>();
+        Arrays.stream(nums).forEach(set::add);
     }
 
     public static void main(String[] args) {

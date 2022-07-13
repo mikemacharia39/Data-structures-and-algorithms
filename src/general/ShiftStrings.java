@@ -1,6 +1,9 @@
 package general;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Given a string s1 and a string s2, write a snippet to say whether s2 is a rotation of s1?
  * (eg given s1 = ABCD and s2 = CDAB, return true, given s1 = ABCD, and s2 = ACBD , return false)
@@ -14,6 +17,41 @@ public class ShiftStrings {
      * @return true|false
      */
     public boolean isShifted(String s1, String s2) {
+        if (s1.length() != s2.length()) return false;
+
+        Queue<Character> q1 = new LinkedList<>();
+        for (char c : s1.toCharArray()) {
+            q1.add(c);
+        }
+
+        Queue<Character> q2 = new LinkedList<>();
+        for (char c : s2.toCharArray()) {
+            q2.add(c);
+        }
+
+        int k = s2.length();
+        while (k > 0) {
+            k--;
+
+            char x = q2.peek();
+            q2.remove();
+            q2.add(x);
+
+            if (q2.equals(q1)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Clever solution
+     * @param s1 original
+     * @param s2 shifted
+     * @return true|false
+     */
+    public boolean isShiftedSol1(String s1, String s2) {
         if (s1.length() != s2.length()) {
             return false;
         }

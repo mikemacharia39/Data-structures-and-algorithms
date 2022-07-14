@@ -24,11 +24,34 @@ public class ReverseLinkedList {
     }
 
     /**
+     * @param head
+     * @return
+     */
+    public ListNode reverseList(ListNode head) {
+
+        // 1 -> 2 -> 3 -> null
+        // null <- 1 <- 2 <- 3
+
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next; // 2
+            // this is the actual reversal
+            head.next = prev;         // null
+
+            prev = head;              // 1
+
+            head = next;              // 2
+        }
+
+        return prev;
+    }
+
+    /**
      * Brute force
      * @param head ListNode
      * @return ListNode
      */
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList2(ListNode head) {
         List<Integer> list = new ArrayList<>();
         while (head != null) {
             list.add(head.val);

@@ -64,10 +64,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int max = 0;
 
         // abca
-        // a[61] = true
-        // b[62] = true
-        // c[63] = true
-        // a[61] -> visited -> then break
+        // a[97] = true
+        // b[98] = true
+        // c[99] = true
+        // a[97] -> visited -> then break
 
         for (int i = 0; i < len; i++) {
             boolean[] isVisited = new boolean[256];

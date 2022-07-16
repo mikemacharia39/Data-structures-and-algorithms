@@ -1,6 +1,8 @@
 package leettests.arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">...</a>
+ *
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of
  * each number sorted in non-decreasing order.
  *
@@ -20,5 +22,42 @@ package leettests.arrays;
  */
 public class SquaresOfSortedArray {
 
+    public int[] sortedSquares(int[] nums) {
+        int n = nums.length;
+        int beginPositive = 0;
+        int endNegative = 0;
+        int[] ans = new int[n];
 
+        // find where the positive numbers start
+        while (beginPositive < n && nums[beginPositive] < 0) {
+            beginPositive++;
+        }
+
+        // Where negative numbers end
+        endNegative = beginPositive - 1;
+        int k = 0;
+        while (endNegative >= 0 && beginPositive < n) {
+            if (nums[endNegative] * nums[endNegative] > nums[beginPositive] * nums[beginPositive]) {
+                ans[k] = nums[beginPositive] * nums[beginPositive];
+                beginPositive++;
+            } else {
+                ans[k] = nums[endNegative] * nums[endNegative];
+                endNegative--;
+            }
+            k++;
+        }
+
+        while (beginPositive < n) {
+            ans[k] = nums[beginPositive] * nums[beginPositive];
+            beginPositive++;
+            k++;
+        }
+
+        while (endNegative >= 0) {
+            ans[k] = nums[endNegative] * nums[endNegative];
+            endNegative--;
+            k++;
+        }
+        return ans;
+    }
 }

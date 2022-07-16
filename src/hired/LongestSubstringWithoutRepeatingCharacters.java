@@ -62,11 +62,13 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         int len = s.length();
         int max = 0;
-
-        // abca
+        // i j
+        // abcabcbb
         // a[97] = true
         // b[98] = true
         // c[99] = true
+
+
         // a[97] -> visited -> then break
 
         for (int i = 0; i < len; i++) {

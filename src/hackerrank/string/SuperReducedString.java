@@ -20,6 +20,12 @@ import java.util.logging.Logger;
  */
 public class SuperReducedString {
 
+    /**
+     * aaabccddd → abccddd → abddd → abd
+     * --            --        --
+     * @param s origin string
+     * @return reduced string
+     */
     public static String reducedString(String s) {
         for (int q = 1; q < s.length(); q++) {
             if (s.charAt(q) == s.charAt(q-1)) {

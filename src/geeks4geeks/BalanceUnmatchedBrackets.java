@@ -4,8 +4,45 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class BalanceUnmatchedBrackets {
-    // Function to return balancedBrackets string
+
     public static String balancedBrackets(String str) {
+        int missing = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                missing++;
+            } else {
+                missing--;
+            }
+        }
+
+        if (missing < 0) {
+            for (int i = 0; i < Math.abs(missing); i++) {
+                str = '(' + str;
+            }
+        }
+
+        missing = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                missing++;
+            } else {
+                missing--;
+            }
+        }
+
+        if (missing < 0) {
+            for (int i = 0; i < Math.abs(missing); i++) {
+                str = str + ')';
+            }
+        }
+
+        return str;
+    }
+
+    // Function to return balancedBrackets string
+    public static String balancedBrackets1(String str) {
         // Initializing dep to 0
         int dep = 0;
 

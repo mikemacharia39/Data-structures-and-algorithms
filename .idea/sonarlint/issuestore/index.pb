@@ -15,10 +15,6 @@ d
 4src/hackerrank/arrays/MinimumAbsoluteDifference.java,b\a\ba5630aba18c17783918917e78896ea0eb7eae18
 X
 (src/hackerrank/arrays/LonelyInteger.java,a\7\a7312e2adf34fb5dc1d86e6cd3b6ea4c3eca6d1b
-W
-'src/leettests/IsCircularLinkedList.java,c\6\c64b207e254ead7a7ac128775551a84ddf5f230c
-U
-%src/leettests/IsCyclicLinkedList.java,a\1\a1300eab19e6f7ef74709e065e7874547dffc920
 a
 1src/leettests/linkedLists/LinkedListCycleTwo.java,2\7\27f573425697517846f925615e134f793c9a44cc
 X

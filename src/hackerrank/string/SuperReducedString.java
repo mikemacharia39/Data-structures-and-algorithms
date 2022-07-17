@@ -4,7 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * https://www.hackerrank.com/challenges/reduced-string/problem
+ * <a href="https://www.hackerrank.com/challenges/reduced-string/problem">...</a>
  * Reduce a string of lowercase characters in range ascii[‘a’..’z’]by doing a series of operations.
  * In each operation, select a pair of adjacent letters that match, and delete them.
  *

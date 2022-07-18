@@ -32,7 +32,7 @@ public class BalanceUnmatchedBrackets {
             }
         }
 
-        if (missing < 0) {
+        if (missing != 0) {
             for (int i = 0; i < Math.abs(missing); i++) {
                 str = str + ')';
             }
@@ -94,6 +94,9 @@ public class BalanceUnmatchedBrackets {
     public static void main(String[] args) {
 
         String str = ")))()";
+        // -3
+        // ((()))()
+        // 0
 
         Logger.getLogger(BalanceUnmatchedBrackets.class.getName())
                 .log(Level.INFO, "Balance Bracket is {0}", BalanceUnmatchedBrackets.balancedBrackets(str));

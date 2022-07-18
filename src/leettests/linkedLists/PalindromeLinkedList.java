@@ -1,6 +1,7 @@
 package leettests.linkedLists;
 
 /**
+ * <a href="https://leetcode.com/problems/palindrome-linked-list/">...</a>
  * Given the head of a singly linked list, return true if it is a palindrome.
  *
  * Example 1:
@@ -26,12 +27,27 @@ public class PalindromeLinkedList {
     }
 
     /**
-     * Approach
-     * @param head
-     * @return
+     * Approach:
+     * 1 -> 2 -> 2 -> 1
+     * Find the middle of the linked list (results in 2 -> 1)
+     * Reverse the slow pointer node      (results in 1 -> 2)
+     * Compare the val of head with the slow node
+     * @param head root
+     * @return true|false
      */
     public boolean isPalindrome(ListNode head) {
+        if (head == null) {return true;}
 
+        ListNode mid = reverse(mid(head));
+
+        while (mid != null) {
+            if (mid.val != head.val) {
+                return false;
+            }
+            head = head.next;
+            mid = mid.next;
+        }
+        return true;
     }
 
     /**

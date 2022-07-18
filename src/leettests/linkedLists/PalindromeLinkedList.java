@@ -25,6 +25,11 @@ public class PalindromeLinkedList {
         }
     }
 
+    /**
+     * Approach
+     * @param head
+     * @return
+     */
     public boolean isPalindrome(ListNode head) {
 
     }
@@ -49,5 +54,18 @@ public class PalindromeLinkedList {
         return slow;
     }
 
+    public ListNode reverse(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
 
+            // the actual reversal of linked list
+            head.next = prev;
+            // assigning the current node
+            prev = head;
+            // assigning the next value
+            head = next;
+        }
+        return prev;
+    }
 }

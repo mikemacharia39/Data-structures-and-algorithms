@@ -20,4 +20,34 @@ package leettests.linkedLists;
  * Output: [1]
  */
 public class SwapNodesInPairs {
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        return swap(head);
+    }
+
+    public ListNode swap(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+
+        ListNode next = head.next;    // 2 -> 4
+
+        head.next = swap(next.next);  // 3 -> null
+
+        next.next = head;             // 1 -> 3
+
+        return next;
+    }
 }

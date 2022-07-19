@@ -38,7 +38,7 @@ public class SwapNodesInPairs {
     }
 
     public ListNode swap(ListNode head) {
-        if (head == null) {
+        if (head == null || head.next == null) {
             return head;
         }
 

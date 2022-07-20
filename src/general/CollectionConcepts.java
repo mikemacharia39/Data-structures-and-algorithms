@@ -1,6 +1,7 @@
 package general;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Java Collection Framework Hierarchy
@@ -65,12 +66,13 @@ public class CollectionConcepts {
         sortByValue(map);
         sortByValueDesc(map);
         sortByKeyAndValue(map);
+        extractValuesFromMapIntoList(map);
     }
 
     public static void sortByKey(Map<String, Integer> map) {
         Map<String, Integer> sorted = new TreeMap<>(map);
 
-        System.out.println(sorted);
+        System.out.println("sortByKey: "  + sorted);
     }
 
     public static void sortByValue(Map<String, Integer> map) {
@@ -81,7 +83,7 @@ public class CollectionConcepts {
                 .sorted(Map.Entry.comparingByValue())
                 .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
 
-        System.out.println(sortedMap);
+        System.out.println("sortByValue: " + sortedMap);
     }
 
     public static void sortByValueDesc(Map<String, Integer> map) {
@@ -92,7 +94,7 @@ public class CollectionConcepts {
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
 
-        System.out.println(sortedMap);
+        System.out.println("sortByValueDesc: " + sortedMap);
     }
 
     /**
@@ -108,7 +110,14 @@ public class CollectionConcepts {
                         .sorted(Map.Entry.comparingByValue())
                         .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
 
-        System.out.println(sortedMap);
+        System.out.println("sortByKeyAndValue: " + sortedMap);
+    }
+
+    public static void extractValuesFromMapIntoList(Map<String, Integer> map) {
+
+        List<Integer> ages = new ArrayList<>(map.values());
+
+        System.out.println("extractValuesFromMapIntoList: " + ages);
     }
 
     public static void main(String[] args) {

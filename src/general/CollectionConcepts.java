@@ -64,7 +64,7 @@ public class CollectionConcepts {
         sortByKey(map);
         sortByValue(map);
         sortByValueDesc(map);
-        sortByKeyValue(map);
+        sortByKeyAndValue(map);
     }
 
     public static void sortByKey(Map<String, Integer> map) {
@@ -95,7 +95,11 @@ public class CollectionConcepts {
         System.out.println(sortedMap);
     }
 
-    public static void sortByKeyValue(Map<String, Integer> map) {
+    /**
+     * Let's just say, the result is the last sorted statement
+     * @param map
+     */
+    public static void sortByKeyAndValue(Map<String, Integer> map) {
         Map<String, Integer> sortedMap = new LinkedHashMap<>();
 
         map.entrySet()

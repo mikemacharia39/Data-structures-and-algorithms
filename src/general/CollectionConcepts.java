@@ -1,9 +1,6 @@
 package general;
 
-import java.util.Collections;
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * Java Collection Framework Hierarchy
@@ -57,7 +54,62 @@ public class CollectionConcepts {
         System.out.println(reversed);
     }
 
+    public static void hashMaps() {
+        Map<String, Integer> map = new HashMap<>();
+        map.put("John", 20);
+        map.put("Ken", 19);
+        map.put("Ian", 29);
+        map.put("Brian", 28);
+
+        sortByKey(map);
+        sortByValue(map);
+        sortByValueDesc(map);
+        sortByKeyValue(map);
+    }
+
+    public static void sortByKey(Map<String, Integer> map) {
+        Map<String, Integer> sorted = new TreeMap<>(map);
+
+        System.out.println(sorted);
+    }
+
+    public static void sortByValue(Map<String, Integer> map) {
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+
+        map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println(sortedMap);
+    }
+
+    public static void sortByValueDesc(Map<String, Integer> map) {
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+
+        map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println(sortedMap);
+    }
+
+    public static void sortByKeyValue(Map<String, Integer> map) {
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+
+        map.entrySet()
+                .stream()
+                        .sorted(Map.Entry.comparingByKey())
+                        .sorted(Map.Entry.comparingByValue())
+                        .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println(sortedMap);
+    }
+
     public static void main(String[] args) {
         CollectionConcepts.sortedSets();
+
+        CollectionConcepts.hashMaps();
     }
 }

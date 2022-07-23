@@ -21,8 +21,52 @@ package general;
  */
 public class RedistributeSpaces {
 
-
     public static String newWord(String word) {
+
+        boolean isWord = false;
+        int wordCount = 0;
+        int spaceCount = 0;
+        int len = word.length()-1; // to prevent ArrayOutIndexException
+
+        for (int i = 0; i < word.length(); i++) {
+            if (Character.isWhitespace(word.charAt(i))) {
+                spaceCount++;
+            }
+
+            if (Character.isLetterOrDigit(word.charAt(i)) && i != len) {
+                isWord = true;
+            } else if (!Character.isLetterOrDigit(word.charAt(i)) && isWord) {
+                wordCount++;
+                isWord = false;
+            } else if (Character.isLetterOrDigit(word.charAt(i)) && i == len) {
+                wordCount++;
+            }
+        }
+
+        if (spaceCount == 0) {return word;}
+        if (wordCount < 2) {return word.trim();}
+
+        int div = spaceCount/(wordCount-1);
+        int rem = spaceCount%(wordCount-1);
+
+        System.out.println("Word Count: " + wordCount + " | Space Count: " + spaceCount);
+
+        word = word.replaceAll("\\s+", " ").trim();
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < word.length(); i++) {
+            int extra = rem > 0 ? 1 : 0;
+            if (Character.isWhitespace(word.charAt(i))) {
+                sb.append(" ".repeat(div+extra));
+                rem--;
+            } else {
+                sb.append(word.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
+
+    public static String newWordSolution1(String word) {
         int numOfSpaces = numOfSpaces(word);
         String[] words = word.split("\\s+");
         int numOfWords = words.length;
@@ -72,7 +116,7 @@ public class RedistributeSpaces {
 
     public static void main(String[] args) {
         String word = "word1     word2     word3   word4 word5 "; //"....word1.....word2.....word3.....";
-        //String word = "word1     word2     word3"; //"....word1.....word2.....word3.....";
+        //String word = "word1     "; //"....word1.....word2.....word3.....";
 
         System.out.println(RedistributeSpaces.newWord(word));
     }

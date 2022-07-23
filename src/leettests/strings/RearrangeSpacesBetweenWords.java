@@ -116,6 +116,9 @@ public class RearrangeSpacesBetweenWords {
     }
 
     public static void main(String[] args) {
-
+        RearrangeSpacesBetweenWords rearrangeSpacesBetweenWords = new RearrangeSpacesBetweenWords();
+        String text = "  this   is  a sentence ";
+        String newText = rearrangeSpacesBetweenWords.reorderSpaces(text);
+        System.out.printf("Text : %s | Reordered: %s", text, newText);
     }
 }

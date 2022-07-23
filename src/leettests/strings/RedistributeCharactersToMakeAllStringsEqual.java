@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * <a href="https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal/">...</a>
  * You are given an array of strings words (0-indexed).
  *
  * In one operation, pick two distinct indices i and j, where words[i] is a non-empty string,

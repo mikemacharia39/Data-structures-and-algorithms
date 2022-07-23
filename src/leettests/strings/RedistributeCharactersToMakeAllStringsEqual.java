@@ -1,5 +1,8 @@
 package leettests.strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * You are given an array of strings words (0-indexed).
  *

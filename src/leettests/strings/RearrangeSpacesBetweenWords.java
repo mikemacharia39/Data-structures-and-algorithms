@@ -29,9 +29,8 @@ package leettests.strings;
 public class RearrangeSpacesBetweenWords {
 
     /**
-     *
-     * @param text
-     * @return
+     * @param text original text
+     * @return updated text
      */
     public String reorderSpaces(String text) {
         int numOfWords = 0;

@@ -28,11 +28,47 @@ package leettests.strings;
  */
 public class RearrangeSpacesBetweenWords {
 
+    public String reorderSpaces(String text) {
+        int numOfSpaces = 0;
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isWhitespace(text.charAt(i))) {
+                numOfSpaces++;
+            }
+        }
+
+        text = text.replaceAll("\\s+", " ").trim();
+        String[] words = text.split(" ");
+        int numOfWords = words.length;
+
+        if (numOfWords < 2 && numOfSpaces == 0) {
+            return text;
+        }
+
+        if (numOfWords < 2 && numOfSpaces > 0) {
+            return text + " " . repeat(numOfSpaces);
+        }
+
+        int div = numOfSpaces/(numOfWords-1);
+        int rem = numOfSpaces%(numOfWords-1);
+
+        int count = 1;
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            sb.append(word);
+            if (count < words.length) {
+                sb.append(" " . repeat(div));
+            }
+            count++;
+        }
+
+        return sb + " " . repeat(rem);
+    }
+
     /**
      * @param text original text
      * @return updated text
      */
-    public String reorderSpaces(String text) {
+    public String reorderSpacesSln1(String text) {
         int numOfWords = 0;
         int numOfSpaces = 0;
         int len = text.length() - 1; // to not throw Array
@@ -77,5 +113,9 @@ public class RearrangeSpacesBetweenWords {
         }
 
         return sb + " " . repeat(rem);
+    }
+
+    public static void main(String[] args) {
+
     }
 }

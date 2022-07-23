@@ -27,6 +27,15 @@ import java.util.Map;
  */
 public class RedistributeCharactersToMakeAllStringsEqual {
 
+    /**
+     * This solution organizes the characters in a map
+     * The key represents the character and the value represents the frequency of the character in the
+     * array
+     *
+     * In a scenario where all words are equal, this means cummulatively the frequency of each distinct character
+     * should be divisible equal across all arrays
+     * i.e. frequencyOfChar%words.length == 0 if equally distributed
+     */
     public boolean makeEqual(String[] words) {
 
         if (words.length < 2) {

@@ -1,6 +1,4 @@
 
-\
-,src/hackerrank/arrays/PairsByDifference.java,5\4\542c4720047ad08fe8d9d90abf3d17f473d0aa5f
 X
 (src/leettests/lists/PeekingIterator.java,f\9\f973b7ae2e1ca6abea12e1c8610a6f05d7d35ed5
 u
@@ -11,16 +9,12 @@ Y
 )src/hackerrank/arrays/IceCreamParlor.java,a\3\a3aed65858f5af60fc21bd3fdd52b25d6d5ae7b9
 Z
 *src/hackerrank/math/FibonaciiModified.java,5\0\507da6e1f3a92099efbf0c48d959dd8a06d08404
-d
-4src/hackerrank/arrays/MinimumAbsoluteDifference.java,b\a\ba5630aba18c17783918917e78896ea0eb7eae18
 X
 (src/hackerrank/arrays/LonelyInteger.java,a\7\a7312e2adf34fb5dc1d86e6cd3b6ea4c3eca6d1b
 a
 1src/leettests/linkedLists/LinkedListCycleTwo.java,2\7\27f573425697517846f925615e134f793c9a44cc
 X
 (src/leettests/LongestStandingPrefix.java,5\9\59eb01aab192885a1b7c8fc3643d3617dedd9e0a
-^
-.src/hackerrank/arrays/SherLockAndAnagrams.java,c\c\ccdb5a45f17427beec4dc6f5ee0b385d92b0f80e
 Q
 !src/leettests/PalindromeTest.java,c\0\c0ab89373d3e390acf6b3ebb20d909301503fec1
 S

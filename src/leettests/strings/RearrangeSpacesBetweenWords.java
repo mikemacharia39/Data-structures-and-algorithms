@@ -1,6 +1,8 @@
 package leettests.strings;
 
 /**
+ * <a href="https://leetcode.com/problems/rearrange-spaces-between-words/">...</a>
+ *
  * You are given a string text of words that are placed among some number of spaces.
  * Each word consists of one or more lowercase English letters and are separated by at least one space.
  * It's guaranteed that text contains at least one word.
@@ -26,7 +28,55 @@ package leettests.strings;
  */
 public class RearrangeSpacesBetweenWords {
 
+    /**
+     *
+     * @param text
+     * @return
+     */
     public String reorderSpaces(String text) {
+        int numOfWords = 0;
+        int numOfSpaces = 0;
+        int len = text.length() - 1; // to not throw Array
+        boolean isWord = false;
 
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isWhitespace(text.charAt(i))) {
+                numOfSpaces++;
+            }
+
+            if (Character.isLetterOrDigit(text.charAt(i)) && i != len) {
+                isWord = true;
+            } else if (!Character.isLetterOrDigit(text.charAt(i)) && isWord) {
+                isWord = false;
+                numOfWords++;
+            } else if (Character.isLetterOrDigit(text.charAt(i)) && i == len) {
+                numOfWords++;
+            }
+        }
+
+        if (numOfWords < 2 && numOfSpaces == 0) {
+            return text;
+        }
+
+        text = text.replaceAll("\\s+", " ").trim();
+
+        if (numOfWords < 2 && numOfSpaces > 0) {
+            return text + " " . repeat(numOfSpaces);
+        }
+
+        int div = numOfSpaces/(numOfWords-1);
+        int rem = numOfSpaces%(numOfWords-1);
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < text.length(); i++) {
+            if (Character.isWhitespace(text.charAt(i))) {
+                String space = " " . repeat(div);
+                sb.append(space);
+            } else {
+                sb.append(text.charAt(i));
+            }
+        }
+
+        return sb + " " . repeat(rem);
     }
 }

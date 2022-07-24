@@ -21,4 +21,30 @@ package leettests.math;
  */
 public class ContainsDuplicateIII {
 
+    /**
+     * Not the best solution Time Limit Exceeded -> <a href="https://leetcode.com/submissions/detail/755509850/testcase/">...</a>
+     * @param nums nums
+     * @param k
+     * @param t
+     * @return true|false
+     */
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+
+        if ((nums == null || nums.length == 0) && k > 0 && t > 0) {
+            return false;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                long numDiff = Math.subtractExact(Long.valueOf(nums[i]),Long.valueOf(nums[j])); // so that the result does not overflow
+                int indexDiff = Math.abs(i - j);
+
+                if (Math.abs(numDiff) <= t && indexDiff <= k) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

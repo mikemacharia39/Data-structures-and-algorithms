@@ -1,5 +1,7 @@
 package leettests.strings;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -61,10 +63,59 @@ import java.util.List;
  */
 public class TextJustification {
 
+    /**
+     *
+     * @param words words
+     * @param maxWidth maximum width per string
+     * @return list
+     */
     public List<String> fullJustify(String[] words, int maxWidth) {
+        List<String> list = new ArrayList<>();
+        String str = "";
+        int j = 0;
+        for (String word : words) {
+            if (!exceeds(str, word, maxWidth)) {
+                if (str.isEmpty()) {
+                    str = word;
+                } else {
+                    str = str + " " + word;
+                }
+            } else {
+                str = str.trim();
+                if (!str.isEmpty()) {
+                    list.add(str);
+                }
+                str = word;
+            }
 
+            if (j == words.length - 1) {
+                list.add(str);
+            }
+            j++;
+        }
+
+        Iterator<String> it = list.iterator();
+
+        int count = 0;
+        while(it.hasNext()) {
+            if (count < list.size()-1) {
+                list.set(count, organize(it.next(), maxWidth, false));
+            } else {
+                list.set(count, organize(it.next(), maxWidth, true));
+            }
+            count++;
+        }
+
+        return list;
     }
 
+    /**
+     * Organize string
+     * @param str string
+     * @param maxWidth max width
+     * @param isLastWord is last word
+     * @return formatted string
+     */
     private String organize(String str, int maxWidth, boolean isLastWord) {
         int numOfLetters = 0;
         int numOfWords = 0;

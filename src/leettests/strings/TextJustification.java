@@ -60,6 +60,9 @@ import java.util.List;
  *   "everything  else  we",
  *   "do                  "
  * ]
+ *
+ * Example 4:
+ * ["Listen","to","many,","speak","to","a","few."] and max width =  6
  */
 public class TextJustification {
 

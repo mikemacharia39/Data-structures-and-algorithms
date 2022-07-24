@@ -65,6 +65,62 @@ public class TextJustification {
 
     }
 
+    private String organize(String str, int maxWidth, boolean isLastWord) {
+        int numOfLetters = 0;
+        int numOfWords = 0;
+        int numOfSpaces = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isWhitespace(str.charAt(i))) {
+                numOfLetters++;
+            }
+        }
+        numOfSpaces = maxWidth - numOfLetters;
+
+        String[] words = str.split("\\s+");
+
+        numOfWords = words.length;
+
+        if (numOfWords < 2) {
+            return str.trim() + " " . repeat(numOfSpaces);
+        }
+
+        int div = numOfSpaces/(numOfWords-1);
+        int rem = numOfSpaces%(numOfWords-1);
+
+        StringBuilder sb = new StringBuilder();
+        int count = 1;
+        if (!isLastWord) {
+            for (String word : words) {
+                int extra = rem > 0 ? 1 : 0;
+                sb.append(word);
+                if (count < words.length) {
+                    sb.append(" " . repeat(div+extra));
+                }
+                rem--;
+                count++;
+            }
+        } else {
+            for (String word : words) {
+                sb.append(word);
+                if (count < words.length) {
+                    sb.append(" ");
+                    numOfSpaces--;
+                }
+                count++;
+            }
+            sb.append(" " . repeat(numOfSpaces));
+        }
+
+        return sb.toString();
+    }
+
+    /**
+     * Check if string + new str exceed
+     * @param str str
+     * @param nextString str to add
+     * @param maxWidth maxWidth
+     * @return true|false
+     */
     private boolean exceeds(String str, String nextString, int maxWidth) {
         String newString = str + " " + nextString;
         return newString.length() > maxWidth;

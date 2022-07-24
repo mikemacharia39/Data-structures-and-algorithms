@@ -1,5 +1,7 @@
 package leettests.strings;
 
+import java.util.List;
+
 /**
  * <a href="https://leetcode.com/problems/text-justification/">...</a>
  *
@@ -59,4 +61,12 @@ package leettests.strings;
  */
 public class TextJustification {
 
+    public List<String> fullJustify(String[] words, int maxWidth) {
+
+    }
+
+    private boolean exceeds(String str, String nextString, int maxWidth) {
+        String newString = str + " " + nextString;
+        return newString.length() > maxWidth;
+    }
 }

@@ -1,6 +1,8 @@
 package interviewbit.math;
 
 /**
+ * <a href="https://www.interviewbit.com/problems/greatest-common-divisor/">...</a>
+ *
  * Given 2 non-negative integers m and n, find gcd(m, n)
  *
  * GCD of 2 integers m and n is defined as the greatest integer g such that g is a divisor of both m and n.

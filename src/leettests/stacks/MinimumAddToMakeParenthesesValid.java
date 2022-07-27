@@ -1,5 +1,7 @@
 package leettests.stacks;
 
+import java.util.Stack;
+
 /**
  * <a href="https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/">...</a>
  *
@@ -29,6 +31,23 @@ public class MinimumAddToMakeParenthesesValid {
             return 0;
         }
 
+        Stack<Character> stackParenthesis = new Stack<>();
 
+        for (int i = 0; i < s.length(); i++) {
+            switch(s.charAt(i)) {
+                case ')':
+                    if (!stackParenthesis.empty() && stackParenthesis.peek() == '(') {
+                        stackParenthesis.pop();
+                    } else {
+                        stackParenthesis.push(')');
+                    }
+                    break;
+                default:
+                    stackParenthesis.push('(');
+                    break;
+            }
+        }
+
+        return stackParenthesis.size();
     }
 }

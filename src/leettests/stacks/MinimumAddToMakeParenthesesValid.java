@@ -25,6 +25,10 @@ package leettests.stacks;
  */
 public class MinimumAddToMakeParenthesesValid {
     public int minAddToMakeValid(String s) {
+        if (s.isEmpty()) {
+            return 0;
+        }
+
 
     }
 }

@@ -24,4 +24,7 @@ package leettests.stacks;
  * Output: 3
  */
 public class MinimumAddToMakeParenthesesValid {
+    public int minAddToMakeValid(String s) {
+
+    }
 }

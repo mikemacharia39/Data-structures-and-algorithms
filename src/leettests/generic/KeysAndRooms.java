@@ -1,5 +1,8 @@
 package leettests.generic;
 
+import java.util.List;
+import java.util.Stack;
+
 /**
  * <a href="https://leetcode.com/problems/keys-and-rooms/">...</a>
  *
@@ -30,4 +33,42 @@ package leettests.generic;
  * Explanation: We can not enter room number 2 since the only key that unlocks it is in that room.
  */
 public class KeysAndRooms {
+
+    /**
+     * The approach for this solution is:
+     * When you enter a room, add the room key to a stack
+     * using the key in the stack, visit the room and while adding the keys.
+     *
+     * In simple terms navigate the ability to navigate to a room is based on keys present in previous rooms
+     * By the end of it all if you are unable to visit all rooms using the keys then return false otherwise true
+     *
+     * @param rooms rooms
+     * @return true|false
+     */
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+
+        boolean[] visited = new boolean[rooms.size()];
+        Stack<Integer> roomKey = new Stack<>();
+
+        visited[0] = true;
+        roomKey.push(0);
+        while (!roomKey.isEmpty()) {
+            int key = roomKey.pop();
+            List<Integer> room = rooms.get(key);
+            for (int j = 0; j < room.size(); j++) {
+                if (!visited[room.get(j)]) {
+                    visited[room.get(j)] = true;
+                    roomKey.push(room.get(j));
+                }
+            }
+        }
+
+        for (int i = 0; i < visited.length; i++) {
+            if (!visited[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

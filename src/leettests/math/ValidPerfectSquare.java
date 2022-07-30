@@ -28,4 +28,25 @@ package leettests.math;
  */
 public class ValidPerfectSquare {
 
+    /**
+     * Time limit exceeded
+     */
+    public boolean isPerfectSquare1(int num) {
+        if (num == 1) {
+            return true;
+        }
+        if (num < 4) {
+            return false;
+        }
+
+        int x = num/2;
+        for (int i = 1; i <= x; i++) {
+            long sq =   1L * i * 1L * i;
+            if (sq == num) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

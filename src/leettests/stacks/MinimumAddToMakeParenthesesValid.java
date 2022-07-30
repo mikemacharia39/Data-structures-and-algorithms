@@ -57,6 +57,12 @@ public class MinimumAddToMakeParenthesesValid {
         return open+closing;
     }
 
+    /**
+     * Time complexity is O(n)
+     * Space complexity O(n)
+     * @param s input
+     * @return min adj
+     */
     public int minAddToMakeValid1(String s) {
         if (s.isEmpty()) {
             return 0;

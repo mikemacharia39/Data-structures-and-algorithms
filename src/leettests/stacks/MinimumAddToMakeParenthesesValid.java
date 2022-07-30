@@ -29,6 +29,12 @@ import java.util.Stack;
  */
 public class MinimumAddToMakeParenthesesValid {
 
+    /**
+     * Time complexity is O(n)
+     * Space complexity O(1)
+     * @param s input
+     * @return min adj
+     */
     public int minAddToMakeValid(String s) {
         if (s == null || s.isEmpty()) {
             return 0;

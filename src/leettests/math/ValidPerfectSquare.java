@@ -82,4 +82,12 @@ public class ValidPerfectSquare {
 
         return false;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2147483647, 4, 5, 15};
+        ValidPerfectSquare perfectSquare = new ValidPerfectSquare();
+        for (int num : nums) {
+            System.out.println("num:" + num + " -> " + perfectSquare.isPerfectSquare(num));
+        }
+    }
 }

@@ -30,6 +30,28 @@ import java.util.Stack;
 public class MinimumAddToMakeParenthesesValid {
 
     public int minAddToMakeValid(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+
+        int open = 0;
+        int closing = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                open++;
+            } else if (s.charAt(i) == ')') {
+                if (open > 0) {
+                    open--;
+                } else {
+                    closing++;
+                }
+            }
+        }
+
+        return open+closing;
+    }
+
+    public int minAddToMakeValid1(String s) {
         if (s.isEmpty()) {
             return 0;
         }
@@ -61,7 +83,7 @@ public class MinimumAddToMakeParenthesesValid {
      * @param s input
      * @return count
      */
-    public int minAddToMakeValidSln1(String s) {
+    public int minAddToMakeValidSln2(String s) {
         if (s.isEmpty()) {
             return 0;
         }

@@ -39,8 +39,8 @@ public class ValidPerfectSquare {
             return true;
         }
 
-        int low = 1;
-        int high = num;
+        long low = 1;
+        long high = num;
 
         while (low <= high) {
 
@@ -51,9 +51,9 @@ public class ValidPerfectSquare {
             }
 
             if (mid * mid > num) {
-                high = (int) mid - 1;
+                high = mid - 1;
             } else {
-                low = (int) mid + 1;
+                low =  mid + 1;
             }
 
         }

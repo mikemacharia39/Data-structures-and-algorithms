@@ -24,4 +24,25 @@ package leettests.math;
  */
 public class Square {
 
+    public int mySqrt1(int x) {
+        if (x < 2) {
+            return x;
+        }
+
+        int ans = 1;
+        int n = (int)Math.ceil((double)x/2);
+
+        for (int i = 2; i <= n; i++) {
+            long val = (long) i * i;
+            if (val == x) {
+                ans = i;
+                break;
+            } else if (val > x) {
+                ans = i-1;
+                break;
+            }
+        }
+
+        return ans;
+    }
 }

@@ -1,6 +1,8 @@
 package leettests.math;
 
 /**
+ * <a href="https://leetcode.com/problems/powx-n/">...</a>
+ *
  * Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
  *
  * Example 1:

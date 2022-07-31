@@ -24,6 +24,11 @@ package leettests.math;
  */
 public class Square {
 
+    /**
+     * Using binary search
+     * @param x actual square
+     * @return the num ^ 2
+     */
     public int mySqrt(int x) {
         if (x < 2) {
             return x;

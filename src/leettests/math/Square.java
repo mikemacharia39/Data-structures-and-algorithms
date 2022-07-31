@@ -24,6 +24,30 @@ package leettests.math;
  */
 public class Square {
 
+    public int mySqrt(int x) {
+        if (x < 2) {
+            return x;
+        }
+
+        int low = 1;
+        int high = x;
+
+        while (low <= high) {
+            int mid = low + (high - low)/2;
+
+            if (mid == x/mid) {   // you could also do mid * mid == x, but this is better
+                return mid;
+            }
+            
+            if (mid > x/mid) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return low - 1; // very important (assuming x = 8 the application will exit loop when low == high = 3)
+    }
+
     public int mySqrt1(int x) {
         if (x < 2) {
             return x;

@@ -22,4 +22,32 @@ package leettests.math;
  * Explanation: 2-2 = 1/22 = 1/4 = 0.25
  */
 public class PowerN {
+    public double myPow(double x, int n) {
+
+        if (n < 0) {
+            return 1/power(x,Math.abs(n));
+        } else {
+            return power(x,n);
+        }
+
+    }
+
+    /**
+     * 2^5 = 5/2 = 2 (2*2*2) then  2/2 = 1  (2*2) = 32
+     *
+     *
+     */
+    private double power(double x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+
+        double ans = power(x, n/2);
+
+        if (n%2 == 0) {
+            return ans * ans;
+        } else {
+            return ans * ans * x;
+        }
+    }
 }

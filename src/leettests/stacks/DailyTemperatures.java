@@ -1,5 +1,7 @@
 package leettests.stacks;
 
+import java.util.Stack;
+
 /**
  * Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
  *
@@ -20,4 +22,20 @@ package leettests.stacks;
  */
 public class DailyTemperatures {
 
+    public int[] dailyTemperatures(int[] temperatures) {
+        int[] result = new int[temperatures.length];
+        Stack<int[]> stack = new Stack<>(); // the stack will contain arr. arr with temp and it's index
+        for (int i = 0; i < temperatures.length; i++) {
+            int currentTemp = temperatures[i];
+            while (!stack.isEmpty() && stack.peek()[0] < currentTemp) {
+                int[] prevDay = stack.pop();
+                int prevIndex = prevDay[1]; // prev day index
+                result[prevIndex] = i - prevIndex;
+            }
+
+            stack.push(new int[] {currentTemp, i});
+        }
+
+        return result;
+    }
 }

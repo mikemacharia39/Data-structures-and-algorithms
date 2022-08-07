@@ -1,5 +1,7 @@
 package leettests.arrays;
 
+import java.util.Arrays;
+
 /**
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n,
  * representing the number of elements in nums1 and nums2 respectively.
@@ -31,4 +33,46 @@ package leettests.arrays;
  * Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
  */
 public class MergeSortedArray {
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+
+        // we create a new array to hold elements in num1 with size m
+
+//        int[] arr = new int[m];
+//        for (int i = 0; i < m; i++) {
+//            arr[i] = nums1[i];
+//        }
+
+        // You can also do
+
+        // int[] arr = nums1.clone();
+
+        int[] arr = Arrays.copyOf(nums1, 3);
+
+        int i = 0;
+        int j = 0;
+        int z = 0;
+        while (i <= m-1 && j <= n-1) {
+            if (arr[i] > nums2[j]) {
+                nums1[z] = nums2[j];
+                j++;
+            } else {
+                nums1[z] = arr[i];
+                i++;
+            }
+            z++;
+        }
+
+        while (i <= m-1) {
+            nums1[z] = arr[i];
+            i++;
+            z++;
+        }
+
+        while (j <= n-1) {
+            nums1[z] = nums2[j];
+            j++;
+            z++;
+        }
+    }
 }

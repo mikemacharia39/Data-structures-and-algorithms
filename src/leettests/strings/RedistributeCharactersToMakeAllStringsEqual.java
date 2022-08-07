@@ -29,6 +29,36 @@ import java.util.Map;
 public class RedistributeCharactersToMakeAllStringsEqual {
 
     /**
+     * Use array
+     * arr[word.charAt(i) - 'a']++;
+     * Assuming word.charAt(i) = c
+     * 'c' - 'a' = 3 - 1 = 2
+     *
+     * This means arr[2]
+     * At position 2 of the array, the value will be +1
+     * Every time the same character is encountered, the value is incremented
+     *
+     * @param words arr
+     * @return true|false
+     */
+    public boolean makeEqual(String[] words) {
+        int[] freq = new int[26];
+        for (String word : words) {
+            for (int i = 0; i < word.length(); i++) {
+                freq[word.charAt(i) - 'a']++;
+            }
+        }
+
+        for (int n : freq) {
+            if (n % words.length != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
      * This solution organizes the characters in a map
      * The key represents the character and the value represents the frequency of the character in the
      * array
@@ -37,7 +67,7 @@ public class RedistributeCharactersToMakeAllStringsEqual {
      * should be divisible equal across all arrays
      * i.e. frequencyOfChar%words.length == 0 if equally distributed
      */
-    public boolean makeEqual(String[] words) {
+    public boolean makeEqual1(String[] words) {
 
         if (words.length < 2) {
             return true;

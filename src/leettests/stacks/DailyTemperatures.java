@@ -22,6 +22,21 @@ import java.util.Stack;
  */
 public class DailyTemperatures {
 
+    /**
+     * This solution uses a stack with array
+     *
+     * Monotonic Stack
+     * ---------------
+     * Whenever a problem requires enumerating values for indices on the basis of other values in an array,
+     * one should think of including a stack in the solution!
+     * And that too, a monotonic stack.
+     * It is simply a stack which contains values in a monotonic order; i.e. either increasing or decreasing.
+     * Imagine there is a data structure which contains the indices whose temperatures are in an increasing order.
+     * Then, enumerating the next index which has a greater temperature will be easy: we simply pop the elements till
+     * the top element has a greater temperature than the current index! Refer to the following picture for better understanding.
+     *
+     * <a href="https://leetcode.com/problems/daily-temperatures/discuss/1574775/A-Classic-Stack-Problem-or-Detailed-Explanation-%2B-Picture-or-C%2B%2B-or-Java-or-Python-or-NovemberChallenge">...</a>
+     */
     public int[] dailyTemperatures(int[] temperatures) {
         int[] result = new int[temperatures.length];
         Stack<int[]> stack = new Stack<>(); // the stack will contain arr. arr with temp and it's index

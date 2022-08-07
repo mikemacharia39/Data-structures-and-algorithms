@@ -29,6 +29,27 @@ import java.util.TreeMap;
 public class KthLargestElementInAnArray {
 
 
+    public int findKthLargest(int[] nums, int k) {
+        int[] freq = new int[20001];             // to cater for -10000 to 0 to 10000
+
+        for(int num: nums) {
+            int currFreq = freq[num + 10000];    // increment the val at the index
+            freq[num + 10000] = currFreq+1;
+        }
+
+        int count = 0;
+        for(int i = freq.length-1; i >= 0; i--) {
+            if(freq[i] > 0) {
+                count += freq[i];                // from the behind start counting
+            }
+
+            if(count >= k){
+                return i - 10000;       // the position represents the value, since we initially did num + 10000,
+                // we need to decrement 10000 to get original value
+            }
+        }
+        return -1;
+    }
 
     /**
      * It's interesting because it's kth largest not kth element

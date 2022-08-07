@@ -28,7 +28,10 @@ import java.util.TreeMap;
  */
 public class KthLargestElementInAnArray {
 
-
+    /**
+     * It's interesting because it's kth largest not kth element
+     * which means you should start checking the largest element from the right or from the last
+     */
     public int findKthLargest(int[] nums, int k) {
         int[] freq = new int[20001];             // to cater for -10000 to 0 to 10000
 
@@ -56,6 +59,34 @@ public class KthLargestElementInAnArray {
      * which means you should start checking the largest element from the right or from the last
      */
     public int findKthLargest1(int[] nums, int k) {
+        Map<Integer, Integer> map = new TreeMap<>();
+        for (int num : nums) {
+            if (map.containsKey(num)) {
+                map.put(num, map.get(num)+1);
+            } else {
+                map.put(num, 1);
+            }
+        }
+
+        int count = nums.length - k; // change here
+        for (int x : map.keySet()) {
+            if (map.get(x) >= 1) {
+                count -= map.get(x);
+            }
+
+            if (count < 0) {
+                return x;
+            }
+        }
+
+        return -1;
+    }
+
+    /**
+     * It's interesting because it's kth largest not kth element
+     * which means you should start checking the largest element from the right or from the last
+     */
+    public int findKthLargest2(int[] nums, int k) {
         Map<Integer, Integer> map = new TreeMap<>(Comparator.reverseOrder());
         for (int num : nums) {
             if (map.containsKey(num)) {

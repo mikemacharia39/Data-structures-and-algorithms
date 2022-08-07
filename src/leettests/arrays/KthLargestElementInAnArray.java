@@ -1,5 +1,9 @@
 package leettests.arrays;
 
+import java.util.Comparator;
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * Given an integer array nums and an integer k, return the kth largest element in the array.
  *
@@ -23,4 +27,34 @@ package leettests.arrays;
  * -104 <= nums[i] <= 104
  */
 public class KthLargestElementInAnArray {
+
+
+
+    /**
+     * It's interesting because it's kth largest not kth element
+     * which means you should start checking the largest element from the right or from the last
+     */
+    public int findKthLargest1(int[] nums, int k) {
+        Map<Integer, Integer> map = new TreeMap<>(Comparator.reverseOrder());
+        for (int num : nums) {
+            if (map.containsKey(num)) {
+                map.put(num, map.get(num)+1);
+            } else {
+                map.put(num, 1);
+            }
+        }
+
+        int count = 0;
+        for (int x : map.keySet()) {
+            if (map.get(x) >= 1) {
+                count += map.get(x);
+            }
+
+            if (count >= k) {
+                return x;
+            }
+        }
+
+        return -1;
+    }
 }

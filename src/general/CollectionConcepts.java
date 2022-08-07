@@ -49,6 +49,12 @@ public class CollectionConcepts {
         sortedSet.add(5);
         System.out.println(sortedSet.toString());
 
+        sortedSet.forEach(x -> {
+            if (x == 1) {
+
+            }
+        });
+
         // reverse sorted set
         SortedSet<Integer> reversed = new TreeSet<>(Collections.reverseOrder());
         reversed.addAll(sortedSet);

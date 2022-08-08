@@ -57,6 +57,16 @@ public class IntersectionOfTwoLinkedLists {
         }
     }
 
+    /**
+     * This is easier, because we check the lengths of the two linked lists
+     * If one is larger than the other we traverse through, this is to ensure we've start at the point where
+     * the longer linked list has matched the length of the other
+     * The next is to traverse both linked list while checking if the node are equal to each other
+     *
+     * @param headA node 1
+     * @param headB node 2
+     * @return intersection node
+     */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode ptA = headA;
         ListNode ptB = headB;
@@ -100,4 +110,6 @@ public class IntersectionOfTwoLinkedLists {
 
         return null;
     }
+
+
 }

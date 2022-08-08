@@ -48,4 +48,49 @@ package leettests.linkedLists;
  * Explanation: The two lists do not intersect, so return null.
  */
 public class IntersectionOfTwoLinkedLists {
+
+
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode ptA = headA;
+        ListNode ptB = headB;
+
+        int lenA = 0;
+        int lenB = 0;
+        int diff = 0;
+
+        while (ptA != null) {
+            lenA++;
+            ptA = ptA.next;
+        }
+
+        while (ptB != null) {
+            lenB++;
+            ptB = ptB.next;
+        }
+
+        diff = Math.abs(lenA - lenB);
+
+        if (lenA > lenB) {
+            while (diff > 0) {
+                headA = headA.next;
+                diff--;
+            }
+        } else {
+            while (diff > 0) {
+                headB = headB.next;
+                diff--;
+            }
+        }
+
+        while (headA != null && headB != null) {
+
+            if (headA == headB) {
+                return headA;
+            }
+            headA = headA.next;
+            headB = headB.next;
+        }
+
+        return null;
+    }
 }

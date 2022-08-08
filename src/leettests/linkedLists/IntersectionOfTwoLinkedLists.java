@@ -111,5 +111,37 @@ public class IntersectionOfTwoLinkedLists {
         return null;
     }
 
+    /**
+     * <a href="https://www.youtube.com/watch?v=D0X0BONOQhI&ab_channel=NeetCode">...</a>
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode1(ListNode headA, ListNode headB) {
+        ListNode ptA = headA;
+        ListNode ptB = headB;
 
+        //2 ->
+
+
+        //   4 , 1, 8 , 4, 5
+        //                    5 6 1 8 4 5
+
+        while (ptA != ptB) {
+            if (ptA == null) {
+                ptA = headB;
+            } else {
+                ptA = ptA.next;
+            }
+
+            if (ptB == null) {
+                ptB = headA;
+            } else {
+                ptB = ptB.next;
+            }
+        }
+
+        return ptB;
+    }
 }

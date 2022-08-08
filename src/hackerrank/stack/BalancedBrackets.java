@@ -1,5 +1,7 @@
 package hackerrank.stack;
 
+import java.util.Stack;
+
 /**
  * A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
  *
@@ -30,4 +32,37 @@ package hackerrank.stack;
  *
  */
 public class BalancedBrackets {
+    public static String isBalanced(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            switch(s.charAt(i)) {
+                case ']':
+                    if (!stack.isEmpty() && stack.peek() == '[') {
+                        stack.pop();
+                    } else {
+                        stack.push(']');
+                    }
+                    break;
+                case ')':
+                    if (!stack.isEmpty() && stack.peek() == '(') {
+                        stack.pop();
+                    } else {
+                        stack.push(')');
+                    }
+                    break;
+                case '}':
+                    if (!stack.isEmpty() && stack.peek() == '{') {
+                        stack.pop();
+                    } else {
+                        stack.push('}');
+                    }
+                    break;
+                default:
+                    stack.push(s.charAt(i));
+                    break;
+            }
+        }
+
+        return stack.isEmpty() ? "YES" : "NO";
+    }
 }

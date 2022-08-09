@@ -6,7 +6,7 @@ import java.util.Map;
 public class TinyURL {
 
     Map<Integer, String> map = new HashMap();
-    String host = "http://tinyurl.com/";
+    String host = "https://tinyurl.com/";
 
     public static void main(String[] args) {
 

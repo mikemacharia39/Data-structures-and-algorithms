@@ -7,7 +7,7 @@ public class AtoiTest {
 
     public static void main(String[] args) {
 
-        String atoi = "             -42";// "+1331";//"-+12";//"words and 987";//"-42786857657465465 njfjfjjfjf    * % #                       ";
+        String atoi = "             -+12";// "+1331";//"-+12";//"words and 987";//"-42786857657465465 njfjfjjfjf    * % #                       ";
 
         AtoiTest atoiTest = new AtoiTest();
 

@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 /**
  * Given two arrays of integers, find which elements in the second array are missing from the first array.
@@ -63,5 +62,13 @@ public class MissingNumbers {
         }
 
         return new ArrayList<>(missingNums);
+    }
+
+    public static void main(String[] args) {
+
+        List<Integer> list = List.of(203, 204, 205, 206, 207, 208, 203, 204, 205, 206);
+        List<Integer> list2 = List.of(203, 204, 204, 205, 206, 207, 205, 208, 203, 206, 205, 206, 204);
+
+        System.out.println(MissingNumbers.missingNumbers(list, list2));
     }
 }

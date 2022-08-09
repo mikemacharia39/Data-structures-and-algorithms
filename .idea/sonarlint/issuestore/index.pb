@@ -4,8 +4,6 @@ X
 R
 "src/general/NextWordPredictor.java,7\d\7d5cb8f3f54b88de73f0edf4aa2848ac21d4da00
 X
-(src/hackerrank/arrays/LonelyInteger.java,a\7\a7312e2adf34fb5dc1d86e6cd3b6ea4c3eca6d1b
-X
 (src/leettests/LongestStandingPrefix.java,5\9\59eb01aab192885a1b7c8fc3643d3617dedd9e0a
 Q
 !src/leettests/PalindromeTest.java,c\0\c0ab89373d3e390acf6b3ebb20d909301503fec1

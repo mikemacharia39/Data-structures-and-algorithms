@@ -1,5 +1,8 @@
 package codility;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Given an array where the index represents days and values are locations, assuming Dave starts the visits,
  * when would it cost him less to do all visits
@@ -19,4 +22,23 @@ package codility;
  * {1,7,3,7,2,1,7}
  */
 public class SmallestSubArrayAfterVisists {
+
+    public void minVisits(int[] locations) {
+        Set<Integer> set = new HashSet<>();
+        for (int location : locations) {
+            set.add(location);
+        }
+
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < locations.length; i++) {
+            Set<Integer> set2 = new HashSet<>();
+            for (int j = i; j < locations.length; j++) {
+                set2.add(locations[j]);
+                if (set.equals(set2)) {
+                    min = Math.min(min, j - i + 1);
+                }
+            }
+        }
+    }
 }

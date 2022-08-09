@@ -57,10 +57,7 @@ public class ShiftStrings {
             return false;
         }
 
-        if ((s1 + s1).contains(s2)) {
-            return true;
-        }
-        return false;
+        return (s1 + s1).contains(s2);
     }
 
 

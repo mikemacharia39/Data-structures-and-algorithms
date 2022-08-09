@@ -3,10 +3,6 @@ X
 (src/leettests/lists/PeekingIterator.java,f\9\f973b7ae2e1ca6abea12e1c8610a6f05d7d35ed5
 R
 "src/general/NextWordPredictor.java,7\d\7d5cb8f3f54b88de73f0edf4aa2848ac21d4da00
-Y
-)src/hackerrank/arrays/IceCreamParlor.java,a\3\a3aed65858f5af60fc21bd3fdd52b25d6d5ae7b9
-Z
-*src/hackerrank/math/FibonaciiModified.java,5\0\507da6e1f3a92099efbf0c48d959dd8a06d08404
 X
 (src/hackerrank/arrays/LonelyInteger.java,a\7\a7312e2adf34fb5dc1d86e6cd3b6ea4c3eca6d1b
 X
@@ -53,8 +49,6 @@ W
 ,src/leettests/math/ContainsDuplicateIII.java,f\5\f5cf274559e770aa0787c1c37c484dde6bc67cfd
 Z
 *src/leettests/math/ValidPerfectSquare.java,b\4\b44a65892a04aeb4607d5f6baf93f79368501b24
-a
-1src/codility/AllPossibleCombinationsOfString.java,e\1\e1ea26ab2d1d714355d23ca954401da2387205e6
 S
 #src/leettests/math/RemoveTandS.java,7\f\7f0aff0fa34d63ade2f504b3ea71e37e6ad7ab73
 V
@@ -85,7 +79,5 @@ Z
 *src/leettests/arrays/MergeSortedArray.java,e\2\e2d4cbb74863b15131c00a5480a8af5dcba36a85
 j
 :src/leettests/stacks/MinimumAddToMakeParenthesesValid.java,d\e\de044fa2be914b4243091d462a1e92bfa22202e3
-Z
-*src/hackerrank/stack/BalancedBrackets.java,5\1\51b66141e50e97e99f2f29a9d6b31aca52dd73bf
 k
 ;src/leettests/linkedLists/IntersectionOfTwoLinkedLists.java,b\1\b1fe27899b5394cb49582b131f3a45640a262062

@@ -23,7 +23,7 @@ import java.util.Set;
  */
 public class SmallestSubArrayAfterVisists {
 
-    public void minVisits(int[] locations) {
+    public int minVisits(int[] locations) {
         Set<Integer> set = new HashSet<>();
         for (int location : locations) {
             set.add(location);
@@ -40,5 +40,14 @@ public class SmallestSubArrayAfterVisists {
                 }
             }
         }
+        return min;
+    }
+
+    public static void main(String[] args) {
+        SmallestSubArrayAfterVisists visits = new SmallestSubArrayAfterVisists();
+
+        int[] locations = {1,7,3,7,2,1,7};
+
+        System.out.println(visits.minVisits(locations));
     }
 }

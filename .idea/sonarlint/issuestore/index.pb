@@ -61,10 +61,6 @@ u
 Esrc/leettests/strings/LongestSubstringWithoutRepeatingCharacters.java,a\1\a1b917f695ec758657da706625ce097e98a2d401
 d
 4src/leettests/arrays/KthLargestElementInAnArray.java,3\d\3dc36083bbfe0fe84f391aaf1930b2785f3b4483
-H
-src/general/Atomics.java,7\b\7baa875094d715fc7a734469d7d16a0235053cca
-S
-#src/general/CollectionConcepts.java,2\f\2f5e8b2dc658aa1d61fee96d7572366c3d05b7bb
 V
 &src/general/RandomNumberGenerator.java,b\2\b2485f2baaf16affb8635c6e2ba3a447d073541f
 [

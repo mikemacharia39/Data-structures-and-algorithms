@@ -7,12 +7,12 @@ package general;
 public class InsertWordInMiddleOfString {
 
     public void insertWordUsingStringBuilder() {
-        String str = "Java  1.0";
-        String word = "Tutorial";
+        String str = "Java 1.0";
+        String word = " Tutorial ";
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(str);
-        stringBuilder.insert(5, word);
+        stringBuilder.insert(str.length()/2, word);
 
         System.out.println("With string builder: new string: " + stringBuilder.toString());
     }

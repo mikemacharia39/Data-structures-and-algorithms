@@ -33,6 +33,7 @@ public class ShiftStrings {
         while (k > 0) {
             k--;
 
+            // here we are shifting the elements in q2 while comparing if the shifted q2 is equal to original q1
             char x = q2.peek();
             q2.remove();
             q2.add(x);

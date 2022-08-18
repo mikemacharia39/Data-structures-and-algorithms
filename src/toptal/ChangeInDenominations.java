@@ -10,7 +10,7 @@ import java.util.Arrays;
  * that returns an array of integers representing the number of each denomination to return.
  *
  * Example:
- * getChange(5, 0.99) // should return [1,0,0,0,0,4]
+ * getChange(5, 0.99) 4.01 // should return [1,0,0,0,0,4]
  */
 public class ChangeInDenominations {
 

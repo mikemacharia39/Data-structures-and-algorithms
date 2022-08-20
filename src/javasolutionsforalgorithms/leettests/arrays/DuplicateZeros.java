@@ -29,7 +29,11 @@ public class DuplicateZeros {
     public void duplicateZeros(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
-                sh
+                shift(arr, i+1);
+                if (i != arr.length - 1) {  // ensure element is not last of the array e.g. [1,2,0]
+                    arr[i+1] = 0;
+                    i++;                    // shift pointer to the right, after assigning position to new element
+                }
             }
         }
     }

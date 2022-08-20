@@ -23,8 +23,25 @@ package javasolutionsforalgorithms.leettests.arrays;
  */
 public class DuplicateZeros {
 
+    /**
+     * Where there is zero make the next value a zero
+     */
     public void duplicateZeros(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                sh
+            }
+        }
+    }
 
+    /**
+     * Create space while ensuring we don't encounter an array out of bounds exception
+     * This shift elements at position x once step behind i.e. x-1
+     */
+    private void shift(int[] arr, int index) {
+        for (int i = arr.length - 1; i >= index; i--) {
+            arr[i] = arr[i-1];
+        }
     }
 
     public static void main(String[] args) {

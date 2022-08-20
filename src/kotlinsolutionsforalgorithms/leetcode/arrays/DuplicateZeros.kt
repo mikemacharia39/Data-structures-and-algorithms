@@ -27,25 +27,25 @@ package kotlinsolutionsforalgorithms.leetcode.arrays
 
 class DuplicateZeros {
 
-    fun duplicateZeros(arr: IntArray):Unit {
-        var index:Int = 0;
+    fun duplicateZeros(arr: IntArray): Unit {
+        var index: Int = 0;
         while (index < arr.size) {
             if (arr[index] == 0) {
-                shift(arr, index+1)
+                shift(arr, index + 1)
                 if (index != arr.lastIndex) {
-                    arr[index+1] = 0
+                    arr[index + 1] = 0
                     index++
                 }
             }
             index++
         }
 
-        println(arr.joinToString { "," })
+        arr.forEach { print(it) }
     }
 
-    fun shift(arr:IntArray, index:Int):Unit {
+    fun shift(arr: IntArray, index: Int): Unit {
         for (i in arr.lastIndex downTo index) {
-            arr[i] = arr[i-1]
+            arr[i] = arr[i - 1]
         }
     }
 }
@@ -53,6 +53,6 @@ class DuplicateZeros {
 fun main() {
     val duplicateZeros = DuplicateZeros();
 
-    val arr = intArrayOf(1,0,2,3,0,4,5,0);
+    val arr = intArrayOf(1, 0, 2, 3, 0, 4, 5, 0);
     duplicateZeros.duplicateZeros(arr)
 }

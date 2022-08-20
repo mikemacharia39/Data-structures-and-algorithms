@@ -53,6 +53,10 @@ public class DuplicateZeros {
     }
 
     public static void main(String[] args) {
+        DuplicateZeros duplicateZeros = new DuplicateZeros();
 
+        int[] arr = {1,0,2,3,0,4,5,0};
+
+        duplicateZeros.duplicateZeros(arr);
     }
 }

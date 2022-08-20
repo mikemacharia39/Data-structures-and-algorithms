@@ -43,7 +43,7 @@ class DuplicateZeros {
         arr.forEach { print(it) }
     }
 
-    fun shift(arr: IntArray, index: Int): Unit {
+    private fun shift(arr: IntArray, index: Int): Unit {
         for (i in arr.lastIndex downTo index) {
             arr[i] = arr[i - 1]
         }

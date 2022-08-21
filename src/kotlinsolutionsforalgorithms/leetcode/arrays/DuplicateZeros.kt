@@ -1,5 +1,8 @@
 package kotlinsolutionsforalgorithms.leetcode.arrays
 
+import java.util.LinkedList
+import java.util.Queue
+
 /**
  *
  * https://leetcode.com/problems/duplicate-zeros/
@@ -28,6 +31,22 @@ package kotlinsolutionsforalgorithms.leetcode.arrays
 class DuplicateZeros {
 
     fun duplicateZeros(arr: IntArray): Unit {
+        val queue: Queue<Int> = LinkedList();
+
+        arr.forEachIndexed { index, item ->
+            if (item == 0) {
+                queue.add(0)
+                queue.add(0)
+            } else {
+                queue.add(item)
+            }
+
+            val first = queue.poll()
+            arr[index] = first
+        }
+    }
+
+    fun duplicateZeros1(arr: IntArray): Unit {
         var index: Int = 0;
         while (index < arr.size) {
             if (arr[index] == 0) {
@@ -39,8 +58,6 @@ class DuplicateZeros {
             }
             index++
         }
-
-        arr.forEach { print(it) }
     }
 
     private fun shift(arr: IntArray, index: Int): Unit {
@@ -55,4 +72,6 @@ fun main() {
 
     val arr = intArrayOf(1, 0, 2, 3, 0, 4, 5, 0);
     duplicateZeros.duplicateZeros(arr)
+
+    println(arr.asList())
 }

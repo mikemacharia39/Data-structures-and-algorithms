@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.hackerrank.list;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/one-week-preparation-kit-countingsort1/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-week-preparation-kit&playlist_slugs%5B%5D=one-week-day-two">...</a>
  *
@@ -33,4 +36,19 @@ package javasolutionsforalgorithms.hackerrank.list;
  *
  */
 public class CountingSort1 {
+    public static List<Integer> countingSort(List<Integer> arr) {
+        int[] result = new int[100];
+
+        for(int i = 0; i < arr.size(); i++) {
+            result[arr.get(i)]++;
+        }
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < result.length; i++) {
+            list.add(result[i]);
+        }
+
+        return list;
+    }
+
 }

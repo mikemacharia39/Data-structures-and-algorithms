@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.hackerrank.arrays;
 
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/one-week-preparation-kit-diagonal-difference/problem">...</a>
  *
@@ -36,5 +38,18 @@ package javasolutionsforalgorithms.hackerrank.arrays;
  *
  */
 public class DiagonalDifference {
+    public static int diagonalDifference(List<List<Integer>> arr) {
 
+        int lrsum = 0;
+        int rlsum = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            lrsum += arr.get(i).get(i);
+        }
+
+        for (int i = arr.size() -1; i >= 0; i--) {
+            rlsum += arr.get(i).get(arr.size()-i-1);
+        }
+
+        return Math.abs(rlsum - lrsum);
+    }
 }

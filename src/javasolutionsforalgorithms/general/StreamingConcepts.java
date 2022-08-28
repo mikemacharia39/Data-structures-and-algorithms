@@ -57,6 +57,14 @@ public class StreamingConcepts {
         Logger.getLogger(StreamingConcepts.class.getName()).log(Level.INFO, "Max even number value is: {0}", evenNums);
     }
 
+    public void sortIntegerString() {
+        List<String> numberList = Arrays.asList("300","3","1","1000","2","20","30001");
+
+        Collections.sort(numberList, (a, b)->Integer.compare(Integer.parseInt(a), Integer.parseInt(b)));
+        //        Collections.sort(numberList, Comparator.comparingInt(Integer::parseInt));
+        Logger.getLogger(StreamingConcepts.class.getName()).log(Level.INFO, "Max even number value is: {0}", numberList);
+    }
+
     public void arrayToSet() {
         int[] nums = new int[5];
         Set<Integer> set = new HashSet<>();
@@ -68,5 +76,6 @@ public class StreamingConcepts {
         streamingConcepts.minAndMaxValueInArray();
         streamingConcepts.maxEvenNumberInList();
         streamingConcepts.evenNumbersInList();
+        streamingConcepts.sortIntegerString();
     }
 }

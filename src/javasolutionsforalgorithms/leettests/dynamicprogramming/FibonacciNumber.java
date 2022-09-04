@@ -25,6 +25,29 @@ package javasolutionsforalgorithms.leettests.dynamicprogramming;
  *
  */
 public class FibonacciNumber {
+
+    public int fib(int n) {
+        if (n < 2) {
+            return n;
+        }
+
+        // 0, 1, 1, 2, 3
+
+        int num1 = 0;
+        int num2 = 1;
+        int sum = 0;
+
+        for (int i = 2; i <= n; i++) {
+            sum = num1 + num2;
+
+            num1 = num2;
+            num2 = sum;
+        }
+
+        return sum;
+    }
+
+
     public int fib1(int n) {
         if (n < 2) {
             return n;

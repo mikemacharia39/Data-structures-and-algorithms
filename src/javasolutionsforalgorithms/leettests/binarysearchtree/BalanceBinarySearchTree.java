@@ -87,4 +87,30 @@ public class BalanceBinarySearchTree {
         toArray(list, root.right);
     }
 
+
+    public void preOrderTraverse(List<Integer> list, TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        list.add(root.val);
+        preOrderTraverse(list, root.left);
+        preOrderTraverse(list, root.right);
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.right = new TreeNode(3);
+        root.right.right.right = new TreeNode(4);
+
+        BalanceBinarySearchTree balanceBinarySearchTree = new BalanceBinarySearchTree();
+
+        TreeNode ansBST = balanceBinarySearchTree.balanceBST(root);
+
+        List<Integer> resultTreeList = new ArrayList<>();
+
+        balanceBinarySearchTree.preOrderTraverse(resultTreeList, ansBST);
+
+        System.out.printf("Converted BST: %s%n", resultTreeList);
+    }
 }

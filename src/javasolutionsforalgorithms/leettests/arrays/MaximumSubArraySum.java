@@ -1,5 +1,6 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -59,7 +60,12 @@ public class MaximumSubArraySum {
     }
 
     public static void main(String[] args) {
+        List<Long> list = Arrays.asList(3L, 3L, 9L, 9L, 5L);
+        long m = 19;
 
+        List<Long> list1 = Arrays.asList(1L,2L,3L);
+        long m1 = 2;
 
+        System.out.println(MaximumSubArraySum.maximumSum(list, m));
     }
 }

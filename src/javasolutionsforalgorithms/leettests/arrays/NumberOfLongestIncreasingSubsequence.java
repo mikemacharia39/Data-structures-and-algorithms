@@ -43,7 +43,7 @@ public class NumberOfLongestIncreasingSubsequence {
         for (int j = 1; j < numLen; j++) {
             for (int i = 0; i < j; i++) {
 
-                if (nums[j] > nums[i]) {             // similar to longest increasing subsequence
+                if (nums[j] > nums[i]) {             // similar to the longest increasing subsequence
                     if (dp[i] + 1 > dp[j]) {
                         dp[j] = dp[i] + 1;
                         counter[j] = counter[i];

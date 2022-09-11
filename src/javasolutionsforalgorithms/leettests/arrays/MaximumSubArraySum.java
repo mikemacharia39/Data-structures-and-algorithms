@@ -41,6 +41,12 @@ import java.util.TreeSet;
  */
 public class MaximumSubArraySum {
 
+    /**
+     * Kadanes algorithm
+     * @param a list
+     * @param m modulus
+     * @return max
+     */
     public static long maximumSum(List<Long> a, long m) {
         long max = 0;
         long curr = 0;

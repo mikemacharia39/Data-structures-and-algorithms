@@ -22,7 +22,20 @@ import java.util.Arrays;
  */
 
 public class MaximumSubArray {
+
     public int maxSubArray(int[] nums) {
+        int max = nums[0];
+        int currMax = max;
+
+        for (int num : nums) {
+            currMax = Math.max(currMax + num, num);
+            max = Math.max(currMax, max);
+        }
+
+        return max;
+    }
+
+    public int maxSubArray1(int[] nums) {
 
         int maxVal = Integer.MIN_VALUE;
         int sum = 0;

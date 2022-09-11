@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.TreeSet;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/maximum-subarray-sum/problem">...</a>
+ *
  * We define the following:
  * <p>
  * A subarray of array  of length  is a contiguous segment from a[i] through a[j] where a <= i <= j < n.
@@ -47,8 +49,11 @@ public class MaximumSubArraySum {
         for (int i = 0; i < a.size(); i++) {
             curr = (curr + a.get(i) % m) % m;
             max = Math.max(curr, max);
+
+            // This is where the trick lies I can't tell why this is used...
             long higher = tree.higher(curr) != null ? tree.higher(curr) : 0L;
 
+            // here
             if (higher != 0L) {
                 max = Math.max(max, (curr - higher + m) % m);
             }

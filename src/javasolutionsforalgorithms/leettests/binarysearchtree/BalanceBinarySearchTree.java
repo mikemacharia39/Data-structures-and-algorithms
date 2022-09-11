@@ -55,6 +55,22 @@ public class BalanceBinarySearchTree {
 
         toArray(list, root);
 
+        return toTree(list, 0, list.size()-1);
+    }
+
+    public TreeNode toTree(List<Integer> list, int start, int end) {
+        if (start > end) {
+            return null;
+        }
+
+        int mid = (start + end)/2;
+
+        TreeNode root = new TreeNode(list.get(mid));
+
+        root.left = toTree(list, start, mid-1);
+        root.right = toTree(list, mid+1, end);
+
+        return root;
     }
 
     /**
@@ -63,6 +79,9 @@ public class BalanceBinarySearchTree {
      * @param root root
      */
     public void toArray(List<Integer> list, TreeNode root) {
+        if (root == null) {
+            return;
+        }
         toArray(list, root.left);
         list.add(root.val);
         toArray(list, root.right);

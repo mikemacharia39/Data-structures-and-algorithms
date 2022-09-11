@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.binarysearchtree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <a href="https://leetcode.com/problems/balance-a-binary-search-tree/">...</a>
  *
@@ -41,8 +44,28 @@ public class BalanceBinarySearchTree {
         }
     }
 
+    /**
+     * the idea is to convert the treeNode to a sorted array, by using inorder traversal
+     * then recursively create a tree from the array
+     * @param root TreeNode
+     * @return BST
+     */
     public TreeNode balanceBST(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
 
+        toArray(list, root);
+
+    }
+
+    /**
+     * Inorder traversal  LEFT -> ROOT -> RIGHT
+     * @param list list
+     * @param root root
+     */
+    public void toArray(List<Integer> list, TreeNode root) {
+        toArray(list, root.left);
+        list.add(root.val);
+        toArray(list, root.right);
     }
 
 }

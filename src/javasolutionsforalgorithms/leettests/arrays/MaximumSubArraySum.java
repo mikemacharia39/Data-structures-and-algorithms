@@ -40,7 +40,8 @@ import java.util.TreeSet;
 public class MaximumSubArraySum {
 
     public static long maximumSum(List<Long> a, long m) {
-        long max = 0, curr = 0;
+        long max = 0;
+        long curr = 0;
         TreeSet<Long> tree = new TreeSet<>();
 
         for (int i = 0; i < a.size(); i++) {

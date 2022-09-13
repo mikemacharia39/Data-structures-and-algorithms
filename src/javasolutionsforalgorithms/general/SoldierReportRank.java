@@ -61,7 +61,16 @@ public class SoldierReportRank {
     }
 
     public static void main(String[] args) {
+        SoldierReportRank reportRank = new SoldierReportRank();
 
+        int[] ranks1 = {4,4,3,3,1,0};
+        System.out.println("Reports: " + reportRank.soldierReport(ranks1) + " | Expected: 3");
+
+        int[] ranks2 = {4,2,0};
+        System.out.println("Reports: " + reportRank.soldierReport(ranks2) + " | Expected: 0");
+
+        int[] ranks3 = {3,4,3,0,2,2,3,0,0};
+        System.out.println("Reports: " + reportRank.soldierReport(ranks3) + " | Expected: 3");
     }
 
 }

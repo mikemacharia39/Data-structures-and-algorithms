@@ -60,5 +60,8 @@ public class SoldierReportRank {
         return count;
     }
 
+    public static void main(String[] args) {
+
+    }
 
 }

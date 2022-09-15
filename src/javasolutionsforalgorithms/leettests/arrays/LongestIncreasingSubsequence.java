@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * https://leetcode.com/problems/longest-increasing-subsequence/
+ * <a href="https://leetcode.com/problems/longest-increasing-subsequence/">...</a>
  *
  * Given an integer array nums, return the length of the longest strictly increasing subsequence.
  *

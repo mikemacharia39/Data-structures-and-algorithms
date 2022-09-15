@@ -63,7 +63,7 @@ public class LongestIncreasingSubsequence {
                     // update the value of our counter by 1 whenever
                     // the new counter is greater than the previous
                     if (counter[i] + 1 > counter[j]) {
-                        counter[j] = counter[i] + 1;
+                        counter[j]++;
                     }
                 }
             }

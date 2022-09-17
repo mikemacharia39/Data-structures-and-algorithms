@@ -30,4 +30,42 @@ package javasolutionsforalgorithms.leettests.dynamicprogramming;
  *
  */
 public class UniquePaths {
+
+    /**
+     * From a naive approach, populate the first row and first column with 1
+     * then add row against column
+     * Time complexity O(2*n + n^2) => O(n^2)
+     *
+     *   |1|1|1|1|
+     *   ---------
+     *   |1|0|0|0|
+     *   ---------
+     *   |1|0|0|0|
+     *
+     */
+    public int uniquePaths1(int m, int n) {
+
+        // m is rows
+        // n is columns
+        // populate the first row and the first column with 1
+        // then add them against each other
+
+        int[][] table = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            table[i][0] = 1;
+        }
+
+        for (int j = 0; j < n; j++) {
+            table[0][j] = 1;
+        }
+
+        for (int i = 1; i < m; i++) {
+            for (int j = 1; j < n; j++) {
+                table[i][j] = table[i-1][j] + table[i][j-1];
+            }
+        }
+
+        return table[m-1][n-1];
+    }
 }

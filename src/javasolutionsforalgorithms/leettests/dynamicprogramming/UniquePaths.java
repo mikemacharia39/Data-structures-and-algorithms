@@ -33,7 +33,7 @@ public class UniquePaths {
 
     /**
      * Optimizing approach 1 where there exists 0s update with 1s
-     * The adding rows agains columns
+     * The adding rows against columns
      */
     public int uniquePaths(int m, int n) {
 

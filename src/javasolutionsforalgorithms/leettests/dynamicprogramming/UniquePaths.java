@@ -94,4 +94,9 @@ public class UniquePaths {
 
         return table[m-1][n-1];
     }
+
+    public int uniquePaths2(int m, int n) {
+
+        return n;
+    }
 }

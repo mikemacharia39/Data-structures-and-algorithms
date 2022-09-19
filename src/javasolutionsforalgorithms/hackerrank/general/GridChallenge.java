@@ -62,5 +62,25 @@ public class GridChallenge {
 
     public static String gridChallenge(List<String> grid) {
 
+        List<String> sortedGrid = new ArrayList<>();
+        for (String str : grid) {
+            char[] charStr = str.toCharArray();
+            Arrays.sort(charStr);
+            sortedGrid.add(new String(charStr));
+        }
+
+        if (sortedGrid.size() < 2) {return "YES";}
+
+        int n = sortedGrid.size();
+        int strLen = sortedGrid.get(0).length();
+        for (int i = 0; i < strLen; i++) {
+            for (int j = 1; j < n; j++) {
+                if (sortedGrid.get(j-1).charAt(i) > sortedGrid.get(j).charAt(i)) {
+                    return "NO";
+                }
+            }
+        }
+
+        return "YES";
     }
 }

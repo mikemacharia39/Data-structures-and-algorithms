@@ -65,6 +65,18 @@ import java.util.List;
  */
 public class GridChallenge {
 
+    // ['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv']
+    // rows are represented by the chars in the strings as is
+    // columns are represented by vertical chars in the string
+
+    /**
+     *abcde
+     *fghij
+     *klmno
+     *pqrst
+     *uvwxy
+     */
+    // start checking position 0 in all lists
     public static String gridChallenge(List<String> grid) {
 
         List<String> sortedGrid = new ArrayList<>();

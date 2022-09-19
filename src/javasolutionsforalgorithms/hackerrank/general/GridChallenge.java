@@ -28,8 +28,34 @@ package javasolutionsforalgorithms.hackerrank.general;
  *
  * string: either YES or NO
  *
+ * Sample Input
+ * ----------------
+ *
+ * STDIN   Function
+ * -----   --------
+ * 1       t = 1
+ * 5       n = 5
+ * ebacd   grid = ['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv']
+ * fghij
+ * olmkn
+ * trpqs
+ * xywuv
+ *
+ *
+ * Sample Output
+ * YES
+ *
+ *
+ * Explanation
+ * The 5 x 5 grid in the  test case can be reordered to
+ *
+ * abcde
+ * fghij
+ * klmno
+ * pqrst
+ * uvwxy
+ *
  */
 public class GridChallenge {
-
 
 }

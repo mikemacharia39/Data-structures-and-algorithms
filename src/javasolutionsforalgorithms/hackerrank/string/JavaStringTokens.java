@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.hackerrank.string;
 
+import java.util.Scanner;
+
 /**
  *
  * <a href="https://www.hackerrank.com/challenges/java-string-tokens/problem">...</a>
@@ -22,4 +24,26 @@ package javasolutionsforalgorithms.hackerrank.string;
  * Next, print each of the n tokens on a new line in the same order as they appear in input string s.
  */
 public class JavaStringTokens {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+
+        s = s.trim();
+        if (s.length() == 0) {
+            System.out.println(s.length());
+        } else {
+            String[] splStrings = s.split("[ !,?._'@]+");
+            StringBuilder sb = new StringBuilder();
+            sb.append(splStrings.length);
+            for (String str : splStrings) {
+                if (!str.equals(" ")) {
+                    sb.append("\n");
+                }
+                sb.append(str);
+            }
+            System.out.println(sb);
+        }
+        scan.close();
+    }
 }

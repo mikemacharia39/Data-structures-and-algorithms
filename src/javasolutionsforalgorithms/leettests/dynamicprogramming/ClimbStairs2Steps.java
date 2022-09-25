@@ -28,4 +28,22 @@ package javasolutionsforalgorithms.leettests.dynamicprogramming;
  * 1 <= n <= 45
  */
 public class ClimbStairs2Steps {
+
+    /**
+     * The idea behind this is recursive
+     * if 1 = 1
+     * if 2 = [{1, 1}, {2}]
+     * if 3 = [{1,1,1}, {1,2}, {2,1}]
+     * if 4 = [{1,1,1,1},{1,1,2},{1,2,1},{2,1,1},{2,2}]
+     *
+     * if you hop 1, you're left with n-1 steps
+     * if you hop 2, you're left with n-2 steps
+     */
+    public int climbStairs1(int n) {
+        if (n <= 2) {
+            return n;
+        }
+
+        return climbStairs1(n-1) + climbStairs1(n-2);
+    }
 }

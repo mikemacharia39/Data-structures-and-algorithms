@@ -30,7 +30,7 @@ public class SherlockAndTheValidString {
             } else {
                 return "YES";
             }
-        } else if (list.size() > 2) {
+        } else {
             if (list.get(0) == 1) {
                 list.remove(0);
                 if (list.size() == 2) {
@@ -54,13 +54,9 @@ public class SherlockAndTheValidString {
                 if ((diff1 > 1) || ((diff1 + diff2) > 1)) {
                     return "NO";
                 } else {
-                    System.out.println("HERE 1");
                     return "YES";
                 }
             }
-        } else {
-            System.out.println("HERE 2");
-            return "YES";
         }
     }
 }

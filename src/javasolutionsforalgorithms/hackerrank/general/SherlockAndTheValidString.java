@@ -1,9 +1,6 @@
 package javasolutionsforalgorithms.hackerrank.general;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * <a href="https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem">...</a>
@@ -29,7 +26,34 @@ import java.util.List;
  */
 public class SherlockAndTheValidString {
 
-    public static String isValid(String s) {
+    /**
+     * This soltion is great but does not work for testcase 'xxxbbbc' or tests cases with strings not containing 'a
+     * @param s input
+     * @return "YES"|"NO"
+     */
+    public static String isValid_Not_WorkingWithAllTestCases(String s) {
+        // Write your code here
+        int [] alphabets = new int[26];
+
+        for (int c : s.toCharArray()) {
+            alphabets[c-'a']++;
+        }
+
+        int freq = alphabets[0];
+        System.out.printf("Freq at pos 0 %d%n", freq);
+        System.out.printf("Frequencies: %s%n", Arrays.toString(alphabets));
+        int count = 0;
+        for (int i = 1; i < alphabets.length; i++) {
+            if(alphabets[i] - freq != 0  && alphabets[i] != 0){
+                count++;
+            }
+        }
+
+        return (count>1) ? "NO" : "YES";
+
+    }
+
+    public static String isValid1(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
@@ -74,5 +98,10 @@ public class SherlockAndTheValidString {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) {
+        String s = "aaabbbc";
+        System.out.println(SherlockAndTheValidString.isValid(s));
     }
 }

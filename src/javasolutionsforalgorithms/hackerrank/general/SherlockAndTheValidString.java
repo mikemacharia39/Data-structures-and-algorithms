@@ -101,7 +101,9 @@ public class SherlockAndTheValidString {
     }
 
     public static void main(String[] args) {
-        String s = "aaabbbc";
-        System.out.println(SherlockAndTheValidString.isValid(s));
+        String[] strings = {"aabbbc", "xxxbbbc"};
+        for (String s : strings) {
+            System.out.printf("Input is %s | Output is %s%n",s, SherlockAndTheValidString.isValid(s));
+        }
     }
 }

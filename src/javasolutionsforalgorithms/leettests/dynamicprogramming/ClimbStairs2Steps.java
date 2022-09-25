@@ -31,6 +31,28 @@ public class ClimbStairs2Steps {
 
     /**
      * The idea behind this is recursive
+     *
+     * This can be further improved using memoization
+     * where stairs[n] = stairs[n-1]+stairs[n-2]
+     */
+    public int climbStairs(int n) {
+        if (n <= 2) {
+            return n;
+        }
+
+        int[] stairs = new int[n+1];
+        stairs[0] = 1;
+        stairs[1] = 1;
+        stairs[2] = 2;
+        for(int i = 3; i <= n; i++) {
+            stairs[i] = stairs[i-1] + stairs[i-2];
+        }
+
+        return stairs[n];
+    }
+
+    /**
+     * The idea behind this is recursive
      * if 1 = 1
      * if 2 = [{1, 1}, {2}]
      * if 3 = [{1,1,1}, {1,2}, {2,1}]

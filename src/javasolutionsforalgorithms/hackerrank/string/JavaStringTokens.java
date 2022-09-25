@@ -31,7 +31,7 @@ public class JavaStringTokens {
 
         s = s.trim();
         if (s.length() == 0) {
-            System.out.println(s.length());
+            System.out.println(0);
         } else {
             String[] splStrings = s.split("[ !,?._'@]+");
             StringBuilder sb = new StringBuilder();

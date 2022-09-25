@@ -12,6 +12,20 @@ import java.util.List;
  * It is also valid if he can remove just 1 character at 1 index in the string,
  * and the remaining characters will occur the same number of times. Given a string ,
  * determine if it is valid. If so, return YES, otherwise return NO.
+ *
+ * Sample Input 1
+ *
+ * aabbccddeefghi
+ * Sample Output 1
+ *
+ * NO
+ * Explanation 1
+ *
+ * Frequency counts for the letters are as follows:
+ *
+ * {'a': 2, 'b': 2, 'c': 2, 'd': 2, 'e': 2, 'f': 1, 'g': 1, 'h': 1, 'i': 1}
+ *
+ * There are two ways to make the valid string:
  */
 public class SherlockAndTheValidString {
 

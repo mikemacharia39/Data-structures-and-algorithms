@@ -37,9 +37,7 @@ public class JavaStringTokens {
             StringBuilder sb = new StringBuilder();
             sb.append(splStrings.length);
             for (String str : splStrings) {
-                if (!str.equals(" ")) {
-                    sb.append("\n");
-                }
+                sb.append("\n");
                 sb.append(str);
             }
             System.out.println(sb);

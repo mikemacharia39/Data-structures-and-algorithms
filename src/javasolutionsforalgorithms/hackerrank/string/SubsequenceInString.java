@@ -4,7 +4,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * We say that a string contains the word javasolutionsforalgorithms.hackerrank if a subsequence of its characters spell the word javasolutionsforalgorithms.hackerrank.
+ * We say that a string contains the word javasolutionsforalgorithms.hackerrank
+ * if a subsequence of its characters spell the word javasolutionsforalgorithms.hackerrank.
  * Remember that a subsequence maintains the order of characters selected from a sequence.\
  *
  * Example1

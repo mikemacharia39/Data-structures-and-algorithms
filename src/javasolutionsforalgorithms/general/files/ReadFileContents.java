@@ -47,9 +47,16 @@ public class ReadFileContents {
         return sb.toString();
     }
 
+
+
     public static void main(String[] args) {
         ReadFileContents readFileContents = new ReadFileContents();
         String contents = readFileContents.fileContents();
         System.out.println(contents);
+
+        System.out.println("============================================");
+
+        String brContents = readFileContents.fileContentsBufferedReader();
+        System.out.println(brContents);
     }
 }

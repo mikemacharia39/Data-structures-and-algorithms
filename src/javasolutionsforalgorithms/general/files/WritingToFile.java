@@ -21,6 +21,7 @@ public class WritingToFile {
 
         FileWriter fileWriter = new FileWriter(newFileName);
         fileWriter.write(sampleContent);
+        System.out.println("Completed writing to file");
         fileWriter.close();
     }
 

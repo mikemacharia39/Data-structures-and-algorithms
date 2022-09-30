@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Stack;
 
 /**
+ * <a href="https://leetcode.com/problems/validate-binary-search-tree/">...</a>
+ * or
+ * <a href="https://www.hackerrank.com/challenges/is-binary-search-tree/problem?isFullScreen=true">...</a>
+ *
+ *
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
  *
  * A valid BST is defined as follows:

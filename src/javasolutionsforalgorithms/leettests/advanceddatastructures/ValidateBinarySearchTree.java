@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.advanceddatastructures;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
  *
@@ -35,7 +38,48 @@ public class ValidateBinarySearchTree {
         }
     }
 
-    public boolean isValidBST(TreeNode root) {
+    //======================= USE A LIST TO CHECK IF IS BST ==============================
+
+    /**
+     * Add the items to a list using in order traversal i.e. LEFT -> ROOT -> RIGHT
+     * Check if the list is sorted
+     * @param root TreeNode
+     * @return true|false
+     */
+    public boolean isValidBSTUsingList(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+
+        addToList(root, list);
+
+        if (list.size() < 2) {return true;}
+        int previous = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if (previous >= list.get(i)) {
+                return false;
+            }
+            previous = list.get(i);
+        }
+
+        return true;
+    }
+
+    /**
+     * Add items to list in order traversal
+     * Then check if list is sorted
+     */
+    void addToList(TreeNode root, List<Integer> list) {
+        if (root == null) {
+            return;
+        }
+        addToList(root.left, list);
+        list.add(root.val);
+        addToList(root.right, list);
+    }
+
+
+    //======================= USE RECURSION TO VALIDATE IF IS BST ==============================
+
+    public boolean isValidBSTUsingRecursion(TreeNode root) {
         prev = null;
 
         return isBST(root);

@@ -42,6 +42,8 @@ public class SoldierReportRank {
      * [4,4,3,3,1,0]
      * [0,1,3,4]
      *
+     * The check is ranks at position n + 1 equal to the next position, if so increment counter
+     *
      * @param ranks array
      * @return reporters
      */

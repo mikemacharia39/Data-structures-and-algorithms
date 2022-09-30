@@ -2,6 +2,7 @@ package javasolutionsforalgorithms.leettests.advanceddatastructures;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Given the root of a binary tree, determine if it is a valid binary search tree (BST).
@@ -36,6 +37,32 @@ public class ValidateBinarySearchTree {
             this.left = left;
             this.right = right;
         }
+    }
+
+    //============= USE A STACK TO DETERMINE IF IS BST =====================
+
+    /**
+     * Use a stack and traverse through the TreeNode in order traversal i.e. LEFT->ROOT->RIGHT
+     */
+    public boolean isValidBST(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode previous = null;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+
+            if (previous != null && root.val <= previous.val) {
+                return false;
+            }
+            previous = root;
+
+            root = root.right;
+        }
+
+        return true;
     }
 
     //======================= USE A LIST TO CHECK IF IS BST ==============================

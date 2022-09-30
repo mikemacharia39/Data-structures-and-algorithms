@@ -91,7 +91,7 @@ public class ValidateBinarySearchTree {
     }
 
     /**
-     * Add items to list in order traversal
+     * Add items to list in order traversal LEFT->ROOT->RIGHT
      * Then check if list is sorted
      */
     void addToList(TreeNode root, List<Integer> list) {

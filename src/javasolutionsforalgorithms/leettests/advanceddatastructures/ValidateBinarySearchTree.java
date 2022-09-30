@@ -104,6 +104,31 @@ public class ValidateBinarySearchTree {
     }
 
 
+    //====================== ANOTHER WAY TO USE RECURSION TO CHECK IF IS BST =======================
+
+    boolean checkBST(TreeNode root) {
+        if (root == null) {return true;}
+        return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    boolean isBST(TreeNode root, int min, int max) {
+        if (root == null) {
+            return true;
+        }
+
+        if (root.val >= max || root.val <= min) {
+            return false;
+        }
+
+        // why we do this?
+        // on the left side this compares min and root.val, values on the left must be smaller
+        // than the root, that is why when traversing on left we assign max the root val
+        // on the right this compares root to max.val, values on the right must be greater than the root
+        // comparison is against root.val and max
+
+        return isBST(root.left, min, root.val) && isBST(root.right, root.val, max);
+    }
+
     //======================= USE RECURSION TO VALIDATE IF IS BST ==============================
 
     public boolean isValidBSTUsingRecursion(TreeNode root) {

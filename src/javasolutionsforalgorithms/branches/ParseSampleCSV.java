@@ -6,11 +6,15 @@ import java.util.List;
 
 public class ParseSampleCSV {
     /**
+     * Given the below data input, parse it to extract the below json:
+     *
      * productId, name, description, cost
      * 1, cup, it is a cup, $10
      * 2, water, water bottle, $$3
      * 3, soap, bar soap, $2
      * 4, fruits, 'banana, apples', $5
+     *
+     * The below out is expected
      * [
      * {
      *     "productId": 1,

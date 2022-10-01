@@ -35,6 +35,10 @@ public class ContainsDuplicate {
         return false;
     }
 
+    public boolean containsDuplicate1(int[] nums) {
+        return Arrays.stream(nums).distinct().count() != nums.length;
+    }
+
     public boolean containsDuplicate2(int[] nums) {
         Set<Integer> set = new HashSet<>();
         Arrays.stream(nums).forEach(value -> set.add(value));

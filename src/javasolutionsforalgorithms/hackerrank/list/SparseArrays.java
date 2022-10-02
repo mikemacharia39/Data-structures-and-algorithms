@@ -28,7 +28,16 @@ import java.util.List;
  */
 public class SparseArrays {
 
-
+    /**
+     * Store the string in a hashmap against their frequencies
+     * Loop through each query and check their frequencies while adding them to the list
+     * time complexity: O(m) + O(n) -> O(n) the longer one basically
+     * space complexity: O(n) using hashmap to save
+     *
+     * @param stringList string list
+     * @param queries queries
+     * @return list
+     */
     public static List<Integer> matchingStrings(List<String> stringList, List<String> queries) {
 
         List<Integer> result = new ArrayList<>();

@@ -29,7 +29,21 @@ import java.util.List;
 public class SparseArrays {
 
 
+    public static List<Integer> matchingStrings(List<String> stringList, List<String> queries) {
 
+        List<Integer> result = new ArrayList<>();
+        HashMap<String, Integer> stringListFreq = new HashMap<>();
+
+        for (String str : stringList) {
+            stringListFreq.put(str, stringListFreq.getOrDefault(str, 0)+1);
+        }
+
+        for (String query : queries) {
+            result.add(stringListFreq.getOrDefault(query, 0));
+        }
+
+        return result;
+    }
 
     /**
      * use two loops, the top loop traverses through each query while checking its existence in the string list

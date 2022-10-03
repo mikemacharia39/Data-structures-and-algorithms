@@ -42,10 +42,39 @@ public class RotateArray {
 
     //==================== SOLUTION 1 ======================
 
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
 
+        k %= n;
+
+        // reverse all elements of the array
+        reverse(nums, 0, n-1);
+
+        // reverse all elements from 0 to k
+        reverse(nums, 0, k-1);
+
+        // reverse all elements from k to n - 1
+        reverse(nums, k, n-1);
+    }
+
+    public void reverse(int[] arr, int start, int end) {
+        while(start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
 
     //==================== SOLUTION 2 ======================
 
+    /**
+     * shift the array elements such that at position (i+k)%n = i
+     *
+     * @param nums nums
+     * @param k shift
+     */
     public void rotate1(int[] nums, int k) {
         int n = nums.length;
         int[] temp = new int[n];

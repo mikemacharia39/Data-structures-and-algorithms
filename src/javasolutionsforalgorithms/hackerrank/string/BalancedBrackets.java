@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.hackerrank.string;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/balanced-brackets/problem">...</a>
+ *
  * A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
  *
  * Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {)

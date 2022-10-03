@@ -1,6 +1,5 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
-import java.util.Arrays;
 
 /**
  * <a href="https://leetcode.com/problems/rotate-array/">...</a>

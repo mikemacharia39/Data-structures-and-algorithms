@@ -142,9 +142,15 @@ public class Trie {
         List<String> searches = Arrays.asList("app", "ap", "hum", "cat", "cap", "hut");
         searches.forEach(search -> System.out.println("Search for " + search + " | Outcome: " + trie.search(search)));
 
+
+        List<String> stringStartingWith = Arrays.asList("hu", "ca", "bat", "apply");
+        stringStartingWith.forEach(search -> System.out.println("Search count of " + search +
+                " | Exists: " + trie.countPrefixStartingWith(search)));
+
+
         List<String> searchCounts = Arrays.asList("ap", "huge", "cat", "cap", "h");
         searchCounts.forEach(search -> System.out.println("Search count of " + search +
-                " | Outcome: " + trie.countPrefixStartingWith(search)));
+                " | Count: " + trie.countPrefixStartingWith(search)));
 
     }
 }

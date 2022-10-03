@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.Arrays;
+
 /**
  * <a href="https://leetcode.com/problems/rotate-array/">...</a>
  *
@@ -38,6 +40,26 @@ package javasolutionsforalgorithms.leettests.arrays;
 public class RotateArray {
 
 
+    //==================== SOLUTION 1 ======================
+
+
+
+    //==================== SOLUTION 2 ======================
+
+    public void rotate1(int[] nums, int k) {
+        int n = nums.length;
+        int[] temp = new int[n];
+
+        // shift the elements in the array by k such that
+        // items in the original ith position are assigned items at (i+k)%n
+        for (int i = 0; i < n; i++) {
+            temp[(i+k)%n] = nums[i];
+        }
+        for (int j = 0; j < n; j++) {
+            nums[j] = temp[j];
+        }
+//        System.arraycopy(temp, 0, nums, 0, n);
+    }
 
     //==================== SOLUTION 3 ======================
 

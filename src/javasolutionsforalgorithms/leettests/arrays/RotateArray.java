@@ -36,4 +36,28 @@ package javasolutionsforalgorithms.leettests.arrays;
  * Could you do it in-place with O(1) extra space?
  */
 public class RotateArray {
+
+
+
+    //==================== SOLUTION 3 ======================
+
+    /**
+     * Naive approach. Rotation K times while shifting elements of the array to the right
+     * Time complexity O(k*m) where K is the number
+     */
+    public void rotate2(int[] nums, int k) {
+
+        k %= nums.length;
+        for (int i = 0; i < k; i++) {
+            shift(nums);
+        }
+    }
+
+    public void shift(int[] nums) {
+        int start = nums[nums.length-1];
+        for (int i = nums.length - 1; i >= 1; i--) {
+            nums[i] = nums[i-1];
+        }
+        nums[0] = start;
+    }
 }

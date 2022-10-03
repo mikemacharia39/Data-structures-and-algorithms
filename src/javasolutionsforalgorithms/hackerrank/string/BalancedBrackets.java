@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.hackerrank.string;
 
+import java.util.Stack;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/balanced-brackets/problem">...</a>
  *
@@ -33,4 +35,41 @@ package javasolutionsforalgorithms.hackerrank.string;
  * string: either YES or NO
  */
 public class BalancedBrackets {
+    public static String isBalanced(String s) {
+        Stack<Character> stack = new Stack<>();
+        int i = 0;
+        while (i < s.length()) {
+            switch(s.charAt(i)) {
+                case '}':
+                    if (!stack.isEmpty() && stack.peek() == '{') {
+                        stack.pop();
+                    } else {
+                        stack.push(s.charAt(i));
+                    }
+                    break;
+                case ']':
+                    if (!stack.isEmpty() && stack.peek() == '[') {
+                        stack.pop();
+                    } else {
+                        stack.push(s.charAt(i));
+                    }
+                    break;
+                case ')':
+                    if (!stack.isEmpty() && stack.peek() == '(') {
+                        stack.pop();
+                    } else {
+                        stack.push(s.charAt(i));
+                    }
+                    break;
+                default:
+                    stack.push(s.charAt(i));
+                    break;
+            }
+
+            i++;
+        }
+
+        return stack.isEmpty() ? "YES" : "NO";
+    }
+
 }

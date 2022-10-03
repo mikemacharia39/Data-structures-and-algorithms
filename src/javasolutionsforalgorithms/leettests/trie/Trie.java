@@ -22,7 +22,8 @@ package javasolutionsforalgorithms.leettests.trie;
  * you need to perform L lookups on the average for each of the W words in the set.
  *
  * Links to tutorials
- *
+ * <a href="https://www.youtube.com/watch?v=-urNrIAQnNo&ab_channel=LukasVyhnalek">...</a>
+ * <a href="https://www.youtube.com/playlist?list=PL6Zs6LgrJj3uwRyATdtSua12k9EFQIW50">...</a>
  */
 public class Trie {
 

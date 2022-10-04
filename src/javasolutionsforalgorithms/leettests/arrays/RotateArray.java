@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
 
+import java.util.Arrays;
+
 /**
  * <a href="https://leetcode.com/problems/rotate-array/">...</a>
  *
@@ -41,7 +43,7 @@ public class RotateArray {
 
     //==================== SOLUTION 1 ======================
 
-    public void rotate(int[] nums, int k) {
+    public void rotate1(int[] nums, int k) {
         int n = nums.length;
 
         k %= n;
@@ -74,7 +76,7 @@ public class RotateArray {
      * @param nums nums
      * @param k shift
      */
-    public void rotate1(int[] nums, int k) {
+    public void rotate(int[] nums, int k) {
         int n = nums.length;
         int[] temp = new int[n];
 
@@ -86,7 +88,6 @@ public class RotateArray {
         for (int j = 0; j < n; j++) {
             nums[j] = temp[j];
         }
-//        System.arraycopy(temp, 0, nums, 0, n);
     }
 
     //==================== SOLUTION 3 ======================
@@ -109,5 +110,15 @@ public class RotateArray {
             nums[i] = nums[i-1];
         }
         nums[0] = start;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7};
+        int shifts = 3;
+
+        RotateArray rotateArray = new RotateArray();
+        rotateArray.rotate(arr, shifts);
+
+        System.out.println(Arrays.toString(arr));
     }
 }

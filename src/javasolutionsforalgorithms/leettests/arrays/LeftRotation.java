@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/array-left-rotation/problem">...</a>
  *
@@ -21,4 +24,17 @@ package javasolutionsforalgorithms.leettests.arrays;
  * int arr[n]: the array to rotate
  */
 public class LeftRotation {
+    public static List<Integer> rotateLeft(int d, List<Integer> arr) {
+        // shifts = 4
+        // 1 2 3 4 5
+        // 5 1 2 3 4
+        int n = arr.size();
+        Integer[] shifted = new Integer[n];
+        for (int i = n-1; i >= 0; i--) {
+            int newPos = (Math.abs(i+d))%n;
+            shifted[i] = arr.get(newPos);
+        }
+
+        return Arrays.asList(shifted);
+    }
 }

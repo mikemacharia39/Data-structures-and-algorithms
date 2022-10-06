@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.hackerrank.stack;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/maximum-element/problem">...</a>
+ *
  * You have an empty sequence, and you will be given N queries. Each query is one of these three types:
  *
  * 1 x  -Push the element x into the stack.

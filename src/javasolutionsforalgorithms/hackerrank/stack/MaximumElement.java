@@ -7,19 +7,19 @@ import java.util.Stack;
 
 /**
  * <a href="https://www.hackerrank.com/challenges/maximum-element/problem">...</a>
- *
+ * <p>
  * You have an empty sequence, and you will be given N queries. Each query is one of these three types:
- *
+ * <p>
  * 1 x  -Push the element x into the stack.
  * 2    -Delete the element present at the top of the stack.
  * 3    -Print the maximum element in the stack.
  * Function Description
- *
+ * <p>
  * Complete the getMax function in the editor below.
- *
+ * <p>
  * getMax has the following parameters:
  * - string operations[n]: operations as strings
- *
+ * <p>
  * Returns
  * - int[]: the answers to each type 3 query
  */

@@ -1,5 +1,10 @@
 package javasolutionsforalgorithms.hackerrank.list;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 /**
  * Jim's Burgers has a line of hungry customers.
  * Orders vary in the time it takes to prepare them.
@@ -31,4 +36,19 @@ package javasolutionsforalgorithms.hackerrank.list;
  */
 public class JimAndTheOrders {
 
+    public static List<Integer> jimOrders(List<List<Integer>> orders) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        int counter = 1;
+        for(List<Integer> order : orders) {
+            int sum = order.get(0) + order.get(1);
+            map.put(counter, sum);
+            counter++;
+        }
+
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .map(a -> a.getKey())
+                .collect(Collectors.toList());
+    }
 }

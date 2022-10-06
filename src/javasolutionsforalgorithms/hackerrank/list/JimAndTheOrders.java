@@ -24,6 +24,10 @@ package javasolutionsforalgorithms.hackerrank.list;
  * Serve time	5	7	8	11	11
  * Customer	    4	5	3	1	2
  *
+ * Function Description
+ *
+ * Complete the jimOrders function in the editor below.
+ * It should return an array of integers that represent the order that customers' orders are delivered.
  */
 public class JimAndTheOrders {
 

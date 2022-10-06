@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/jim-and-the-orders/problem">...</a>
+ *
  * Jim's Burgers has a line of hungry customers.
  * Orders vary in the time it takes to prepare them.
  * Determine the order the customers receive their orders.

@@ -1,8 +1,6 @@
 package javasolutionsforalgorithms.hackerrank.list;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -50,5 +48,17 @@ public class JimAndTheOrders {
                 .sorted(Map.Entry.comparingByValue())
                 .map(a -> a.getKey())
                 .collect(Collectors.toList());
+    }
+
+    public static void main(String[] args) {
+
+        List<List<Integer>> data = new ArrayList<>();
+        data.add(Arrays.asList(8, 3));
+        data.add(Arrays.asList(4, 2));
+        data.add(Arrays.asList(5, 6));
+        data.add(Arrays.asList(3, 1));
+        data.add(Arrays.asList(4, 3));
+
+        System.out.println(JimAndTheOrders.jimOrders(data));
     }
 }

@@ -68,5 +68,19 @@ public class HeightOfABinaryTree {
         return counter;
     }
 
+    /**
+     * Using recursion to calculate height of BST
+     * @param root Node
+     * @return height
+     */
+    public static int height_recursive(Node root) {
+        if (root == null) {
+            return -1;
+        }
 
+        int left = height(root.left);
+        int right = height(root.right);
+
+        return Math.max(left, right)+1;
+    }
 }

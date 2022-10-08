@@ -84,7 +84,7 @@ public class HeightOfABinaryTree {
         return Math.max(left, right)+1;
     }
 
-    public Node insert(Node root, int data) {
+    public static Node insert(Node root, int data) {
         if (root == null) {
             return new Node(data);
         }
@@ -97,5 +97,17 @@ public class HeightOfABinaryTree {
             root.right = cur;
         }
         return root;
+    }
+
+    public static void main(String[] args) {
+        int[] treeData = {4,3,2,1,6,5};
+
+        Node root = null;
+        for (int val : treeData) {
+             root = HeightOfABinaryTree.insert(root, val);
+        }
+
+        int treeHeight = HeightOfABinaryTree.height(root);
+        System.out.println("Height of tree: " + treeHeight);
     }
 }

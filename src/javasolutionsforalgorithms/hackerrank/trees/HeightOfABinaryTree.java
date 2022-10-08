@@ -23,7 +23,11 @@ import java.util.Queue;
  *
  * root: a reference to the root of a binary tree.
  *
- * Note -The Height of binary tree with single node is taken as zero.
+ * Note -The Height of binary tree with single node is taken as zero. The tree expects at least one node
+ *
+ * Output Format
+ *
+ * Your function should return a single integer denoting the height of the binary tree.
  *
  */
 public class HeightOfABinaryTree {
@@ -37,6 +41,11 @@ public class HeightOfABinaryTree {
         }
     }
 
+    /**
+     * Using Queue: We use queue for level order traversal
+     * @param root Node
+     * @return height
+     */
     public static int height(Node root) {
         Queue<Node> queue = new LinkedList<>();
         int counter = -1;
@@ -58,4 +67,6 @@ public class HeightOfABinaryTree {
         }
         return counter;
     }
+
+
 }

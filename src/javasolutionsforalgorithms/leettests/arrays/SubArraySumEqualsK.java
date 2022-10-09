@@ -21,6 +21,35 @@ import java.util.HashMap;
  */
 public class SubArraySumEqualsK {
 
+    /**
+     * Explanation
+     * <a href="https://www.youtube.com/watch?v=AmlVSNBHzJg&ab_channel=NickWhite">...</a>
+     *
+     * @param nums nums
+     * @param k k
+     * @return count
+     */
+    public int subarraySum(int[] nums, int k) {
+        HashMap<Integer, Integer> mapSums = new HashMap<>();
+        mapSums.put(0, 1); // initialize. The sum of 0 occurs once
+        int sum = 0;
+        int result = 0;
+
+        for (int num : nums) {
+            sum += num;
+
+            if (mapSums.containsKey(sum - k)) {
+                result += mapSums.get(sum - k);
+            }
+
+            // the sum and it's frequency
+            mapSums.put(sum, mapSums.getOrDefault(sum, 0) + 1);
+        }
+
+        return result;
+    }
+
+
     public int subarraySum_1(int[] nums, int k) {
         HashMap<Integer, Integer> mapSums = new HashMap<>();
         int sum = 0;

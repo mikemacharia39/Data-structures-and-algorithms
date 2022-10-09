@@ -1,13 +1,13 @@
 package javasolutionsforalgorithms.leettests.recursion;
 
 /**
+ * <a href="https://leetcode.com/problems/n-th-tribonacci-number/">...</a>
+ *
  * The Tribonacci sequence Tn is defined as follows:
  *
  * T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
  *
  * Given n, return the value of Tn.
- *
- *
  *
  * Example 1:
  *
@@ -18,4 +18,15 @@ package javasolutionsforalgorithms.leettests.recursion;
  * T_4 = 1 + 1 + 2 = 4
  */
 public class NthTribonacciNumber {
+    public int tribonacci(int n) {
+        if (n < 2) return n;
+        int a = 0, b = 1, c = 1, d;
+        while (n-- > 2) {
+            d = a + b + c;
+            a = b;
+            b = c;
+            c = d;
+        }
+        return c;
+    }
 }

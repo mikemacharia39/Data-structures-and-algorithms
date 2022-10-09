@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.HashMap;
+
 /**
  * <a href="https://leetcode.com/problems/subarray-sum-equals-k/">...</a>
  *
@@ -19,6 +21,29 @@ package javasolutionsforalgorithms.leettests.arrays;
  */
 public class SubArraySumEqualsK {
 
+    public int subarraySum_1(int[] nums, int k) {
+        HashMap<Integer, Integer> mapSums = new HashMap<>();
+        int sum = 0;
+        int result = 0;
+
+        for (int num : nums) {
+            sum += num;
+
+            // to cover when subarray sum == k
+            if (sum == k) {
+                result += 1;
+            }
+
+            if (mapSums.containsKey(sum - k)) {
+                result += mapSums.get(sum - k);
+            }
+
+            // the sum and it's frequency
+            mapSums.put(sum, mapSums.getOrDefault(sum, 0) + 1);
+        }
+
+        return result;
+    }
 
     /**
      * Time complexity 0(n^2)

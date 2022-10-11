@@ -65,8 +65,6 @@ k
 ;src/javasolutionsforalgorithms/branches/ParseSampleCSV.java,d\9\d9ee7a03be14e1bfd939f08ef4c192b799e1876e
 ç
 ]src/javasolutionsforalgorithms/leettests/advanceddatastructures/ValidateBinarySearchTree.java,9\8\98c783b5d6e8ab7dc6d4a1dd5eec9df7bd0a2e54
-p
-@src/javasolutionsforalgorithms/hackerrank/list/SparseArrays.java,2\1\219693d0dcb54f2afc4bfab6821ecf9430497592
 v
 Fsrc/javasolutionsforalgorithms/hackerrank/string/BalancedBrackets.java,d\d\dd2289a5449470d7a180a3f954eff1ece1e08a3b
 â

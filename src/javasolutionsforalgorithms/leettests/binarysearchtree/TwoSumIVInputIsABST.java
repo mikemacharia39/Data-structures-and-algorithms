@@ -26,6 +26,33 @@ public class TwoSumIVInputIsABST {
         }
     }
 
+    /**
+     * Using recursion
+     * @param root TreeNode
+     * @param k K
+     * @return true|false
+     */
+    public boolean findTarget(TreeNode root, int k) {
+        Set<Integer> set = new HashSet<>();
+        return find(root, k, set);
+    }
+
+    /**
+     * pre order root -> left -> right
+     */
+    public boolean find(TreeNode root, int k, Set<Integer> set) {
+        if (root == null) {
+            return false;
+        }
+
+        if (set.contains(k - root.val)) {
+            return true;
+        } else {
+            set.add(root.val);
+        }
+        return find(root.left, k, set) || find(root.right, k, set);
+    }
+
     public boolean findTarget_usingQueue(TreeNode root, int k) {
         if (root == null) {
             return false;

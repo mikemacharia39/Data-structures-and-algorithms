@@ -20,6 +20,36 @@ package javasolutionsforalgorithms.leettests.interestingquestions;
 public class ContainerWithMostWater {
 
     /**
+     * Best Explanation
+     * <a href="https://leetcode.com/problems/container-with-most-water/discuss/1915172/JavaC%2B%2B-Easiest-Explanations">...</a>
+     * Time complexity O(n)
+     * Start from the extreme right and left of the x axis and narrow down to the most
+     * volume -> <-
+     */
+    public int maxArea(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int maxWater = 0;
+        while (left < right) {
+            int containerLen = right - left;
+            int waterHeight = Math.min(height[left], height[right]);
+            int area = containerLen * waterHeight;
+
+            maxWater = Math.max(maxWater, area);
+
+            if (height[left] < height[right]) {
+                left++;
+            } else if (height[left] > height[right]) {
+                right--;
+            } else {
+                left++;
+                right--;
+            }
+        }
+        return maxWater;
+    }
+
+    /**
      * Brute force
      * Time complexity 0(n^2)
      * Space complexity O(1)

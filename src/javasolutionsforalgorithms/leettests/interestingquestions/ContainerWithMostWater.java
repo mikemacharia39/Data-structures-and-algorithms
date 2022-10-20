@@ -18,4 +18,32 @@ package javasolutionsforalgorithms.leettests.interestingquestions;
  * In this case, the max area of water (blue section) the container can contain is 49.
  */
 public class ContainerWithMostWater {
+
+    /**
+     * Brute force
+     * Time complexity 0(n^2)
+     * Space complexity O(1)
+     * Find the length from a certain position x to position x + distance
+     * The maximum height of water at any position is determined by the height of the
+     * lesser height level
+     * Loop through this until you get the max height
+     *
+     */
+    public int maxArea_BruteForce(int[] height) {
+
+        int containerLength = height.length;
+        int maxArea = 0;
+        for (int i = 0; i < containerLength; i++) {
+            for (int j = i + 1; j < containerLength; j++) {
+
+                int length = j - i;
+                int waterHeight = Math.min(height[i], height[j]);
+                int area = length * waterHeight;
+
+                maxArea = Math.max(maxArea, area);
+            }
+        }
+
+        return maxArea;
+    }
 }

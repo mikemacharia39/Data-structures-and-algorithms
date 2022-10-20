@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/tree-level-order-traversal/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
+ *
  * Given a pointer to the root of a binary tree, you need to print the level order traversal of this tree.
  * In level-order traversal, nodes are visited level by level from left to right.
  * Complete the function levelOrder and print the values in a single line separated by a space.
@@ -66,6 +68,22 @@ public class TreeLevelOrderTraversal {
 
                 qsize--;
             }
+        }
+    }
+
+    public static Node insert(Node root, int data) {
+        if(root == null) {
+            return new Node(data);
+        } else {
+            Node cur;
+            if(data <= root.data) {
+                cur = insert(root.left, data);
+                root.left = cur;
+            } else {
+                cur = insert(root.right, data);
+                root.right = cur;
+            }
+            return root;
         }
     }
 }

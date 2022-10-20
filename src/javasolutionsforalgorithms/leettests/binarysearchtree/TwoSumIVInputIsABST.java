@@ -1,8 +1,6 @@
 package javasolutionsforalgorithms.leettests.binarysearchtree;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Given the root of a Binary Search Tree and a target number k,
@@ -28,6 +26,42 @@ public class TwoSumIVInputIsABST {
         }
     }
 
+    public boolean findTarget_usingQueue(TreeNode root, int k) {
+        if (root == null) {
+            return false;
+        }
+
+        Set<Integer> set = new HashSet<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+
+            int qSize = queue.size();
+
+            while (qSize > 0) {
+                TreeNode node = queue.poll();
+
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+
+                if (set.contains(k - node.val)) {
+                    return true;
+                } else {
+                    set.add(node.val);
+                }
+
+                qSize--;
+            }
+
+        }
+
+        return false;
+    }
 
     public boolean findTarget_usingStack(TreeNode root, int k) {
         Set<Integer> set = new HashSet<>();

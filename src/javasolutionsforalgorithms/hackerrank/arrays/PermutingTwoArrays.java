@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * https://www.hackerrank.com/challenges/two-arrays/problem
+ * <a href="https://www.hackerrank.com/challenges/two-arrays/problem">...</a>
  *
  */
 public class PermutingTwoArrays {

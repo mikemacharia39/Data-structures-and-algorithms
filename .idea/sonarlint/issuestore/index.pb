@@ -80,8 +80,6 @@ m
 n
 >src/javasolutionsforalgorithms/general/CollectionConcepts.java,c\8\c8f1d1165d3326f5e8837c21933f87e5f0bf72cf
 s
-Csrc/javasolutionsforalgorithms/hackerrank/stack/MaximumElement.java,9\0\9002238e0dd4a1011713d148827643edb93e7cb3
-s
 Csrc/javasolutionsforalgorithms/hackerrank/list/JimAndTheOrders.java,6\5\6565beea7bf88a9c720e09fe1b0d44030dc74867
 g
 7src/javasolutionsforalgorithms/leettests/trie/Trie.java,a\8\a82c01f831d0f4e793597f365647fee23a89abf0

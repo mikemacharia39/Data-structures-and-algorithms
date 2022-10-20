@@ -14,5 +14,15 @@ package javasolutionsforalgorithms.leettests.binarysearchtree;
  * Output: true
  */
 public class TwoSumIVInputIsABST {
+    static class TreeNode {
+        TreeNode left;
+        TreeNode right;
+        int val;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+    }
+
 
 }

@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * <a href="https://leetcode.com/problems/check-if-the-sentence-is-pangram/">...</a>
+ * <a href="https://leetcode.com/problems/check-if-the-sentence-is-pangram/">link</a>
  *
  * A pangram is a sentence where every letter of the English alphabet appears at least once.
  *

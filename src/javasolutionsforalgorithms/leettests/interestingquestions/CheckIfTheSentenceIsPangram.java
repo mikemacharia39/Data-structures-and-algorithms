@@ -20,4 +20,20 @@ package javasolutionsforalgorithms.leettests.interestingquestions;
  * Output: false
  */
 public class CheckIfTheSentenceIsPangram {
+
+    public boolean checkIfPangram2(String sentence) {
+        int[] alphabetFeq = new int[26];
+
+        for(int i = 0; i < sentence.length(); i++) {
+            alphabetFeq[sentence.charAt(i) - 'a']++;
+        }
+
+        for (int freq : alphabetFeq) {
+            if (freq == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

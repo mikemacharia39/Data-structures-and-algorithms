@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * Given a pointer to the root of a binary tree, you need to print the level order traversal of this tree.
  * In level-order traversal, nodes are visited level by level from left to right.
@@ -29,6 +32,17 @@ package javasolutionsforalgorithms.leettests.trees;
  *
  */
 public class TreeLevelOrderTraversal {
+
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
     public static void levelOrder(Node root) {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);

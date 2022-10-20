@@ -63,8 +63,6 @@ r
 Bsrc/javasolutionsforalgorithms/neetcode/set/ContainsDuplicate.java,e\3\e3bebe94bea7f7bc8e72babbd9d393251d0ee6ac
 k
 ;src/javasolutionsforalgorithms/branches/ParseSampleCSV.java,d\9\d9ee7a03be14e1bfd939f08ef4c192b799e1876e
-ç
-]src/javasolutionsforalgorithms/leettests/advanceddatastructures/ValidateBinarySearchTree.java,9\8\98c783b5d6e8ab7dc6d4a1dd5eec9df7bd0a2e54
 v
 Fsrc/javasolutionsforalgorithms/hackerrank/string/BalancedBrackets.java,d\d\dd2289a5449470d7a180a3f954eff1ece1e08a3b
 â
@@ -83,8 +81,6 @@ s
 Csrc/javasolutionsforalgorithms/hackerrank/list/JimAndTheOrders.java,6\5\6565beea7bf88a9c720e09fe1b0d44030dc74867
 g
 7src/javasolutionsforalgorithms/leettests/trie/Trie.java,a\8\a82c01f831d0f4e793597f365647fee23a89abf0
-í
-bsrc/javasolutionsforalgorithms/leettests/advanceddatastructures/BinaryTreeLevelOrderTraversal.java,3\1\3191e4396e750341e7d9faafaead39c5bf5b338a
 x
 Hsrc/javasolutionsforalgorithms/hackerrank/trees/HeightOfABinaryTree.java,6\8\68db1c3919ac29d8516ec84e8133e3fec0dc15de
 w

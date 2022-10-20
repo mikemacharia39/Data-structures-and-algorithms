@@ -24,7 +24,25 @@ import java.util.Set;
  */
 public class CheckIfTheSentenceIsPangram {
 
-
+    /**
+     * This checks for if all the english alphabets exists in the sentence provided
+     * if the sentence does not have a letter, then return false
+     *
+     * @param sentence sentence
+     * @return true|false
+     */
+    public boolean checkIfPangram(String sentence) {
+        if (sentence.length() < 26) {
+            return false;
+        }
+        String alphas = "abcdefghijklmnopqrstuvwxyz";
+        for (int i = 0; i < alphas.length(); i++) {
+            if (sentence.indexOf(alphas.charAt(i)) == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     /**
      * Solution 2

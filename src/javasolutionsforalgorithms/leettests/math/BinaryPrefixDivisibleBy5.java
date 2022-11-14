@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <a href="https://leetcode.com/problems/binary-prefix-divisible-by-5/">...</a>
+ *
  * You are given a binary array nums (0-indexed).
  *
  * We define xi as the number whose binary representation is the subarray nums[0..i]

@@ -36,7 +36,7 @@ public class BinaryPrefixDivisibleBy5 {
             boolean b = sum % 5 == 0;
             booleans.add(b);
 
-            //This is to prevent it from overflow
+            //This is to prevent it from overflow, i.e. it will become a very big value to manage
             sum = sum%5;
         }
         return booleans;

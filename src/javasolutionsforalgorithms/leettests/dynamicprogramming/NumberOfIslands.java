@@ -33,6 +33,7 @@ public class NumberOfIslands {
     private int rows;
     private int cols;
 
+    //https://www.youtube.com/watch?v=LVlihRYfVVw&ab_channel=MattYang-SWEinNYC
     public int numIslands(char[][] grid) {
         rows = grid.length;
         if (rows == 0) return 0;

@@ -28,4 +28,12 @@ package javasolutionsforalgorithms.leettests.dynamicprogramming;
  */
 public class NumberOfIslands {
 
+    private void dfsFilling(char[][] grid, int i, int j) {
+        if (i < 0 || j < 0 || i >= rows || j >= cols || grid[i][j] != '1') {return;}
+        grid[i][j] = '0'; // flood filling, i.e. marking areas as visited
+        dfsFilling(grid, i+1, j);
+        dfsFilling(grid, i-1, j);
+        dfsFilling(grid, i, j-1);
+        dfsFilling(grid, i, j+1);
+    }
 }

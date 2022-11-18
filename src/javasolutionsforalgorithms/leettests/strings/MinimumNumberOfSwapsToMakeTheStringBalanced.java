@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.leettests.strings;
 
+import java.util.Stack;
+
 /**
  * <a href="https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/">...</a>
  * Example 1:
@@ -23,4 +25,23 @@ package javasolutionsforalgorithms.leettests.strings;
  * Explanation: The string is already balanced.
  */
 public class MinimumNumberOfSwapsToMakeTheStringBalanced {
+
+    public int minSwapsStack(String s) {
+        int unmatched = 0;
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '[') {
+                stack.push('[');
+            } else {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                } else {
+                    unmatched++;
+                }
+            }
+        }
+
+        // round up if decimal, division by 2 because of swaps
+        return (int) Math.ceil((double) unmatched/2);
+    }
 }

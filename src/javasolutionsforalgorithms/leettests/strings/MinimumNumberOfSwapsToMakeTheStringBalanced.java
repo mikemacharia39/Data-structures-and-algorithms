@@ -26,6 +26,22 @@ import java.util.Stack;
  */
 public class MinimumNumberOfSwapsToMakeTheStringBalanced {
 
+    public int minSwaps(String s) {
+        int matches = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '[') {
+                matches++;
+            } else {
+                if (matches > 0) {
+                    matches--;
+                }
+            }
+        }
+
+        return (int) Math.ceil((double) matches/2);
+    }
+
     public int minSwapsStack(String s) {
         int unmatched = 0;
         Stack<Character> stack = new Stack<>();

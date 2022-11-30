@@ -1,10 +1,11 @@
 package javasolutionsforalgorithms.leettests.math;
 
 /**
+ * <a href="https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three/">...</a>
+ *
  * Given an integer array nums of positive integers, return the average value of all even integers that are divisible by 3.
  *
  * Note that the average of n elements is the sum of the n elements divided by n and rounded down to the nearest integer.
-
  * Example 1:
  *
  * Input: nums = [1,3,6,10,12,15]
@@ -19,4 +20,16 @@ package javasolutionsforalgorithms.leettests.math;
  */
 public class AverageValueEvenNumbersThatAreDivisibleByThree {
 
+    public int averageValue(int[] nums) {
+        int sum = 0;
+        int count = 0;
+        for(int num: nums) {
+            if (num % 2 == 0 && num % 3 == 0) {
+                count++;
+                sum += num;
+            }
+        }
+
+        return sum == 0 ? 0 : (sum/count);
+    }
 }

@@ -24,6 +24,31 @@ package javasolutionsforalgorithms.leettests.arrays;
  */
 public class ContainsDuplicateIII {
 
+    /**
+     * The idea is to create a window and only loop through values lesser than the window
+     * and ensure the inner loop does not exceed array size
+     *
+     * Then within the block check if -> abs(nums[i] - nums[j]) <= valueDiff
+     */
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        int n = nums.length;
+
+        int window ;
+        for (int i = 0; i < n; i++) {
+            window = i + k;
+            for (int j = i + 1; j <= window ; j++) {
+                if(j == n){
+                    break;
+                }
+                if (Math.abs(nums[i] - nums[j]) <= t){
+                    return true;
+                }
+            }
+
+        }
+        return false;
+    }
+
 
     /**
      * Not a good solution Time Limit Exceeded

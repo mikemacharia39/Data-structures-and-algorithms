@@ -25,4 +25,26 @@ package javasolutionsforalgorithms.leettests.arrays;
 public class ContainsDuplicateIII {
 
 
+    /**
+     * Not a good solution Time Limit Exceeded
+     */
+    public boolean containsNearbyAlmostDuplicateSln2(int[] nums, int k, int t) {
+
+        if ((nums == null || nums.length == 0) && k > 0 && t > 0) {
+            return false;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                long numDiff = Math.subtractExact((long) nums[i],nums[j]);
+                int indexDiff = Math.abs(i - j);
+
+                if (Math.abs(numDiff) <= t && indexDiff <= k) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

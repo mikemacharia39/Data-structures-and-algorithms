@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/contains-duplicate-iii/">...</a>
+ *
  * You are given an integer array nums and two integers indexDiff and valueDiff.
  *
  * Find a pair of indices (i, j) such that:

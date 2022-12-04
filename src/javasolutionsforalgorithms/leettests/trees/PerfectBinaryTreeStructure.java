@@ -42,6 +42,24 @@ import java.util.List;
  *
  *
  *
+ * QUESTION
+ * -------------------
+ * Find largest perfect subtree from binary tree provided below
+ *
+ *                     1                                              3
+ *                 /      \                                         /  \
+ *                2        3                                       5    6
+ *                 \      /  \            =>                     /  \  /  \
+ *                  4   5     6                                 7   8 9   10
+ *                    /  \   /  \
+ *                   7    8  9  10
+ *                              /
+ *                             11
+ *
+ * resources:
+ * https://www.geeksforgeeks.org/find-the-largest-perfect-subtree-in-a-given-binary-tree/
+ * https://www.geeksforgeeks.org/check-weather-given-binary-tree-perfect-not/
+ * https://www.techiedelight.com/convert-given-binary-tree-to-full-tree-removing-half-nodes/
  */
 
 public class PerfectBinaryTreeStructure {

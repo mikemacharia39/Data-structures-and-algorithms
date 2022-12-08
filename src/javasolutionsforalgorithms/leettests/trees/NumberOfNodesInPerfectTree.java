@@ -22,6 +22,28 @@ public class NumberOfNodesInPerfectTree {
             tree = tree.left;
         }
 
-        return (int) Math.pow(2,depth) - 1;
+        return (int) Math.pow(2, depth) - 1;
+    }
+
+    public static void main(String[] args) {
+        /**
+         *            18
+         *        /       \
+         *      15         30
+         *     /  \        /  \
+         *   40    50    100   40
+         */
+
+        Tree tree = new Tree(18);
+        tree.left = new Tree(15);
+        tree.left.left = new Tree(40);
+        tree.left.right = new Tree(50);
+        tree.right = new Tree(30);
+        tree.right.left = new Tree(100);
+        tree.right.right = new Tree(40);
+
+        NumberOfNodesInPerfectTree nodesInPerfectTree = new NumberOfNodesInPerfectTree();
+
+        System.out.println("Number of nodes: " + nodesInPerfectTree.countNodes(tree));
     }
 }

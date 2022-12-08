@@ -24,6 +24,7 @@ public class CheckIfTreeIsPerfect {
     }
 
 
+    //https://www.geeksforgeeks.org/check-weather-given-binary-tree-perfect-not/
     public boolean isPerfectTree(Tree root) {
         int depth = treeDepth(root);
 

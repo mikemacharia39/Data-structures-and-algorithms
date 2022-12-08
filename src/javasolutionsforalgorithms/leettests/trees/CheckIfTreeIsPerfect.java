@@ -76,11 +76,28 @@ public class CheckIfTreeIsPerfect {
         Tree tree = new Tree(18);
         tree.left = new Tree(15);
         tree.left.left = new Tree(40);
-        tree.left.right = new Tree(40);
+        tree.left.right = new Tree(50);
         tree.right = new Tree(30);
         tree.right.left = new Tree(100);
         tree.right.right = new Tree(40);
 
         System.out.println("Is perfect tree: " + checkIfTreeIsPerfect.isPerfectTree(tree));
+
+        /**
+         *            18
+         *        /       \
+         *      15         30
+         *     /           /  \
+         *   40          100   40
+         */
+
+        Tree tree2 = new Tree(18);
+        tree2.left = new Tree(15);
+        tree2.left.left = new Tree(40);
+        tree2.right = new Tree(30);
+        tree2.right.left = new Tree(100);
+        tree2.right.right = new Tree(40);
+
+        System.out.println("Is perfect tree: " + checkIfTreeIsPerfect.isPerfectTree(tree2));
     }
 }

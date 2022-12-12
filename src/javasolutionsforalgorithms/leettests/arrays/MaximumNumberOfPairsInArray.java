@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * You are given a 0-indexed integer array nums. In one operation, you may do the following:
  *
@@ -28,4 +31,21 @@ package javasolutionsforalgorithms.leettests.arrays;
  */
 public class MaximumNumberOfPairsInArray {
 
+    public int[] numberOfPairsSln1(int[] nums) {
+        int[] res = new int[2];
+
+        Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            if (!set.contains(num)) {
+                set.add(num);
+            } else {
+                set.remove(num);
+            }
+        }
+
+        res[0] = (nums.length - set.size())/2; // pairs formed
+        res[1] = set.size();                   // leftovers
+
+        return res;
+    }
 }

@@ -9,10 +9,31 @@ public class SortCharactersByFrequency {
         String myString = "tree";
 
         SortCharactersByFrequency sorts = new SortCharactersByFrequency();
-        System.out.println(sorts.sortByFreq(myString));
+        System.out.println(sorts.frequencySort(myString));
     }
 
-    public String sortByFreq(String myString) {
+    public String frequencySort(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i),0)+1);
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        map.entrySet().stream()
+                      .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                      .forEach(x -> sb.append(Character.toString(x.getKey()).repeat(x.getValue())));
+
+        return sb.toString();
+    }
+
+    /**
+     * This is NOT a good solution
+     * @param myString string
+     * @return string
+     */
+    public String frequencySort1(String myString) {
         char[] chars = myString.toCharArray();
 
         Map<Character, Integer> map = new HashMap<>();

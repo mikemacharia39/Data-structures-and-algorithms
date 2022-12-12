@@ -1,6 +1,7 @@
 package javasolutionsforalgorithms.leettests.lists;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -58,4 +59,11 @@ public class SortArrayByIncreasingFrequency {
         return nums;
     }
 
+    public static void main(String[] args) {
+        SortArrayByIncreasingFrequency sortArrayByIncreasingFrequency = new SortArrayByIncreasingFrequency();
+        int[] nums = {3,1,1,2,2,2};
+
+        int [] res = sortArrayByIncreasingFrequency.frequencySort(nums);
+        System.out.println("Result: " + Arrays.toString(res));
+    }
 }

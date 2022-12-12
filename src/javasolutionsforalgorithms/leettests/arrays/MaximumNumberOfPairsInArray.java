@@ -31,6 +31,20 @@ import java.util.Set;
  */
 public class MaximumNumberOfPairsInArray {
 
+    public int[] numberOfPairs(int[] nums) {
+        int[] checkPairs = new int[101];     // the pair checker
+        int pairs = 0;                       // counter of pairs
+
+        for (int num : nums) {
+            checkPairs[num]++;               // increment value at position num
+            if (checkPairs[num] % 2 == 0) {  // check if pair
+                pairs++;                     // increment pair if is pair
+            }
+        }
+
+        return new int[] {pairs, nums.length - (pairs * 2)};
+    }
+
     public int[] numberOfPairsSln1(int[] nums) {
         int[] res = new int[2];
 

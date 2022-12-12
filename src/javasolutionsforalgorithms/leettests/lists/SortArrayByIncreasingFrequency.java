@@ -1,5 +1,9 @@
 package javasolutionsforalgorithms.leettests.lists;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * Given an array of integers nums, sort the array in increasing order based on the frequency of the values.
  * If multiple values have the same frequency, sort them in decreasing order.
@@ -20,5 +24,36 @@ package javasolutionsforalgorithms.leettests.lists;
  */
 public class SortArrayByIncreasingFrequency {
 
+    public int[] frequencySort(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        List<Integer>[] listFreq = new ArrayList[nums.length + 1];
+
+        for(int key : map.keySet()) {
+            int freq = map.get(key);
+            if (listFreq[freq] == null) {
+                listFreq[freq] = new ArrayList<>();
+            }
+            listFreq[freq].add(key);
+        }
+
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (listFreq[i] != null) {
+                List<Integer> currList = listFreq[i];
+                for (int val : currList) {
+                    for (int j = 0; j < i; j ++) {
+                        nums[count] = val;
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return nums;
+    }
 
 }

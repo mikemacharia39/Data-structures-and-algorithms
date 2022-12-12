@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * <a href="https://leetcode.com/problems/maximum-number-of-pairs-in-array/">...</a>
+ *
  * You are given a 0-indexed integer array nums. In one operation, you may do the following:
  *
  * Choose two integers in nums that are equal.

@@ -21,6 +21,9 @@ package javasolutionsforalgorithms.leettests.strings;
  * The percentage of characters in s that equal the letter 'k' is 0%, so we return 0.
  */
 public class PercentageOfLetterInString {
+    public int percentageLetter(String s, char letter) {
+        return (int) s.chars().filter(ch -> ch == letter).count() * 100 / s.length();
+    }
 
     public int percentageLetterSln1(String s, char letter) {
         int count = 0;

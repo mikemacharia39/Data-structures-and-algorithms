@@ -1,5 +1,11 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
+
 /**
  * Given an array of strings words and an integer k, return the k most frequent strings.
  *
@@ -27,7 +33,8 @@ public class TopKFrequentWords {
 
         return map.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .map(x -> x.getKey())
+                .map(Map.Entry::getKey)
+                //.map(x -> x.getKey()) or this too
                 .limit(k)
                 .collect(Collectors.toList());
     }

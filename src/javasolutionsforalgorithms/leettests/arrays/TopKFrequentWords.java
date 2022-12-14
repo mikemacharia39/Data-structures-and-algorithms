@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
  * Explanation: "the", "is", "sunny" and "day" are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively.
  */
 public class TopKFrequentWords {
+
     public List<String> topKFrequent(String[] words, int k) {
         TreeMap<String, Integer> map = new TreeMap<>();
         for (String word : words) {
@@ -39,5 +40,13 @@ public class TopKFrequentWords {
                 //.map(x -> x.getKey()) or this too
                 .limit(k)
                 .collect(Collectors.toList());
+    }
+
+    public static void main(String[] args) {
+        TopKFrequentWords topKFrequentWords = new TopKFrequentWords();
+
+        String[] strings = new String[] {"the","day","is","sunny","the","the","the","sunny","is","is"};
+        int k = 4;
+        System.out.println(topKFrequentWords.topKFrequent(strings, k));
     }
 }

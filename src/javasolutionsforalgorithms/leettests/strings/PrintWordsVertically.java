@@ -42,5 +42,25 @@ public class PrintWordsVertically {
         return list;
     }
 
+    private String getWords(String[] splitString, int index) {
+        StringBuilder sb = new StringBuilder();
+        for (String s : splitString) {
+            if (index < s.length()) {
+                sb.append(s.charAt(index));
+            } else {
+                sb.append(" ");
+            }
+        }
+        return sb.toString();
+    }
+
+    private int maxWordInString(String[] splitString) {
+        int max = Integer.MIN_VALUE;
+        for (String aStr : splitString) {
+            max = Math.max(max, aStr.length());
+        }
+
+        return max;
+    }
 
 }

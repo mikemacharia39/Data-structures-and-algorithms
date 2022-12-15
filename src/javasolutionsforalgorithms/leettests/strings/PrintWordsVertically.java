@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.strings;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <a href="https://leetcode.com/problems/print-words-vertically/">...</a>
  *
@@ -26,4 +29,18 @@ package javasolutionsforalgorithms.leettests.strings;
  * "   T"
  */
 public class PrintWordsVertically {
+
+    public List<String> printVertically(String s) {
+        String[] splitString = s.split(" ");
+        int count = maxWordInString(splitString);
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < count; i++) {
+            list.add(getWords(splitString, i).stripTrailing());
+        }
+
+        return list;
+    }
+
+
 }

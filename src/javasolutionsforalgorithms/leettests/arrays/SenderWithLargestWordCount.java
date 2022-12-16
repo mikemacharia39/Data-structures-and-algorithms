@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.leettests.arrays;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * You have a chat log of n messages.
  * You are given two string arrays messages and senders where messages[i] is a message sent by senders[i].
@@ -24,4 +27,23 @@ package javasolutionsforalgorithms.leettests.arrays;
  * Since there is a tie for the largest word count, we return the sender with the lexicographically larger name, Charlie.
  */
 public class SenderWithLargestWordCount {
+    public String largestWordCount(String[] messages, String[] senders) {
+
+        // sorts the keys in order
+        TreeMap<String, Integer> map = new TreeMap<>();
+        for (int i = 0; i < senders.length; i++) {
+            int wordCount = wordCount(messages[i]);
+            map.put(senders[i], map.getOrDefault(senders[i], 0) + wordCount);
+        }
+
+        // this will sort values in order
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .map(x -> x.getKey())
+                .reduce((a,b) -> b).get(); // then gets the last element
+    }
+
+    private int wordCount(String message) {
+        return message.split(" ").length;
+    }
 }

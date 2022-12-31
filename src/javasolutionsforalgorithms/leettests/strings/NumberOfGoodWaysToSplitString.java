@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * <a href="https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/">...</a>
+ *
  * You are given a string s.
  *
  * A split is called good if you can split s into two non-empty strings sleft and sright

@@ -1,5 +1,14 @@
 package javasolutionsforalgorithms.leettests.strings;
 
+/**
+ * You are given a string s.
+ *
+ * A split is called good if you can split s into two non-empty strings sleft and sright
+ * where their concatenation is equal to s (i.e., sleft + sright = s) and the number of distinct letters
+ * in sleft and sright is the same.
+ * Return the number of good splits you can make in s.
+ *
+ */
 public class NumberOfGoodWaysToSplitString {
 
 }

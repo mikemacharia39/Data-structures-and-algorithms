@@ -1,5 +1,6 @@
 package javasolutionsforalgorithms.leettests.strings;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,6 +15,39 @@ import java.util.Set;
  */
 public class NumberOfGoodWaysToSplitString {
 
+    /**
+     * Better solution
+     * @param s string
+     * @return count
+     */
+    public int numSplits(String s) {
+        int goodSplits = 0;
+        HashMap<Character, Integer> leftMap = new HashMap<>();
+        HashMap<Character, Integer> rightMap = new HashMap<>();
+
+        // this will add disticts keys and their repetitions to the map
+        for (int i = 0; i < s.length(); i++) {
+            leftMap.put(s.charAt(i), leftMap.getOrDefault(s.charAt(i), 0) + 1);
+        }
+
+        // add disticts keys and their repetitions to the map
+        for (int i = 0; i < s.length(); i++) {
+            rightMap.put(s.charAt(i), rightMap.getOrDefault(s.charAt(i), 0) + 1);
+
+            // remove elements at the front of the map
+            leftMap.put(s.charAt(i), leftMap.getOrDefault(s.charAt(i), 0) - 1);
+
+            // consider when all of key freq are removed
+            if (leftMap.get(s.charAt(i)) <= 0) {
+                leftMap.remove(s.charAt(i));
+            }
+
+            // check if the remaining size of keys in leftMap = add keys in right map
+            goodSplits += rightMap.size() == leftMap.size() ? 1 : 0;
+        }
+
+        return goodSplits;
+    }
 
     /**
      * Timed-out

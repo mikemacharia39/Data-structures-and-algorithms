@@ -5,6 +5,17 @@ import java.util.List;
 
 /**
  * <a href="https://www.hackerrank.com/challenges/beautiful-pairs/problem">...</a>
+ *
+ * Function Description
+ *
+ * Complete the beautifulPairs function in the editor below.
+ * It should return an integer that represents the maximum number of pairwise disjoint beautiful pairs that can be formed.
+ *
+ * BeautifulPairs has the following parameters:
+ * A: an array of integers
+ * B: an array of integers
+ *
+ * N/B: Your task is to change exactly 1 element in B so that the size of the pairwise disjoint beautiful set is maximum.
  */
 public class BeautifulPairs {
     public static int beautifulPairs(List<Integer> A, List<Integer> B) {

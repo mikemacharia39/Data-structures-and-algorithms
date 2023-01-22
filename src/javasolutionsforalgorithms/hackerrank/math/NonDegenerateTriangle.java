@@ -14,12 +14,11 @@ import java.util.List;
  * If more than one has that maximum as well, print any one them.
  * If no non-degenerate triangle exists, return [-1].
  * 
- *
+ * Example1
  * Sample Input 0
- *
  * 1 1 1 3 3
- * Sample Output 0
  *
+ * Sample Output 0
  * 1 3 3
  *
  * -------------------------------------------------------------------------------------------

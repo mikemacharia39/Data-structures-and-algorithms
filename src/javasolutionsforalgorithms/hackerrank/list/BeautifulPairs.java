@@ -3,6 +3,9 @@ package javasolutionsforalgorithms.hackerrank.list;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://www.hackerrank.com/challenges/beautiful-pairs/problem">...</a>
+ */
 public class BeautifulPairs {
     public static int beautifulPairs(List<Integer> A, List<Integer> B) {
         // both list A and B are of equal size

@@ -1,0 +1,20 @@
+Courtesy of https://www.educative.io/courses/mongodb-complete-guide/xoBrYpgWByB
+# MONGO DB
+- it is a NO-SQL Database
+- it is a document oriented database
+
+Q: What is the difference between RDBMS and NoSQL?
+A: RDBMS use rows and columns to store data in a structured format whereas NoSQL store data in the form of collections.
+
+Additionally, there are other types of databases such as graph databases, key-value stores, and object-oriented databases.
+A graph database is composed of nodes that each store data and there relation to other nodes.
+A key-value store is a database that stores data in the form of key-value pairs.
+
+## Normalization
+Normalization is an important concept that improves database structure, maintains data integrity, and reduces data redundancy.
+
+## ACID
+ACID is a set of properties that guarantee that database transactions are processed reliably.
+A transaction is a logical unit of work that contains one or more database operations.
+
+## MongoDB supports transactions starting from version 4.0.

@@ -18,3 +18,13 @@ ACID is a set of properties that guarantee that database transactions are proces
 A transaction is a logical unit of work that contains one or more database operations.
 
 ## MongoDB supports transactions starting from version 4.0.
+
+## What is a no-sql database?
+NoSQL databases store data in the form of JavaScript Object Notation (JSON), key-value pair, wide-column, and graphs.
+
+## Benefits of NoSQL databases?
+- They do not require a predefined schema. This means that you can add or remove fields dynamically.
+- They are horizontally scalable. This means that you can add more servers to increase the performance of your database.
+  Horizontal scaling simply adds more instances of machines without first implementing improvements to existing specifications. By scaling out, you share the processing power and load balancing across multiple machines.
+  Horizontal scaling means adding more machines to the resource pool, rather than simply adding resources by scaling vertically.
+- They can easily stored unstructured data. Queries can be faster than RDBMS.

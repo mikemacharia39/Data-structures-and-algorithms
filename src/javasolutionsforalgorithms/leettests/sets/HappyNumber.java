@@ -2,6 +2,10 @@ package javasolutionsforalgorithms.leettests.sets;
 
 import java.util.HashSet;
 
+/**
+ * A happy number is one in which the sum of each digit squared eventually ends in the number 1.
+ * 23 is a happy number because 2^2 + 3^2 = 13, 1^2 + 3^2 = 10, 1^2 + 0^2 = 1
+ */
 public class HappyNumber {
 
     //=========== SOLUTION 1 ===========

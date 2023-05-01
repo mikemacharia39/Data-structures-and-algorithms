@@ -97,3 +97,26 @@ p
 @src/javasolutionsforalgorithms/hackerrank/list/SparseArrays.java,2\1\219693d0dcb54f2afc4bfab6821ecf9430497592
 t
 Dsrc/javasolutionsforalgorithms/hackerrank/arrays/InsertionSort1.java,c\0\c0eaaf5e8af208585c251377cce56a0dc604d2f5
+u
+Esrc/javasolutionsforalgorithms/hackerrank/stack/LargestRectangle.java,a\8\a80ae418f10b99308d74830611833dd5976c604a
+y
+Isrc/javasolutionsforalgorithms/hackerrank/math/NonDegenerateTriangle.java,6\6\6688257b1813c66c11c217fbbf62827d04419c06
+r
+Bsrc/javasolutionsforalgorithms/hackerrank/list/BeautifulPairs.java,4\8\480ce2ed4c59a18c4c81f3990fe7725385417e57
+p
+@src/javasolutionsforalgorithms/toptal/ChangeInDenominations.java,9\8\98e3747d1d1776f66d6e9367c702407cce66b7dc
+m
+=src/javasolutionsforalgorithms/general/NextWordPredictor.java,b\1\b144f54c80d02753b94bd983954a89cb7ee33e73
+\
+,src/databases_concepts/mysql/mysql_tests.sql,3\e\3e6fd10e7c95c6514562efe9fa39a70f235f34ce
+[
++src/databases_concepts/mongo/2. concepts.md,7\5\75e308f87c310442aa4b061f3c974c666d42da0d
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+Y
+)src/databases_concepts/mongo/1. basics.md,e\a\eae46803ffde60e6ea449c6b87e4637de527282d
+
+Osrc/javasolutionsforalgorithms/leettests/trees/LargestPerfectTreeInSubtree.java,d\e\dea3f575c01c89b6b0eedc80df39cc257e6bfd06
+b
+2src/databases_concepts/mongo/3. create_and_drop.md,2\5\25b1525841503ac63799c47eea88f6147cd71e06

@@ -17,7 +17,7 @@ package javasolutionsforalgorithms.general;
  *
  * Example 2:
  * num: 8
- *
+ * count: -1
  */
 public class DifferenceMaxAndMinOfNoUntilOriginal {
 

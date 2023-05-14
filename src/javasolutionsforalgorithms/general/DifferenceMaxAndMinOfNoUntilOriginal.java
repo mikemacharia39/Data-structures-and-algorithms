@@ -23,8 +23,9 @@ import java.util.Arrays;
  */
 public class DifferenceMaxAndMinOfNoUntilOriginal {
 
-    public static int countNoOfDiffUntilOriginalNumIsObtained_Has_Good_Concepts(int num) {
-        int counter = 0;// Initialize a counter variable to 0
+    public static int countNoOfDiffUntilOriginalNumIsObtained_has_good_concepts(int num) {
+        int counter = 1;// Initialize a counter variable to 0
+        int original = num;// Store the original number
         while (counter < 10) {// Loop up to 10 times
             int[] digits = new int[4];// Create an array to store the digits
             int i = 3;
@@ -36,8 +37,11 @@ public class DifferenceMaxAndMinOfNoUntilOriginal {
             Arrays.sort(digits);// Sort the digits in ascending order
             int smallest = digits[0] * 1000 + digits[1] * 100 + digits[2] * 10 + digits[3];// Calculate the smallest number that can be formed
             int largest = digits[3] * 1000 + digits[2] * 100 + digits[1] * 10 + digits[0];// Calculate the largest number that can be formed
+
+            System.out.printf("smallest: %d, largest: %d%n", smallest, largest);
+
             int diff = largest - smallest;// Calculate the difference between the largest and smallest numbers
-            if (diff == num) {// Check if the difference is equal to the original number
+            if (diff == original) {// Check if the difference is equal to the original number
                 return counter;// If so, return the number of iterations performed
             }
             num = diff;// Otherwise, set the input number to the difference and continue the loop

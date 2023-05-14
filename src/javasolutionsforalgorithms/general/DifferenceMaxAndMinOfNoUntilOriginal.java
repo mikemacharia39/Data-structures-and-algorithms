@@ -2,8 +2,22 @@ package javasolutionsforalgorithms.general;
 
 /**
  * This class is a solution to the following problem:
- * to find the difference between the largest and smallest digits of a number.
+ * to find the difference between the largest and smallest digits of a number until the original number is obtained.
  * The number is limited to 4 digits.
+ *
+ * You can also assume that in the case after 10 repetitions the number is still not the original number,
+ * then return -1.
+ *
+ * Example:
+ * num: 6174
+ * count: 1, diff: 6174
+ *
+ * Explanation:
+ * 7641 - 1467 = 6174
+ *
+ * Example 2:
+ * num: 8
+ *
  */
 public class DifferenceMaxAndMinOfNoUntilOriginal {
 
@@ -17,6 +31,7 @@ public class DifferenceMaxAndMinOfNoUntilOriginal {
             System.out.println("count: " + count + ", diff: " + num);
 
             if (count > 10 || num == 0) {
+                count = -1;
                 break;
             }
         }

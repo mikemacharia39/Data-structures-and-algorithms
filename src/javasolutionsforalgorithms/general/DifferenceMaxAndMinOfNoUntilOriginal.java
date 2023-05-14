@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.general;
 
+import java.util.Arrays;
+
 /**
  * This class is a solution to the following problem:
  * to find the difference between the largest and smallest digits of a number until the original number is obtained.
@@ -20,6 +22,29 @@ package javasolutionsforalgorithms.general;
  * count: -1
  */
 public class DifferenceMaxAndMinOfNoUntilOriginal {
+
+    public static int countNoOfDiffUntilOriginalNumIsObtained_Has_Good_Concepts(int num) {
+        int counter = 0;// Initialize a counter variable to 0
+        while (counter < 10) {// Loop up to 10 times
+            int[] digits = new int[4];// Create an array to store the digits
+            int i = 3;
+            while (i >= 0) {// Extract the digits and store them in the array
+                digits[i] = num % 10;
+                num /= 10;
+                i--;
+            }
+            Arrays.sort(digits);// Sort the digits in ascending order
+            int smallest = digits[0] * 1000 + digits[1] * 100 + digits[2] * 10 + digits[3];// Calculate the smallest number that can be formed
+            int largest = digits[3] * 1000 + digits[2] * 100 + digits[1] * 10 + digits[0];// Calculate the largest number that can be formed
+            int diff = largest - smallest;// Calculate the difference between the largest and smallest numbers
+            if (diff == num) {// Check if the difference is equal to the original number
+                return counter;// If so, return the number of iterations performed
+            }
+            num = diff;// Otherwise, set the input number to the difference and continue the loop
+            counter++;// Increment the counter
+        }
+        return -1;// Return -1 if the original number is not obtained after 10 iterations
+    }
 
     public static int countNoOfDiffUntilOriginalNumIsObtained(int num) {
         int count = 0;

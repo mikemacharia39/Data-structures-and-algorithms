@@ -38,7 +38,9 @@ public class DifferenceMaxAndMinOfNo {
         int ans = 0;
         for (int i = 0; i < digits.length; i++) {
             if (digits[i] > 0) {
-                ans = ans * 10 + i;
+                while (digits[i]-- > 0) {
+                    ans = ans * 10 + i;
+                }
             }
         }
 
@@ -71,6 +73,12 @@ public class DifferenceMaxAndMinOfNo {
     }
 
     public static void main(String[] args) {
-        System.out.println(numOfDiffCountBetweenSmallestAndLargestDigitsOfANumber(6124));
+        int num = 6124;
+        System.out.printf("Original num: %d, result: %d", num, numOfDiffCountBetweenSmallestAndLargestDigitsOfANumber(num));
+
+        System.out.println();
+
+        int num2 = 261421;
+        System.out.printf("Original num: %d, result: %d", num2, numOfDiffCountBetweenSmallestAndLargestDigitsOfANumber(num2));
     }
 }

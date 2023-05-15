@@ -3,7 +3,7 @@ package javasolutionsforalgorithms.general;
 public class ConvertDecimalToFraction {
 
     public static void main(String[] args) {
-        double[] nums = {0.625, 2.40, 0.5, 0.75, 0.6, 0.33};
+        double[] nums = {0.625, 2.40, 0.5, 0.75, 0.6, 0.33, 3.00};
         for (double num : nums) {
             System.out.println("num: " + num);
             System.out.println("convertDecimalToFraction: " + convertDecimalToFraction(num));
@@ -23,6 +23,10 @@ public class ConvertDecimalToFraction {
         int numerator = (int) num;
 
         int gcd = gcd(numerator, denominator);
+
+        if (gcd == 1) {
+            return Integer.toString(numerator);
+        }
 
         return numerator / gcd + "/" + denominator / gcd;
     }

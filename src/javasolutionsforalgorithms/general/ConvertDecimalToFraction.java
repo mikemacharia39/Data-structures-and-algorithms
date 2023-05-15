@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.general.files;
+package javasolutionsforalgorithms.general;
 
 public class ConvertDecimalToFraction {
 

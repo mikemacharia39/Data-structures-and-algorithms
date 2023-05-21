@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.general;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class ConvertDecimalToFraction {
 
     public static void main(String[] args) {
@@ -11,7 +14,7 @@ public class ConvertDecimalToFraction {
         }
     }
 
-    private static String convertDecimalToFraction(double num) {
+    private static String convertDecimalToFractionSln1(double num) {
         int denominator = 1;
 
         // multiply the number by 10 until it becomes an integer
@@ -39,5 +42,16 @@ public class ConvertDecimalToFraction {
 
         // Euclidean algorithm: Explaination: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
         return gcd(denominator, numerator % denominator);
+    }
+
+    public static String convertDecimalToFraction(double num) {
+        BigDecimal bd = BigDecimal.valueOf(num);
+        BigInteger numerator = bd.unscaledValue();
+        BigInteger denominator = BigDecimal.TEN.pow(bd.scale()).toBigInteger();
+        BigInteger gcd = numerator.gcd(denominator);
+        BigInteger simplifiedNumerator = numerator.divide(gcd);
+        BigInteger simplifiedDenominator = denominator.divide(gcd);
+
+        return simplifiedNumerator + "/" + simplifiedDenominator;
     }
 }

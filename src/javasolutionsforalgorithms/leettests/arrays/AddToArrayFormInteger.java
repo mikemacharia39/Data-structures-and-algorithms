@@ -3,14 +3,32 @@ package javasolutionsforalgorithms.leettests.arrays;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode.com/problems/add-to-array-form-of-integer/
+ * The array-form of an integer num is an array representing its digits in left to right order.
+ *
+ * For example, for num = 1321, the array form is [1,3,2,1].
+ * Given num, the array-form of an integer, and an integer k, return the array-form of the integer num + k.
+ *
+ * Example 1:
+ *
+ * Input: num = [1,2,0,0], k = 34
+ * Output: [1,2,3,4]
+ * Explanation: 1200 + 34 = 1234
+ * Example 2:
+ *
+ * Input: num = [2,7,4], k = 181
+ * Output: [4,5,5]
+ * Explanation: 274 + 181 = 455
+ */
 public class AddToArrayFormInteger {
 
     public List<Integer> addToArrayForm(int[] num, int k) {
         List<Integer> result = new ArrayList<>();
         int len = num.length - 1;
 
-        while(len >= 0 || k != 0) {
-            if(len >= 0) {
+        while (len >= 0 || k != 0) {
+            if (len >= 0) {
                 k += num[len--];
             }
             result.add(0, k % 10);
@@ -19,6 +37,7 @@ public class AddToArrayFormInteger {
 
         return result;
     }
+
     public List<Integer> addToArrayFormSolution3(int[] num, int k) {
         int kCopy = k;
         int digitsInK = 0;
@@ -53,12 +72,11 @@ public class AddToArrayFormInteger {
         }
 
         if (carry > 0) {
-            ans.add(0 , carry);
+            ans.add(0, carry);
         }
 
         return ans;
     }
-
 
 
     public List<Integer> addToArrayFormSln2(int[] num, int k) {

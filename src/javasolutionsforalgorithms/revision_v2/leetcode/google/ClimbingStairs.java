@@ -35,4 +35,9 @@ public class ClimbingStairs {
         }
         return n > 1 ? step2 : step1;
     }
+
+    public static void main(String[] args) {
+        ClimbingStairs climbingStairs = new ClimbingStairs();
+        System.out.println(climbingStairs.climbStairs(4));
+    }
 }

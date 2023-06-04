@@ -1,12 +1,44 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.google;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
 public class NumberOfGoodWaysToSplitAString {
 
 
+    /**
+     * Using a hashmap to keep track of the number of occurrences of each character
+     * @param s string input
+     * @return number of good splits
+     */
+    public int numSplits(String s) {
+        int n = s.length();
 
+        HashMap<Character, Integer> left = new HashMap<>();
+        HashMap<Character, Integer> right = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            right.put(s.charAt(i), right.getOrDefault(s.charAt(i), 0) +1);
+        }
+
+        int goodSplitCount = 0;
+
+        for (int i = 0; i < n; i++) {
+            left.put(s.charAt(i), left.getOrDefault(s.charAt(i), 0) +1);
+            right.put(s.charAt(i), right.get(s.charAt(i)) - 1);
+
+            if (right.get(s.charAt(i)) == 0) {
+                right.remove(s.charAt(i));
+            }
+
+            if (right.size() == left.size()) {
+                goodSplitCount++;
+            }
+        }
+
+        return goodSplitCount;
+    }
 
     /**
      * Naive approach - (Bad- because it run through all characters even

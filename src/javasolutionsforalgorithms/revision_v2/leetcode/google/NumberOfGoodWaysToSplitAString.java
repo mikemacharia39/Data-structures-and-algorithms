@@ -6,13 +6,50 @@ import java.util.Set;
 
 public class NumberOfGoodWaysToSplitAString {
 
+    /**
+     * Using 2 arrays to keep track of the number of occurrences of each character
+     * @param s string input
+     * @return number of good splits
+     */
+    public int numSplits(String s) {
+        int n = s.length();
+        int[] left = new int[26];
+        int[] right = new int[26];
+
+        // store the characters and their frequencies in their corresponding position
+        for (int i = 0; i < n; i++) {
+            right[s.charAt(i)]++; // increment the frequency of the character
+        }
+
+        int goodSplitCount = 0;
+        for(int i = 0; i < n; i++) {
+            right[s.charAt(i) - 'a']--;
+            left[s.charAt(i) - 'a']++;
+
+            if (getArraySize(right) == getArraySize(left)) {
+                goodSplitCount++;
+            }
+        }
+        return goodSplitCount;
+    }
+
+    private int getArraySize(int[] arr) {
+        int count = 0;
+        for (int freq : arr) {
+            if (freq != 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
     /**
      * Using a hashmap to keep track of the number of occurrences of each character
      * @param s string input
      * @return number of good splits
      */
-    public int numSplits(String s) {
+    public int numSplits_1(String s) {
         int n = s.length();
 
         HashMap<Character, Integer> left = new HashMap<>();

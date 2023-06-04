@@ -34,6 +34,28 @@ package javasolutionsforalgorithms.revision_v2.leetcode.leetcode.dp;
 public class MinCostClimbingStairs {
 
     /**
+     * In this algorithm, we use an array dp to store the minimum cost to
+     * reach each step. We initialize dp[0] and dp[1] with the costs of
+     * the first and second steps respectively.
+     * Then, we iterate from step 2 to n, calculating the minimum cost
+     * to reach each step by considering the cost of the current
+     * step (cost[i]) along with the minimum cost to reach the
+     * previous two steps. We take the minimum between dp[i - 1] + currentCost
+     * (if we take one step from the previous step) and dp[i - 2] +
+     * currentCost (if we take two steps from the previous step).
+     */
+    public int minCostClimbingStairs(int[] cost) {
+        int len = cost.length;
+        int[] dp = new int[len];
+        dp[0] = cost[0];
+        dp[1] = cost[1];
+        for (int i = 2; i < cost.length; i++) {
+            dp[i] = cost[i] + Math.min(dp[i-1], dp[i-2]);
+        }
+        return Math.min(dp[len-1], dp[len-2]);
+    }
+
+    /**
      * From where we are consider one step back and a step infront
      * Using this example [10,15,20]
      * prev = 10, curr = 15

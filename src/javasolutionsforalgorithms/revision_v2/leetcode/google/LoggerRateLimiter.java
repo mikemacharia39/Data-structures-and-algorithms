@@ -65,6 +65,43 @@ public class LoggerRateLimiter {
         // Time complexity: O(1)
         return true;
     }
+
+    public static void main(String[] args) {
+        LoggerRateLimiter logger = new LoggerRateLimiter();
+
+        // logging string "foo" at timestamp 1
+        System.out.println(logger.shouldPrintMessage(1, "foo")); //returns true;
+
+        // logging string "bar" at timestamp 2
+        System.out.println(logger.shouldPrintMessage(2,"bar")); //returns true;
+
+        // logging string "foo" at timestamp 3
+        System.out.println(logger.shouldPrintMessage(3,"food")); //returns false;
+
+        // logging string "bar" at timestamp 8
+        System.out.println(logger.shouldPrintMessage(8,"bars")); //returns false;
+
+        // logging string "foo" at timestamp 10
+        System.out.println(logger.shouldPrintMessage(10,"foods")); //returns false;
+
+        // logging string "foo" at timestamp 11
+        System.out.println(logger.shouldPrintMessage(11,"foo")); //returns true;
+
+        // logging string "foo" at timestamp 12
+        System.out.println(logger.shouldPrintMessage(12,"barred")); //returns true;
+
+        // logging string "foo" at timestamp 13
+        System.out.println(logger.shouldPrintMessage(13,"fooder")); //returns false;
+
+        // logging string "bar" at timestamp 14
+        System.out.println(logger.shouldPrintMessage(14,"barz")); //returns false;
+
+        // logging string "foo" at timestamp 15
+        System.out.println(logger.shouldPrintMessage(15,"fooders")); //returns false;
+
+
+        System.out.println(logger.map);
+    }
 }
 
 

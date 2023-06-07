@@ -1,6 +1,7 @@
 package javasolutionsforalgorithms.general;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Java Collection Framework Hierarchy
@@ -72,6 +73,7 @@ public class CollectionConcepts {
         sortByValueDesc(map);
         sortByKeyAndValue(map);
         extractValuesFromMapIntoList(map);
+        getThe2Largest(map);
     }
 
     public static void sortByKey(Map<String, Integer> map) {
@@ -116,6 +118,37 @@ public class CollectionConcepts {
                         .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
 
         System.out.println("sortByKeyAndValue: " + sortedMap);
+    }
+
+    public static void getThe2Largest(Map<String, Integer> map) {
+        List<String> ans = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .limit(2)
+                .map(a -> a.getKey())
+                .collect(Collectors.toList());
+
+        System.out.println("getThe2Largest: " + ans);
+
+        String[] ans2 = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .limit(2)
+                .map(Map.Entry::getKey)
+                .toArray(String[]::new);
+
+        System.out.println("getThe2Largest: " + Arrays.toString(ans2));
+
+        // return the 2 largest values
+        int[] ans3 = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .limit(2)
+                .mapToInt(Map.Entry::getValue)
+                .toArray();
+
+        System.out.println("getThe2Largest: " + Arrays.toString(ans3));
+
     }
 
     public static void extractValuesFromMapIntoList(Map<String, Integer> map) {

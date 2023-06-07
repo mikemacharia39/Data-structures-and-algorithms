@@ -99,8 +99,6 @@ y
 Isrc/javasolutionsforalgorithms/hackerrank/math/NonDegenerateTriangle.java,6\6\6688257b1813c66c11c217fbbf62827d04419c06
 r
 Bsrc/javasolutionsforalgorithms/hackerrank/list/BeautifulPairs.java,4\8\480ce2ed4c59a18c4c81f3990fe7725385417e57
-p
-@src/javasolutionsforalgorithms/toptal/ChangeInDenominations.java,9\8\98e3747d1d1776f66d6e9367c702407cce66b7dc
 m
 =src/javasolutionsforalgorithms/general/NextWordPredictor.java,b\1\b144f54c80d02753b94bd983954a89cb7ee33e73
 \

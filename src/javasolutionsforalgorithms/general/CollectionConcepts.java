@@ -74,6 +74,7 @@ public class CollectionConcepts {
         sortByKeyAndValue(map);
         extractValuesFromMapIntoList(map);
         getThe2Largest(map);
+        getTheLargest(map);
     }
 
     public static void sortByKey(Map<String, Integer> map) {
@@ -150,6 +151,20 @@ public class CollectionConcepts {
         System.out.println("getThe2Largest: " + Arrays.toString(ans3));
 
     }
+
+
+    public static void getTheLargest(Map<String, Integer> map) {
+        Integer largest = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
+                .limit(1)
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .get();
+
+        System.out.println("getTheLargest: " + largest);
+    }
+
 
     public static void extractValuesFromMapIntoList(Map<String, Integer> map) {
 

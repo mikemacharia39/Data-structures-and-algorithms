@@ -6,6 +6,31 @@ import java.util.TreeMap;
 
 public class MostFrequentEvenElement {
 
+    public int mostFrequentEven_0(int[] nums) {
+        int[] numbers = new int[100000];
+
+        boolean hasEvenNum = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                numbers[nums[i]]++;
+                hasEvenNum = true;
+            }
+        }
+
+        if (!hasEvenNum) return -1;
+
+        int element = Integer.MIN_VALUE;
+        int maxFreq = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > maxFreq) {
+                element = i;
+                maxFreq = numbers[i];
+            }
+        }
+
+        return element;
+    }
+
     public int mostFrequentEven_1(int[] nums) {
         Map<Integer, Integer> map = new TreeMap<>();
 

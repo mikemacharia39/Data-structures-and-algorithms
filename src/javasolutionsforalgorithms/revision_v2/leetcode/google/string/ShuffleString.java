@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.leetcode.google;
+package javasolutionsforalgorithms.revision_v2.leetcode.google.string;
 
 /**
  * <a href="https://leetcode.com/problems/shuffle-string/">...</a>

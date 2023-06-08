@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.leetcode.google;
+package javasolutionsforalgorithms.revision_v2.leetcode.google.unstructured;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

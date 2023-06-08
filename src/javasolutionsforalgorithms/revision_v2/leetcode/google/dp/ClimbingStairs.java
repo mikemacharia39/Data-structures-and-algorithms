@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.leetcode.google;
+package javasolutionsforalgorithms.revision_v2.leetcode.google.dp;
 
 /**
  * <a href="https://leetcode.com/problems/climbing-stairs/">...</a>

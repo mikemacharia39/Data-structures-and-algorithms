@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.leetcode.google;
+package javasolutionsforalgorithms.revision_v2.leetcode.google.arrays;
 
 import java.util.ArrayList;
 import java.util.HashMap;

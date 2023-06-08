@@ -6,6 +6,34 @@ import java.util.TreeMap;
 
 public class MostFrequentEvenElement {
 
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     * @param nums array of integers
+     * @return the most frequent even element in the array. If there is no even element, return -1
+     */
+    public int mostFrequentEven(int[] nums) {
+        int[] ans = new int[100000];
+
+        int maxFreq = Integer.MIN_VALUE;
+        int result = nums[0];
+        boolean hasEvenNum = false;
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (num % 2 == 0) {
+                int freq = ans[num] + 1;
+                ans[num] = freq;
+                hasEvenNum = true;
+                if (freq > maxFreq || (freq == maxFreq && num < result)) {
+                    maxFreq = ans[num];
+                    result = num;
+                }
+            }
+        }
+
+        return hasEvenNum ? result : -1;
+    }
+
     public int mostFrequentEven_0(int[] nums) {
         int[] numbers = new int[100000];
 

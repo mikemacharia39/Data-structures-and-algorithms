@@ -50,4 +50,28 @@ public class SearchA2DMatrix {
 
         return false;
     }
+
+    /**
+     * Time complexity: O(m * n) because we are iterating through the matrix, looking for the target
+     * Space complexity: O(m * n) because we are creating a new array of size m * n
+     * @param matrix 2D matrix
+     * @param target target number to search
+     * @return true if found, false otherwise
+     */
+    public boolean searchMatrix_1(int[][] matrix, int target) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int n = rows * cols;
+        int[] numbers = new int[n];
+        int count = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] == target) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

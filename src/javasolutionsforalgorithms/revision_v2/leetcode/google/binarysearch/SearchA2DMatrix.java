@@ -65,7 +65,7 @@ public class SearchA2DMatrix {
      * Explanation: We are checking where the target number could be in the matrix.
      * If not found, we return false. If found, we are creating a new array of size n (number of columns)
      * We then do a binary search on the matrix to find the row where the target number could be.
-     * Time complexity: O(log(m * n)), because we are doing binary search on a matrix
+     * Time complexity: O(m + log(n)), where m is the number of rows and n is the number of columns
      * space complexity: O(n), because we are creating a new array of size n (number of columns
      * @param matrix 2D matrix
      * @param target target number to search

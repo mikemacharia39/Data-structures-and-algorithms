@@ -18,6 +18,50 @@ package javasolutionsforalgorithms.revision_v2.leetcode.google.binarysearch;
 public class SearchA2DMatrix {
 
     /**
+     * The time complexity of the algorithm is O(rows + log(cols)), where "rows" is the number of rows in the matrix
+     * and "cols" is the number of columns in the matrix.
+     *
+     * The first loop iterates through the rows of the matrix, which has a time complexity of O(rows).
+     *
+     * After finding the appropriate row, the algorithm performs binary search within that row to find the target element.
+     * The binary search has a time complexity of O(log(cols)), where "cols" is the number of columns in the matrix.
+     *
+     * Therefore, the overall time complexity is O(rows + log(cols)).
+     */
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int foundRow = -1;
+        for (int i = 0; i < rows; i++) {
+            if (matrix[i][0] <= target && matrix[i][cols-1] >= target) {
+                foundRow = i;
+                break;
+            }
+        }
+
+        if (foundRow == -1) return false;
+
+        int left = 0;
+        int right = cols;
+
+        while (left < right) {
+            int mid = left + (right - left)/2;
+
+            if (matrix[foundRow][mid] == target) {
+                return true;
+            }
+
+            if (matrix[foundRow][mid] > target) {
+                right = mid;
+            } else if (matrix[foundRow][mid] < target) {
+                left = mid + 1;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Explanation: We are checking where the target number could be in the matrix.
      * If not found, we return false. If found, we are creating a new array of size n (number of columns)
      * We then do a binary search on the matrix to find the row where the target number could be.
@@ -27,7 +71,7 @@ public class SearchA2DMatrix {
      * @param target target number to search
      * @return true if found, false otherwise
      */
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public boolean searchMatrix_1(int[][] matrix, int target) {
         int rows = matrix.length;
         int cols = matrix[0].length;
         int foundRow = -1;
@@ -76,7 +120,7 @@ public class SearchA2DMatrix {
      * @param target target number to search
      * @return true if found, false otherwise
      */
-    public boolean searchMatrix_1(int[][] matrix, int target) {
+    public boolean searchMatrix__2(int[][] matrix, int target) {
         int rows = matrix.length;
         int cols = matrix[0].length;
         int n = rows * cols;

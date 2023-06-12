@@ -4,6 +4,14 @@ import java.util.HashSet;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    /**
+     * This solution uses a boolean array to keep track of visited characters. The fast slow pointer iterates over the string
+     * while comparing the current character with the visited array. If the character is visited, then we break the inner loop
+     * Time complexity: O(n^2)
+     * Space complexity: O(1)
+     * @param s
+     * @return
+     */
     public int lengthOfLongestSubstring_1(String s) {
         int n = s.length();
         int max = 0;
@@ -22,6 +30,13 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return max;
     }
 
+    /**
+     * This solution uses a HashSet to keep track of visited characters. The fast slow pointer iterates over the string
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     * @param s
+     * @return
+     */
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
         HashSet<Character> set = new HashSet<>();

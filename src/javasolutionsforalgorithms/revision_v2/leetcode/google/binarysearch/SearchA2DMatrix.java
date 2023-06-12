@@ -121,14 +121,10 @@ public class SearchA2DMatrix {
      * @return true if found, false otherwise
      */
     public boolean searchMatrix__2(int[][] matrix, int target) {
-        int rows = matrix.length;
         int cols = matrix[0].length;
-        int n = rows * cols;
-        int[] numbers = new int[n];
-        int count = 0;
-        for (int i = 0; i < rows; i++) {
+        for (int[] ints : matrix) {
             for (int j = 0; j < cols; j++) {
-                if (matrix[i][j] == target) {
+                if (ints[j] == target) {
                     return true;
                 }
             }

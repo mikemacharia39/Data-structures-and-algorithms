@@ -29,7 +29,7 @@ package javasolutionsforalgorithms.revision_v2.leetcode.leetcode.arrays;
 public class MergeSortedArray {
 
     /**
-     * Time complexity: O(m) since it is the longest length of the two arrays
+     * Time complexity: O(m + n)
      * Space complexity: O(n)
      */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -69,5 +69,31 @@ public class MergeSortedArray {
             j++;
             k++;
         }
+    }
+
+    /**
+     * Time complexity: O(m+ n)
+     * Space complexity: O(1)
+     */
+    public void merge1(int[] nums1, int m, int[] nums2, int n) {
+        int p1 = m - 1;
+        int p2 = n - 1;
+        int lastIndex = m + n - 1;
+
+        while (p1 >= 0 && p2 >= 0) {
+            if (nums1[p1] > nums2[p2]) {
+                nums1[lastIndex--] = nums1[p1--];
+            } else {
+                nums1[lastIndex--] = nums2[p2--];
+            }
+        }
+
+        // Copy any remaining elements from nums2 to nums1
+        while (p2 >= 0) {
+            nums1[lastIndex--] = nums2[p2--];
+        }
+
+        // No need to handle remaining elements in nums1
+        // They are already in their correct positions
     }
 }

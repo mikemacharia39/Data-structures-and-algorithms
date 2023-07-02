@@ -21,8 +21,6 @@ g
 7src/javasolutionsforalgorithms/general/TreePrinter.java,e\a\eadb2533c3996720b03a7cb91fa816ef096bf733
 v
 Fsrc/javasolutionsforalgorithms/hackerrank/string/JavaStringTokens.java,8\b\8b8f261dd5f9a8e532d4c689505009f3f6bda770
-€
-Psrc/javasolutionsforalgorithms/hackerrank/general/SherlockAndTheValidString.java,6\8\681669bd7382f135c0c6fb4ec20e20920b589342
 {
 Ksrc/javasolutionsforalgorithms/general/files/testfiles/read_file_sample.txt,b\e\be283e2b07463a5950de99ffd62edfaf5b85630c
 o
@@ -57,8 +55,6 @@ i
 9src/javasolutionsforalgorithms/leettests/WordSubsets.java,c\b\cb067b32f652144e3e33f84f21b1eaf3170518c3
 y
 Isrc/javasolutionsforalgorithms/hackerrank/string/SubsequenceInString.java,a\6\a6e147e1e13a220eac6dda2681cc01a516b3d150
-r
-Bsrc/javasolutionsforalgorithms/neetcode/set/ContainsDuplicate.java,e\3\e3bebe94bea7f7bc8e72babbd9d393251d0ee6ac
 k
 ;src/javasolutionsforalgorithms/branches/ParseSampleCSV.java,d\9\d9ee7a03be14e1bfd939f08ef4c192b799e1876e
 v

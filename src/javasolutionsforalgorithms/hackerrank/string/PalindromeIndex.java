@@ -56,6 +56,12 @@ public class PalindromeIndex {
         return true;
     }
 
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     * @param s string
+     * @return true if string is palindrome
+     */
     private boolean isPalindrome(String s) {
         int left = 0;
         int right = s.length() - 1;

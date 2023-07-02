@@ -14,6 +14,22 @@ package javasolutionsforalgorithms.revision_v2.leetcode.leetcode.string;
  */
 public class LongestPalindromicSubstring {
 
+    public String longestPalindrome(String s) {
+        int n = s.length();
+        String longest = "";
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j <= n; j++) {
+                String subString = s.substring(i, j);
+                if (subString.length() > longest.length() &&
+                        isPalindrome(subString)) {
+                    longest = subString;
+                }
+            }
+        }
+
+        return longest;
+    }
+
     public boolean isPalindrome(String str) {
         int left = 0;
         int right = str.length() - 1;

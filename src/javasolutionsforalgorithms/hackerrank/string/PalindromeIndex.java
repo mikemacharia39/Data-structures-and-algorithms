@@ -45,7 +45,7 @@ public class PalindromeIndex {
         return -1;
     }
 
-    private boolean isPalindrome(String s) {
+    private boolean isPalindrome1(String s) {
         int right = s.length() - 1;
         for (int left = 0; left < s.length()/2; left++) {
             if (s.charAt(left) != s.charAt(right)) {
@@ -53,6 +53,22 @@ public class PalindromeIndex {
             }
             right--;
         }
+        return true;
+    }
+
+    private boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
         return true;
     }
 

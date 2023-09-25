@@ -26,6 +26,14 @@ public class Singleton {
     private Singleton() {
     }
 
+    /**
+     * Multi-threaded programs may often come to a situation where multiple threads try to access the same resources and
+     * finally produce erroneous and unforeseen results.
+     *
+     * Why use Java Synchronization?
+     * Java Synchronization is used to make sure by some synchronization method that only one thread can access the
+     * resource at a given point in time. It is mainly used to prevent thread interference and thread deadlock.
+     */
     public static synchronized Singleton getInstance() {
         if (instance == null) {
             instance = new Singleton();

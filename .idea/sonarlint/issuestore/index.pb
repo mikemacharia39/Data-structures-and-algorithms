@@ -158,3 +158,13 @@ Osrc/javasolutionsforalgorithms/projecteuler/numbers/LargestProductInSeries.java
 Vsrc/javasolutionsforalgorithms/projecteuler/numbers/SmallestEvenlyDivisibleNumber.java,8\6\86cc4a0729ea16e2457315726dd58ebf419c58a0
 €
 Psrc/javasolutionsforalgorithms/hackerrank/general/SherlockAndTheValidString.java,6\8\681669bd7382f135c0c6fb4ec20e20920b589342
+”
+dsrc/javasolutionsforalgorithms/revision_v2/leetcode/leetcode/string/LongestPalindromicSubstring.java,d\4\d42fbb188095625f9a6aa98ee1a5f1f0203e9dfd
+…
+Usrc/javasolutionsforalgorithms/revision_v2/leetcode/google/math/PalindromeNumber.java,5\f\5f2bfcd4f7db563e3e4b1ad446caf13cc3ef7224
+ž
+nsrc/javasolutionsforalgorithms/revision_v2/leetcode/leetcode/arrays/ConvertArrayInto2DArrayWithConditions.java,2\e\2e1836c3320dcaf5c5626fe97fb44bc548a28062
+u
+Esrc/javasolutionsforalgorithms/hackerrank/string/PalindromeIndex.java,c\e\ce7f2fca5a3cc0e5dccede4e18cf449cf55b6596
+…
+Usrc/javasolutionsforalgorithms/revision_v2/leetcode/google/arrays/InsertInterval.java,c\4\c48a7de74e5a50a0e5cfd11ad959a58642bf82cc

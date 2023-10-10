@@ -37,10 +37,19 @@ public class AnagramMidEquality {
             if (index == -1){
                 count++;
             } else {
+                // this removes the character at the index, so that it is not used again in subsequent iterations
                 s2 = s2.substring(0,index)+s2.substring(index+1);
             }
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        String[] testStrings = {"aaabbb", "ab", "abc", "mnop", "xyyx", "xaxbbbxx"};
+
+        for (String testString : testStrings) {
+            System.out.println("TestString: " + testString + "\t" + AnagramMidEquality.anagram(testString));
+        }
     }
 
 }

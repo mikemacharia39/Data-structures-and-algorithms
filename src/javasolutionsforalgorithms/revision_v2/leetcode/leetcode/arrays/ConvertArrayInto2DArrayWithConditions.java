@@ -1,11 +1,6 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.leetcode.arrays;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -101,5 +96,13 @@ public class ConvertArrayInto2DArrayWithConditions {
         }
 
         return ans;
+    }
+
+    public static void main(String[] args) {
+        ConvertArrayInto2DArrayWithConditions arrayInto2DArrayWithConditions = new ConvertArrayInto2DArrayWithConditions();
+
+        int[] nums = {1,3,4,1,2,3,1};
+
+        System.out.println(arrayInto2DArrayWithConditions.findMatrix(nums));
     }
 }

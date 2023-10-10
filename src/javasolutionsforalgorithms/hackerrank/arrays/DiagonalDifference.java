@@ -52,4 +52,14 @@ public class DiagonalDifference {
 
         return Math.abs(rlsum - lrsum);
     }
+
+    public static void main(String[] args) {
+        int difference = DiagonalDifference.diagonalDifference(List.of(
+                List.of(11, 2,  4),
+                List.of(4,  5,  6),
+                List.of(10, 8, -12)
+        ));
+
+        System.out.println(difference);
+    }
 }

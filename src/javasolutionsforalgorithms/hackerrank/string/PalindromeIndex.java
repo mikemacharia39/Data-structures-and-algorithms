@@ -28,9 +28,10 @@ public class PalindromeIndex {
         }
 
         int right = s.length() - 1;
-        for (int left = 0; left < s.length()/2; left++) {
+        int mid = s.length()/2;
+        for (int left = 0; left < mid; left++) {
             String removeFromLeft =  s.substring(0, left) + s.substring(left + 1);
-            String removeFromRight =  s.substring(0, right) + s.substring(right + 1);
+            String removeFromRight =  s.substring(mid, right) + s.substring(right + 1);
 
             if (isPalindrome(removeFromLeft)) {
                 return left;

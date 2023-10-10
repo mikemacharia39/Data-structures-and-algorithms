@@ -23,17 +23,38 @@ public class PalindromeNumber {
      * Time complexity: O(n)
      */
     public boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        }
+
+        if (x == 0) {
+            return true;
+        }
+
+        if (x % 10 == 0) {
+            return false;
+        }
+
         int duplicate = x;
 
         int sum = 0;
         while (duplicate > 0) {
             int modulus = duplicate % 10;
+            duplicate /= 10;
 
             sum = (sum * 10) + modulus;
-
-            duplicate /= 10;
         }
 
         return x == sum;
+    }
+
+    public static void main(String[] args) {
+        PalindromeNumber palindromeNumber = new PalindromeNumber();
+
+        int[] testNumbers = {121, -121, 345676543};
+
+        for (int num : testNumbers) {
+            System.out.println("Is " + num + " a palindrome number? " + palindromeNumber.isPalindrome(num));
+        }
     }
 }

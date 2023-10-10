@@ -65,4 +65,12 @@ public class BalancedBrackets {
 
         return stack.isEmpty() ? "YES" : "NO";
     }
+
+    public static void main(String[] args) {
+        String[] testCases = {"{[()]}", "{[(])}", "{{[[(())]]}}"};
+
+        for (String testCase: testCases) {
+            System.out.println(testCase + " is balanced? " + BalancedBrackets.isBalanced(testCase));
+        }
+    }
 }

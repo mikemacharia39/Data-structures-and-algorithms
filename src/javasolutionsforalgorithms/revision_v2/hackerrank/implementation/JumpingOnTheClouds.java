@@ -23,6 +23,19 @@ public class JumpingOnTheClouds {
 
     public static int jumpingOnClouds(List<Integer> c) {
         int totalJumps = 0;
-
+        int i = 0;
+        while (i < c.size() - 1) {
+            if (i + 2 < c.size()) {
+                if (c.get(i + 2) == 0) {
+                    i = i + 2;
+                } else {
+                    i++;
+                }
+            } else {
+                i++;
+            }
+            totalJumps++;
+        }
+        return totalJumps;
     }
 }

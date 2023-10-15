@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
+import java.util.Arrays;
+
 /**
  * <a href="https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/">...</a>
  *
@@ -11,4 +13,22 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  * Return the minimum possible sum of new1 and new2.
  */
 public class MinimumSumofFourDigitNumberAfterSplitting {
+    // these is greedy approach
+    // the idea here is to minimize the value
+    public int minimumSum(int num) {
+        int[] digits = new int[4];
+
+        int i = 0;
+        while (num > 0) {
+            int modulus = num % 10;
+            num = num / 10;
+            digits[i++] = modulus;
+        }
+
+        Arrays.sort(digits);
+
+        int sum = (digits[0] * 10 + digits[2]) + (digits[1] * 10 + digits[3]);
+
+        return sum;
+    }
 }

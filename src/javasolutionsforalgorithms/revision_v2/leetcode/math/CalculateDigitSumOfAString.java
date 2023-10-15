@@ -32,7 +32,7 @@ import java.util.List;
 public class CalculateDigitSumOfAString {
 
     /**
-     * Time complexity: O(n*k)
+     * Time complexity: O(n)
      * @param s
      * @param k
      * @return

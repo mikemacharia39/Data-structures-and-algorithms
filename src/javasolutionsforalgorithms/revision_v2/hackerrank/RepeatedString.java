@@ -12,4 +12,33 @@ package javasolutionsforalgorithms.revision_v2.hackerrank;
  */
 public class RepeatedString {
 
+    public static long repeatedString(String s, long n) {
+        long strLen = s.length();
+
+        long countPerChunk = 0;
+        char a = 'a';
+        for (int i = 0; i < strLen; i++) {
+            if (a == s.charAt(i)) {
+                countPerChunk += 1;
+            }
+        }
+
+        if (strLen == n) {
+            return countPerChunk;
+        }
+
+        long chunks = n/strLen;
+
+        long rem = n%strLen;
+
+        long totalSum = countPerChunk * chunks;
+
+        for (int j = 0; j < rem; j++) {
+            if (a == s.charAt(j)) {
+                totalSum += 1;
+            }
+        }
+
+        return totalSum;
+    }
 }

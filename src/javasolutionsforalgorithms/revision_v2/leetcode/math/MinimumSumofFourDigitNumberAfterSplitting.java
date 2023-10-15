@@ -31,4 +31,23 @@ public class MinimumSumofFourDigitNumberAfterSplitting {
 
         return sum;
     }
+
+    /**
+     * Same as above but using string
+     * Explanation: this uses greedy approach to minimize the value of the number by putting the smallest digits
+     * in the front and the largest digits in the back of the number
+     * Time complexity: O(nlogn) for sorting
+     * @param num
+     * @return
+     */
+    public int minimumSum1(int num) {
+        char[] characters = Integer.toString(num).toCharArray();
+
+        Arrays.sort(characters);
+
+        int sum = Integer.parseInt("" + characters[0] + characters[2]) +
+                Integer.parseInt("" + characters[1] + characters[3]);
+
+        return sum;
+    }
 }

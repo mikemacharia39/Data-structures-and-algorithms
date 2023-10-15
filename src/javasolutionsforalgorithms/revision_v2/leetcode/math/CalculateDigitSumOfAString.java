@@ -27,4 +27,16 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  * Now, s.length <= k, so we return "135" as the answer.
  */
 public class CalculateDigitSumOfAString {
+
+    /**
+     * Adds the numbers in the each index of the list
+     */
+    private String addNums(String subNums) {
+        char[] charNums = subNums.toCharArray();
+        int sum = 0;
+        for (char c : charNums) {
+            sum += c - '0'; // Character.getNumericValue(c);
+        }
+        return Integer.toString(sum);
+    }
 }

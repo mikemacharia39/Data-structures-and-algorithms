@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <a href="https://leetcode.com/problems/calculate-digit-sum-of-a-string/">...</a>
  *
@@ -29,7 +32,75 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
 public class CalculateDigitSumOfAString {
 
     /**
+     * This is pretty brute force
+     * Time complexity: O(n^2)
+     */
+    public String digitSum1(String s, int k) {
+        if (s.length() <= k) {
+            return s;
+        }
+
+        String ans = "";
+        List<String> divided = new ArrayList<>();
+        divided.addAll(divider(s, k));
+        int finalSize = checkDividedSize(divided);
+        while (finalSize > k) {
+            s = merge(divided);
+            divided.clear();
+
+            divided.addAll(divider(s, k));
+
+            finalSize = checkDividedSize(divided);
+        }
+
+        return merge(divided);
+    }
+
+    /**
+     * Checks if the size of the divided strings inside the list
+     */
+    private int checkDividedSize(List<String> list) {
+        int size = 0;
+        for (String s : list) {
+            size += s.length();
+        }
+        return size;
+    }
+
+    /**
+     * merge the subdivided list to a string
+     */
+    private String merge(List<String> list) {
+        StringBuilder sb = new StringBuilder();
+        for (String s : list) {
+            sb.append(s);
+        }
+        return sb.toString();
+    }
+
+    /**
+     * Divides the string to a list
+     * Time complexity: O(n)
+     */
+    private List<String> divider(String s, int k) {
+        List<String> divided = new ArrayList<>();
+        int i = 0;
+        while (i < s.length() - k) {
+            String substring = s.substring(i, i+k);
+            divided.add(addNums(substring));
+
+            i = i+k;
+        }
+
+        if (i < s.length()) {
+            divided.add(addNums(s.substring(i)));
+        }
+        return divided;
+    }
+
+    /**
      * Adds the numbers in the each index of the list
+     * Time complexity: O(n)
      */
     private String addNums(String subNums) {
         char[] charNums = subNums.toCharArray();

@@ -3,6 +3,7 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.implementation;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
  * There is a new mobile game that starts with consecutively numbered clouds.
  * Some of the clouds are thunderheads and others are cumulus.
  * The player can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus 1 or 2.

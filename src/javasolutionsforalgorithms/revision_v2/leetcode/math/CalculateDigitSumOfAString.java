@@ -32,6 +32,36 @@ import java.util.List;
 public class CalculateDigitSumOfAString {
 
     /**
+     * Time complexity: O(n*k)
+     * @param s
+     * @param k
+     * @return
+     */
+    public String digitSum(String s, int k) {
+        StringBuilder sb = new StringBuilder(s);
+
+        while(sb.length() > k) {
+            StringBuilder newString = new StringBuilder();
+            int i = 0; // iterates over the entire string
+
+            while (i < sb.length()) {
+                int sum = 0;
+                int count = 0; // iterates over the k characters
+
+                while (i < sb.length() && count < k) {
+                    sum += sb.charAt(i) - '0';
+                    i++;
+                    count++;
+                }
+                newString.append(sum);
+            }
+            sb = newString; // update the string
+        }
+
+        return sb.toString();
+    }
+
+    /**
      * This is pretty brute force
      * Time complexity: O(n^2)
      */

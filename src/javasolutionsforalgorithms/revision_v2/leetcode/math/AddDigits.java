@@ -19,7 +19,21 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  */
 public class AddDigits {
 
+    /**
+     * Easy to understand
+     */
+    public int addDigits1(int num) {
 
+        if (num < 10) {
+            return num;
+        }
+
+        while (num > 9) {
+            num = addHelper(num);
+        }
+
+        return num;
+    }
 
     /**
      * Time complexity: O(n)

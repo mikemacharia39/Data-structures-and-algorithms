@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * There is a string, s, of lowercase English letters that is repeated infinitely many times. Given an integer, n,
  * find and print the number of letter a's in the first n letters of the infinite string.
@@ -40,5 +43,15 @@ public class RepeatedString {
         }
 
         return totalSum;
+    }
+
+    public static void main(String[] args) {
+        Map<String, Long> testCases = Map.of(
+                "aba", 10L, "a", 1000000000000L, "abcac", 10L
+        );
+
+        for (Map.Entry<String, Long> entry : testCases.entrySet()) {
+            System.out.println(repeatedString(entry.getKey(), entry.getValue()));
+        }
     }
 }

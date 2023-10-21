@@ -1,5 +1,9 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.array;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Given an array of integers, determine the minimum number of elements to delete to leave only elements of equal value.
  *
@@ -21,4 +25,23 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.array;
  */
 public class EqualizeTheArray {
 
+    public static int equalizeArray(List<Integer> arr) {
+        if (arr.size() < 2) {
+            return 0;
+        }
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        int frequency = 0;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > frequency) {
+                frequency = entry.getValue();
+            }
+        }
+
+        return arr.size() - frequency;
+    }
 }

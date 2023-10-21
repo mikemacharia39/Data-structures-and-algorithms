@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/equality-in-a-array/problem">...</a>
+ *
  * Given an array of integers, determine the minimum number of elements to delete to leave only elements of equal value.
  *
  * Example

@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 public class ReverseIntArray {
 
-    public static int[] reverseIntegerArray(int[] numbers) {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     * @param numbers
+     * @return
+     */
+    public static int[] reverseIntegerArray1(int[] numbers) {
         int start = 0;
         int end = numbers.length - 1;
 
@@ -16,6 +22,35 @@ public class ReverseIntArray {
             end--;
         }
 
+        return numbers;
+    }
+
+    /**
+     * This solution uses recursion
+     * @param numbers
+     * @return
+     */
+    public static int[] reverseIntegerArray(int[] numbers) {
+        return reverseArray(numbers, 0, numbers.length - 1);
+    }
+
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     * @param numbers
+     * @param start
+     * @param end
+     * @return
+     */
+    private static int[] reverseArray(int[] numbers, int start, int end) {
+        if (start >= end) {
+            return numbers;
+        }
+
+        int temp = numbers[start];
+        numbers[start] = numbers[end];
+        numbers[end] = temp;
+        reverseArray(numbers, start + 1, end - 1);
         return numbers;
     }
 

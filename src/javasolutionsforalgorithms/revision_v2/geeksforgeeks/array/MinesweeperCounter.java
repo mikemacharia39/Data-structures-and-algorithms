@@ -62,6 +62,44 @@ public class MinesweeperCounter {
         return count;
     }
 
+    public int countMines1(String[][] minesweeper, int rows, int cols, int i, int j) {
+        int count = 0;
+        // left
+        if (i - 1 >= 0 && minesweeper[i-1][j].equals("*")) {
+            count++;
+        }
+        // right
+        if (i + 1 < rows && minesweeper[i+1][j].equals("*")) {
+            count++;
+        }
+        // top
+        if (j - 1 >= 0 && minesweeper[i][j-1].equals("*")) {
+            count++;
+        }
+        // bottom
+        if (j + 1 < cols && minesweeper[i][j+1].equals("*")) {
+            count++;
+        }
+        // top left
+        if (i - 1 >= 0 && j - 1 >= 0 && minesweeper[i-1][j-1].equals("*")) {
+            count++;
+        }
+        // top right
+        if (i - 1 >= 0 && j + 1 < cols && minesweeper[i-1][j+1].equals("*")) {
+            count++;
+        }
+        // bottom left
+        if (i + 1 < rows && j - 1 >= 0 && minesweeper[i+1][j-1].equals("*")) {
+            count++;
+        }
+        // bottom right
+        if (i + 1 < rows && j + 1 < cols && minesweeper[i+1][j+1].equals("*")) {
+            count++;
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
         MinesweeperCounter minesweeperCounter = new MinesweeperCounter();
 

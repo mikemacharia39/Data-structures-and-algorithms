@@ -25,8 +25,8 @@ public class JumpingOnTheClouds {
     public static int jumpingOnClouds(List<Integer> c) {
         int totalJumps = 0;
         int i = 0;
-        while (i < c.size() - 1) {
-            if (i + 2 < c.size()) {
+        while (i < c.size() - 1) { // we don't need to jump on the last cloud
+            if (i + 2 < c.size()) {// we can jump 2 clouds
                 if (c.get(i + 2) == 0) {
                     i = i + 2;
                 } else {

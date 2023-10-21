@@ -22,10 +22,10 @@ import java.util.Arrays;
 public class MinesweeperCounter {
 
     int[][] sides = {
-            {-1, 0}, // left
-            {1, 0}, // right
-            {0, -1}, // top
-            {0, 1}, // bottom
+            {-1, 0}, // top
+            {1, 0}, // bottom
+            {0, -1}, // left
+            {0, 1}, // right
             {-1, -1}, // top left
             {-1, 1}, // top right
             {1, -1}, // bottom left
@@ -64,19 +64,19 @@ public class MinesweeperCounter {
 
     public int countMines1(String[][] minesweeper, int rows, int cols, int i, int j) {
         int count = 0;
-        // left
+        // top
         if (i - 1 >= 0 && minesweeper[i-1][j].equals("*")) {
             count++;
         }
-        // right
+        // bottom
         if (i + 1 < rows && minesweeper[i+1][j].equals("*")) {
             count++;
         }
-        // top
+        // left
         if (j - 1 >= 0 && minesweeper[i][j-1].equals("*")) {
             count++;
         }
-        // bottom
+        // right
         if (j + 1 < cols && minesweeper[i][j+1].equals("*")) {
             count++;
         }

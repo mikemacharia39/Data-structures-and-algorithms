@@ -17,6 +17,11 @@ import java.util.LinkedHashMap;
  */
 public class ReversedStringAlsoPresentInArray {
 
+    /**
+     * Time complexity: O(n)
+     * @param arr
+     * @return
+     */
     public static String isPresent(String[] arr) {
         String result = "-1";
         HashMap<String, Integer> map = new LinkedHashMap<>();

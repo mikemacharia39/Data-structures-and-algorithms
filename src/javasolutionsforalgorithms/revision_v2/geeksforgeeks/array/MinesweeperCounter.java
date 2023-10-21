@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.geeksforgeeks.array;
 
+import java.util.Arrays;
+
 /**
  * Record the number of mines in the adjacent cells of a matrix
  * <p>
@@ -60,4 +62,15 @@ public class MinesweeperCounter {
         return count;
     }
 
+    public static void main(String[] args) {
+        MinesweeperCounter minesweeperCounter = new MinesweeperCounter();
+
+        String[][] input = {
+                {"*", "", "", "*", "", "", ""},
+                {"*", "", "", "", "*", "", ""},
+                {"", "", "*", "", "", "", ""}
+        };
+
+        System.out.println(Arrays.deepToString(minesweeperCounter.minesweeperCounter(input)));
+    }
 }

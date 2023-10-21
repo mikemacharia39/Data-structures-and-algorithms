@@ -3,6 +3,7 @@ package javasolutionsforalgorithms.revision_v2.geeksforgeeks.array;
 import java.util.Arrays;
 
 /**
+ * Notes on Matrices: <a href="https://github.com/derricknjeru/AlgoDatastructure/blob/main/src/CodingInterviewPatterns/matrix/note.md">...</a>
  * Record the number of mines in the adjacent cells of a matrix
  * <p>
  * input =

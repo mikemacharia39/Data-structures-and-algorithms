@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.geeksforgeeks.array;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 /**
  * Given a string array str[], the task is to find the first string from the given array whose reverse is
  * also present in the same array. If there is no such string then print -1.
@@ -14,12 +17,30 @@ package javasolutionsforalgorithms.revision_v2.geeksforgeeks.array;
  */
 public class ReversedStringAlsoPresentInArray {
 
+    public static String isPresent(String[] arr) {
+        String result = "-1";
+        HashMap<String, Integer> map = new LinkedHashMap<>();
+        for (String string : arr) {
+            map.put(string, map.getOrDefault(string, 0) + 1);
+        }
+
+        for (String string : arr) {
+            String reversed = reversedString(string);
+            if (map.containsKey(reversed)) {
+                result = string;
+                break;
+            }
+        }
+        return result;
+    }
+
+
     /**
      * Time complexity: O(n^3)
      * @param arr
      * @return
      */
-    public static String isPresent(String[] arr) {
+    public static String isPresent1(String[] arr) {
         String result = "-1";
         for (String string : arr) {
             String reversed = reversedString(string);

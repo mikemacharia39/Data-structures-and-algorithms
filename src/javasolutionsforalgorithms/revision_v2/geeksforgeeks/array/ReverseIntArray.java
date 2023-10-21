@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.geeksforgeeks;
+package javasolutionsforalgorithms.revision_v2.geeksforgeeks.array;
 
 import java.util.Arrays;
 

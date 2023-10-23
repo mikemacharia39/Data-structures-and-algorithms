@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.implementation;
 
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/acm-icpc-team/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
  *
@@ -27,6 +30,21 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.implementation;
  */
 public class ACMICPCTeam {
 
+    public static List<Integer> acmTeam(List<String> topic) {
+        HashMap<Integer, Integer> teams = new HashMap<>();
+        int largestSoFar = Integer.MIN_VALUE;
+        int teamsSize = topic.size();
+        for (int i = 0; i < teamsSize; i++) {
+            for (int j = i + 1; j < teamsSize; j++) {
+                int knownTopics = countTeams(topic.get(i), topic.get(j));
+                teams.put(knownTopics, teams.getOrDefault(knownTopics, 0) + 1);
+
+                largestSoFar = Math.max(largestSoFar, knownTopics);
+            }
+        }
+
+        return List.of(largestSoFar, teams.get(largestSoFar));
+    }
 
     private static int countTeams(String team1, String team2) {
         int knownTopics = 0;

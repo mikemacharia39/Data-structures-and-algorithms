@@ -26,6 +26,7 @@ public class BestTimeToBuyAndSellStock {
 
     /**
      * Time complexity: O(n)
+     * Best explanation: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/1735493/JavaC%2B%2B-best-ever-EXPLANATION-could-possible
      * @param prices
      * @return
      */

@@ -22,4 +22,19 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  */
 public class BestTimeToBuyAndSellStock {
 
+
+    /**
+     * Usind 2 ptr; time limit exceed
+     */
+    public int maxProfitSln1(int[] prices) {
+        int max = 0;
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                if (prices[i] < prices[j]) {
+                    max = Math.max(max, prices[j] - prices[i]);
+                }
+            }
+        }
+        return max;
+    }
 }

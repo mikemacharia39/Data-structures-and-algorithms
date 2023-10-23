@@ -22,6 +22,30 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  */
 public class BestTimeToBuyAndSellStock {
 
+    /**
+     * Time complexity: O(n)
+     * @param prices
+     * @return
+     */
+    public int maxProfit(int[] prices) {
+        int leastPriceSoFar = Integer.MAX_VALUE;
+        int overallPrice = 0;
+        int priceIfSoldToday = 0;
+
+        for (int price : prices) {
+            if (price < leastPriceSoFar) {
+                leastPriceSoFar = price;
+            }
+
+            priceIfSoldToday = price - leastPriceSoFar;
+
+            if (overallPrice < priceIfSoldToday) {
+                overallPrice = priceIfSoldToday;
+            }
+        }
+
+        return overallPrice;
+    }
 
     /**
      * Usind 2 ptr; time limit exceed

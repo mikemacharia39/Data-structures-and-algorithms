@@ -59,4 +59,8 @@ public class ACMICPCTeam {
         return knownTopics;
     }
 
+    public static void main(String[] args) {
+        List<String> topic = List.of("10101", "11110", "00010");
+        System.out.println(acmTeam(topic));
+    }
 }

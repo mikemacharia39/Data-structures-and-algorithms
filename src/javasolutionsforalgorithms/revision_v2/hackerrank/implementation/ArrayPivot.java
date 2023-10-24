@@ -16,12 +16,29 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.implementation;
  */
 public class ArrayPivot {
 
+    public static int pivotIndex(int[] nums) {
+        int leftSum = 0;
+        int totalSum = 0;
+
+        for (int num : nums) {
+            totalSum += num;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (leftSum == (totalSum - leftSum - nums[i])) {
+                return i;
+            }
+            leftSum += nums[i];
+        }
+        return -1;
+    }
+
     /**
      * Time complexity: O(n^2)
      * @param nums
      * @return
      */
-    public static int pivotIndex(int[] nums) {
+    public static int pivotIndex1(int[] nums) {
         int leftSum = 0;
         for (int i = 0; i < nums.length; i++) {
             leftSum += nums[i];

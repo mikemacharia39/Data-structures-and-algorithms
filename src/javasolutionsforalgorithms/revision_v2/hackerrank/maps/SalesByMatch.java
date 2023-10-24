@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.maps;
 
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/sock-merchant/problem">...</a>
  *
@@ -13,5 +16,18 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.maps;
  */
 public class SalesByMatch {
 
+    public static int sockMerchant(int n, List<Integer> ar) {
+        HashMap<Integer, Integer> groupedSocks = new HashMap<>();
+        for (int num : ar) {
+            groupedSocks.put(num, groupedSocks.getOrDefault(num, 0) + 1);
+        }
 
+        int pairs = 0;
+
+        for (int sockFrequency : groupedSocks.values()) {
+            pairs += sockFrequency/2;
+        }
+
+        return pairs;
+    }
 }

@@ -44,6 +44,7 @@ public class MaxZeroBinaryGap {
     }
 
     /**
+     * You generate a binary by dividing the initial value by 2 and getting the remainder
      * Generating a binaryString
      * @param N integer
      * @return binaryString

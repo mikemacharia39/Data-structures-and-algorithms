@@ -188,3 +188,13 @@ dsrc/javasolutionsforalgorithms/revision_v2/geeksforgeeks/array/ReversedStringAl
 \src/javasolutionsforalgorithms/revision_v2/hackerrank/implementation/JumpingOnTheClouds.java,7\9\79c9ef17db4fe18bb2073c0de9f3dfc27f09fb12
 †
 Vsrc/javasolutionsforalgorithms/revision_v2/geeksforgeeks/array/MinesweeperCounter.java,c\e\ce364e5bd6b6ed7bd10cb02620d70d0e15c37bbd
+‡
+Wsrc/javasolutionsforalgorithms/revision_v2/leetcode/math/BestTimeToBuyAndSellStock.java,6\f\6fe009a6ae11a478c944857e1876bbb5137bd631
+…
+Usrc/javasolutionsforalgorithms/revision_v2/hackerrank/implementation/ACMICPCTeam.java,4\4\44b5cca30ae5fd48d7f1da783f76109ba815dfe1
+„
+Tsrc/javasolutionsforalgorithms/revision_v2/hackerrank/implementation/ArrayPivot.java,a\c\ace9b479cc8c24ee2cff6f6e897225d077490e5f
+|
+Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/maps/SalesByMatch.java,1\3\1381b7ff1c6714e0d1c81057f0f5e2058b4ca7ab
+y
+Isrc/javasolutionsforalgorithms/neetcode/tree/KthSmallestElementInBST.java,a\c\ac9098d77a15ebe33a9e5fd23032ac33c6afaa3b

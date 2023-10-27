@@ -127,7 +127,7 @@ public class CollectionConcepts {
                 .sorted(Map.Entry.comparingByValue(Collections.reverseOrder()))
                 .limit(2)
                 .map(a -> a.getKey())
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("getThe2Largest: " + ans);
 

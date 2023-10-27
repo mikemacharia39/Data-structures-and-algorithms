@@ -28,6 +28,8 @@ package javasolutionsforalgorithms.neetcode.tree;
  * and you need to find the kth smallest frequently, how would you optimize?
  */
 
+import com.sun.source.tree.Tree;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +42,12 @@ public class KthSmallestElementInBST {
 
         TreeNode(int val) {
             this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 

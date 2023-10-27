@@ -1,9 +1,8 @@
 package javasolutionsforalgorithms.general;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeMap;
+import kotlin.collections.ArrayDeque;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -58,7 +57,7 @@ public class SoldierReportRank {
         }
 
         int count = 0;
-        List<Integer> list = treeMap.keySet().stream().collect(Collectors.toList());
+        List<Integer> list = new ArrayList<>(treeMap.keySet());
         for (int i = 1; i < list.size(); i++) {
             if (list.get(i - 1) + 1 == list.get(i)) {
                 count += treeMap.get(list.get(i - 1));

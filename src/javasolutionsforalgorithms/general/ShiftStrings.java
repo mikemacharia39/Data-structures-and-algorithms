@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.general;
 
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -81,7 +83,7 @@ public class ShiftStrings {
         return false;
     }
 
-    public String shiftRight(String str) {
+    public String shiftRight(@NotNull String str) {
         return str.substring(1) + str.charAt(0);
     }
 

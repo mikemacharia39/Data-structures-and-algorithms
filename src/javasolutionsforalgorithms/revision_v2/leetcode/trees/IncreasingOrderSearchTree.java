@@ -26,6 +26,12 @@ public class IncreasingOrderSearchTree {
         TreeNode(int val) {this.val = val;}
     }
 
+    /**
+     * Logic is to do an inorder traversal and then create a new tree with the values in the list
+     * Time complexity = O(N)
+     * @param root
+     * @return
+     */
     public TreeNode increasingBST(TreeNode root) {
         TreeNode ansRoot = new TreeNode(0);
         TreeNode ans = ansRoot;
@@ -56,5 +62,27 @@ public class IncreasingOrderSearchTree {
         inorder(root.left, list);
         list.add(root.val);
         inorder(root.right, list);
+    }
+
+    // ================== solution 1 ===============
+
+    TreeNode dollRoot = new TreeNode();
+    TreeNode doll = dollRoot;
+
+    public TreeNode increasingBST1(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        helper(root);
+        return dollRoot.right;
+    }
+
+    private void helper(TreeNode root) {
+        if (root == null) {return;}
+
+        helper(root.left);
+        doll.right = new TreeNode(root.val);
+        doll = doll.right;
+        helper(root.right);
     }
 }

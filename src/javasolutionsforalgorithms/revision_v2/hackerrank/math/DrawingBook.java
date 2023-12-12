@@ -16,8 +16,8 @@ public class DrawingBook {
         // n = number of pages in book
         // res = minimum number of turns
 
-        double front = Math.floor(p/2); // divide by 2 because we are turning 2 pages at a time
-        double back = Math.floor(n/2) - front; // subtract front from total pages to get back
+        double front = (double) p / 2; // divide by 2 because we are turning 2 pages at a time
+        double back =  (n / 2) - front; // subtract front from total pages to get back
         return (int)Math.min(front,back);
     }
 }

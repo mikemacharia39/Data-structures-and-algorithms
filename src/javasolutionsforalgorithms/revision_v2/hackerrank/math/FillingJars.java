@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.hackerrank;
+package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
 import java.util.List;
 

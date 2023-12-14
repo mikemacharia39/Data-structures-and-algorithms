@@ -21,5 +21,20 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * Your task is to help Sherlock find the key before The Beast is destroyed!
  */
 public class SherlockAndTheBeast {
+    public static void decentNumber(int n) {
+        int x = -1;
 
+        for (int i = n; i >= 0; i--) {
+            if (i % 3 == 0 && (n - i) % 5 == 0) {
+                x = i;
+                break;
+            }
+        }
+
+        if (x == -1) {
+            System.out.println("-1");
+        } else {
+            System.out.println("5".repeat(x) + "3".repeat(n-x));
+        }
+    }
 }

@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
+/**
+ * Finding the first and last digit in a number
+ */
 public class FirstAndLastDigitInNumber {
 
     /**

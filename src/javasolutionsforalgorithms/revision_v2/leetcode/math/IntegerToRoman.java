@@ -72,6 +72,7 @@ public class IntegerToRoman {
 
     public static void main(String[] args) {
         IntegerToRoman integerToRoman = new IntegerToRoman();
+        System.out.println(integerToRoman.intToRoman(999));
         System.out.println(integerToRoman.intToRoman1(999));
     }
 }

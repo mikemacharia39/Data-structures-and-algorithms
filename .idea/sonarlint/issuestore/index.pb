@@ -264,3 +264,5 @@ Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/SherlockAndTheBeast.
 Lsrc/javasolutionsforalgorithms/revision_v2/leetcode/math/IntegerToRoman.java,0\c\0cf4e5d5dad7cc31d1e50f464f15042c5daf9c47
 ‡
 Wsrc/javasolutionsforalgorithms/revision_v2/leetcode/math/FirstAndLastDigitInNumber.java,8\4\844e6aa19255487cc88e307b591324e78122dacb
+‹
+[src/javasolutionsforalgorithms/revision_v2/leetcode/math/FindPalindromeWithFixedLength.java,c\3\c3c5b7b861debbbb70af28e3d0d0703be434908f

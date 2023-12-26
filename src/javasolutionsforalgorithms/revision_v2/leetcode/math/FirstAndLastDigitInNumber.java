@@ -14,7 +14,15 @@ public class FirstAndLastDigitInNumber {
         return (int) (n / divisor);
     }
 
-
+    /**
+     * This solution uses modulo to find the last digit in a number.
+     * Time complexity: 0(1)
+     * @param n the number
+     * @return the last digit
+     */
+    public static int lastDigit(long n) {
+        return (int) (n % 10);
+    }
 
     /**
      * This is a simple math problem. We can find the first digit by dividing the number by 10 until the number is less than 10.

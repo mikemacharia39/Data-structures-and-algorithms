@@ -24,6 +24,11 @@ import java.util.Arrays;
  */
 public class MinimumNumberOfCoinsToBeAdded {
 
+    /**
+     * Explanation https://www.youtube.com/watch?v=RAdaP-JcLA0&ab_channel=Alpha-Code and
+     * https://leetcode.com/problems/minimum-number-of-coins-to-be-added/discuss/4356100/C%2B%2B-or-PYTHON-or-JAVA-oror-Greedy-Explained-oror
+     * Time complexity O(target log target)
+     */
     public int minimumAddedCoins(int[] coins, int target) {
         int currentTarget = 0;
         int coinsToAdd = 0;

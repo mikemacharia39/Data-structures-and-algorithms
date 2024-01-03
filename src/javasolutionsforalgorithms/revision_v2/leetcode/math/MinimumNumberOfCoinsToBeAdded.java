@@ -44,4 +44,11 @@ public class MinimumNumberOfCoinsToBeAdded {
         return coinsToAdd;
     }
 
+    public static void main(String[] args) {
+        MinimumNumberOfCoinsToBeAdded numberOfCoinsToBeAdded = new MinimumNumberOfCoinsToBeAdded();
+        int[] coins = {1, 4, 10};
+        int target = 19;
+        int ans = numberOfCoinsToBeAdded.minimumAddedCoins(coins, target);
+        System.out.println(ans);
+    }
 }

@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
+import java.util.Arrays;
+
 /**
  * <a href="https://leetcode.com/problems/minimum-number-of-coins-to-be-added/">...</a>
  *
@@ -21,5 +23,25 @@ package javasolutionsforalgorithms.revision_v2.leetcode.math;
  * minimum number of coins that need to be added to the array.
  */
 public class MinimumNumberOfCoinsToBeAdded {
+
+    public int minimumAddedCoins(int[] coins, int target) {
+        int currentTarget = 0;
+        int coinsToAdd = 0;
+        int coinIndex = 0;
+
+        Arrays.sort(coins);
+
+        while (currentTarget < target) {
+            if (coinIndex < coins.length && coins[coinIndex] <= currentTarget + 1) {
+                currentTarget += coins[coinIndex];
+                coinIndex++;
+            } else {
+                currentTarget += currentTarget + 1;
+                coinsToAdd++;
+            }
+        }
+
+        return coinsToAdd;
+    }
 
 }

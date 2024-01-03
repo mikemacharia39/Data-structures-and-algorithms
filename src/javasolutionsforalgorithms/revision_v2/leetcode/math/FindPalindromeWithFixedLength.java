@@ -1,6 +1,5 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
@@ -47,7 +46,7 @@ public class FindPalindromeWithFixedLength {
                 String right = temp.reverse().toString();
 
                 //this to handling for odd strings example for 4 -> 1001 but for 3 also it is 1001
-                //but we don't want 1001 for 3 int length instead we want 101 so we have to remove o from right string which this formula likely to do
+                //but we don't want 1001 for 3 int length instead we want 101 so we have to remove 0 from right string which this formula likely to do
                 ans[i] = Long.parseLong(left + right.substring(intLength % 2));
             } else
                 ans[i] = -1;

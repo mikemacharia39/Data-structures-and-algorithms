@@ -270,3 +270,5 @@ Wsrc/javasolutionsforalgorithms/revision_v2/leetcode/math/FirstAndLastDigitInNum
 [src/javasolutionsforalgorithms/revision_v2/leetcode/math/MinimumNumberOfCoinsToBeAdded.java,4\7\47210206ea2a103bb802375b90a9ead166f9119a
 Å
 Qsrc/javasolutionsforalgorithms/revision_v2/hackerrank/operators/CatsAndMouse.java,c\9\c95bbcf9db61b495f586bfb49d46332b262faa5b
+
+Osrc/javasolutionsforalgorithms/revision_v2/general/collection/ReverseStack.java,c\d\cdb3679617870c3f1165ba15a1005e5f9fc31a35

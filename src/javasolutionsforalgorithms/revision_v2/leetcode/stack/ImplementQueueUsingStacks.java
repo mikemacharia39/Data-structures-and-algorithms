@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.stack;
 
+import java.util.Stack;
+
 /**
  * Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the
  * functions of a normal queue (push, peek, pop, and empty).
@@ -18,4 +20,33 @@ package javasolutionsforalgorithms.revision_v2.leetcode.stack;
  */
 public class ImplementQueueUsingStacks {
 
+    public Stack<Integer> stack;
+    public ImplementQueueUsingStacks() {
+        stack = new Stack<>();
+    }
+
+    public void push(int x) {
+        stack.push(x);
+    }
+
+    public int pop() {
+        if (!empty()) {
+            Stack<Integer> stackRev = new Stack<>();
+            while (!stack.isEmpty()) {
+                stackRev.push(stack.pop());
+            }
+            int lastIn = stackRev.pop();
+
+            while (!stackRev.empty()) {
+                stack.push(stackRev.pop());
+            }
+
+            return lastIn;
+        }
+        return 0;
+    }
+
+    public boolean empty() {
+        return stack.isEmpty();
+    }
 }

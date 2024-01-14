@@ -31,6 +31,12 @@ public class BinaryTreePostorderTraversal {
             this.right = right;
         }
     }
+
+    /**
+     * Postorder traversal is LEFT -> RIGHT -> ROOT
+     * @param root
+     * @return
+     */
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if (root == null) {
@@ -49,5 +55,39 @@ public class BinaryTreePostorderTraversal {
         traverse(root.left, list);
         traverse(root.right, list);
         list.add(root.val);
+    }
+
+    private void insertElement(TreeNode root, int val) {
+        if (root == null) {
+            return;
+        }
+        if (val < root.val) {
+            if (root.left == null) {
+                root.left = new TreeNode(val);
+            } else {
+                insertElement(root.left, val);
+            }
+        } else {
+            if (root.right == null) {
+                root.right = new TreeNode(val);
+            } else {
+                insertElement(root.right, val);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        BinaryTreePostorderTraversal obj = new BinaryTreePostorderTraversal();
+        TreeNode root = new TreeNode(5);
+        obj.insertElement(root, 7);
+        obj.insertElement(root, 8);
+        obj.insertElement(root, 9);
+        obj.insertElement(root, 2);
+        obj.insertElement(root, 1);
+        obj.insertElement(root, 4);
+        obj.insertElement(root, 3);
+        obj.insertElement(root, 6);
+        List<Integer> list = obj.postorderTraversal(root);
+        System.out.println(list);
     }
 }

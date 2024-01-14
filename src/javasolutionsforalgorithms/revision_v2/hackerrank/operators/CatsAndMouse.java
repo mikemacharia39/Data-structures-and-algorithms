@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.operators;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/cats-and-a-mouse/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=30-day-campaign">...</a>
+ *
  * Two cats and a mouse are at various positions on a line. You will be given their starting positions.
  * Your task is to determine which cat will reach the mouse first,
  * assuming the mouse does not move and the cats travel at equal speed.

@@ -66,4 +66,21 @@ public class ImplementQueueUsingStacks {
     public boolean empty() {
         return stack.isEmpty();
     }
+
+    public static void main(String[] args) {
+        ImplementQueueUsingStacks obj = new ImplementQueueUsingStacks();
+        obj.push(1);
+        obj.push(3);
+        obj.push(5);
+
+        System.out.println(obj.peek());// we expect to see 1
+
+        System.out.println(obj.pop());// we will get 1
+
+        System.out.println(obj.empty()); // false
+
+        obj.push(7);
+
+        System.out.println(obj.pop()); // we expect to see 3
+    }
 }

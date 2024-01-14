@@ -11,6 +11,11 @@ public class BinaryTreePreorderTraversal {
 
     private final List<Integer> list = new ArrayList<>();
 
+    /**
+     * Preorder traversal is ROOT -> LEFT -> RIGHT
+     * @param root
+     * @return
+     */
     public List<Integer> preorderTraversal(TreeNode root) {
         if (root == null) {
             return list;

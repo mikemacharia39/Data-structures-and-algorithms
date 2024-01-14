@@ -16,5 +16,16 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.operators;
  */
 public class CatsAndMouse {
 
+    static String catAndMouse(int x, int y, int z) {
+        int catAMouseDistance = Math.abs(z-x);
+        int catBMouseDistance = Math.abs(z-y);
 
+        if (catAMouseDistance < catBMouseDistance) {
+            return "Cat A";
+        } else if (catAMouseDistance > catBMouseDistance) {
+            return "Cat B";
+        }
+
+        return "Mouse C";
+    }
 }

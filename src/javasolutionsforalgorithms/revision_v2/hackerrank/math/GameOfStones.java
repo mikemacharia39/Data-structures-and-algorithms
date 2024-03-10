@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Two players called p1 and p2 are playing a game with a starting number of stones.
  * Player p1 always plays first, and the two players move in alternating turns. The game's rules are as follows:
@@ -53,11 +56,51 @@ public class GameOfStones {
     /**
      * The logic is to find the remainder of n divided by 7 and if it is 0 or 1
      * then the second player wins otherwise the first player wins
-     * @param n
+     * @param n number of stones
      * @return
      */
     public static String gameOfStones(int n) {
         return n % 7 <= 1 ? "Second" : "First";
     }
 
+    /**
+     * Attempted some other solution, but it is not working
+     * @param n
+     * @return
+     */
+    public static String gameOfStones1(int n) {
+        if (n <= 1) {
+            return "Second";
+        }
+        List<Integer> ans = new ArrayList<>();
+        int player = 0;
+        turn(n, player, ans);
+        int ansSize = ans.size();
+        return ans.get(ansSize - 1) == 0 ? "Second" : "First";
+    }
+    /**
+     * Another solution
+     * @param n
+     * @return
+     */
+    private static void turn(int n, int player, List<Integer> ans) {
+        int[] maxRemovals = {2,3,5};
+        if (n <= 1) {
+            return;
+        }
+
+        for (int maxRemoval : maxRemovals) {
+            if (n - maxRemoval >= 0) {
+                int nextPlayer = (1 + player) % 2;
+                ans.add(nextPlayer);
+                turn(n - maxRemoval, nextPlayer, ans);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i + "Result: " +GameOfStones.gameOfStones(i));
+        }
+    }
 }

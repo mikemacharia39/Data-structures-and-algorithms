@@ -49,4 +49,15 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * First
  */
 public class GameOfStones {
+
+    /**
+     * The logic is to find the remainder of n divided by 7 and if it is 0 or 1
+     * then the second player wins otherwise the first player wins
+     * @param n
+     * @return
+     */
+    public static String gameOfStones(int n) {
+        return n % 7 <= 1 ? "Second" : "First";
+    }
+
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/the-power-sum/problem">...</a>
+ *
  * Find the number of ways that a given integer, X, can be expressed as the sum of the Nth powers of unique, natural numbers.
  *
  * For example, if X=13 and n=2, we have to find all combinations of unique squares adding up to 13. The only solution is 2^2 + 3^2.

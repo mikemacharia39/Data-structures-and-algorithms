@@ -22,6 +22,31 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * gameOfStones has the following parameter(s):
  *
  * n: an integer that represents the starting number of stones
+ *
+ * ===========================================
+ *
+ * Sample Input
+ *
+ * 1
+ * 2
+ * 3
+ * 4
+ * 5
+ * 6
+ * 7
+ * 10
+ *
+ *
+ * Sample Output
+ *
+ * Second
+ * First
+ * First
+ * First
+ * First
+ * First
+ * Second
+ * First
  */
 public class GameOfStones {
 }

@@ -276,3 +276,5 @@ Osrc/javasolutionsforalgorithms/revision_v2/general/collection/ReverseStack.java
 Xsrc/javasolutionsforalgorithms/revision_v2/leetcode/stack/ImplementQueueUsingStacks.java,7\a\7a1cf8f932563e1b57e17dfb9deeffe0c9cc8d5f
 ƒ
 Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/backTracking/ThePowerSum.java,1\4\14a8f640a6c1cbf88555477b4f8d5241ec41e953
+|
+Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/GameOfStones.java,9\f\9f7a0ba11ca3b2edaa2373bf9dfedd57889bb091

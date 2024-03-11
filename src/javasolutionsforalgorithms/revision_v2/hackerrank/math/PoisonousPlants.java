@@ -21,7 +21,42 @@ import java.util.List;
 public class PoisonousPlants {
 
     private static int days = 0;
+
+    /**
+     * Explanation: the stack is used to keep track of the plants that are alive. The days array is used to keep track of
+     * the days it takes for the plant to die. The maxDays is used to keep track of the days it takes for the plant to die.
+     * @param p
+     * @return
+     */
     public static int poisonousPlants(List<Integer> p) {
+        int[] days = new int[p.size()];
+        LinkedList<Integer> stack = new LinkedList<>();
+        stack.push(0);
+        for (int i = 1; i < p.size(); i++) {
+            int maxDays = 0;
+            while (!stack.isEmpty() && p.get(stack.peek()) >= p.get(i)) {
+                maxDays = Math.max(maxDays, days[stack.pop()]);
+            }
+            if (stack.isEmpty()) {
+                days[i] = 0;
+            } else {
+                days[i] = maxDays + 1;
+            }
+            stack.push(i);
+        }
+        int max = 0;
+        for (int d : days) {
+            max = Math.max(max, d);
+        }
+        return max;
+    }
+
+    /**
+     * The logic is to keep removing the elements from the list until there are no more elements to remove
+     * @param p
+     * @return
+     */
+    public static int poisonousPlants1(List<Integer> p) {
         helper(p);
         return days;
     }

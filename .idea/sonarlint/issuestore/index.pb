@@ -278,3 +278,5 @@ Xsrc/javasolutionsforalgorithms/revision_v2/leetcode/stack/ImplementQueueUsingSt
 Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/backTracking/ThePowerSum.java,1\4\14a8f640a6c1cbf88555477b4f8d5241ec41e953
 |
 Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/GameOfStones.java,9\f\9f7a0ba11ca3b2edaa2373bf9dfedd57889bb091
+}
+Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/StockMaximize.java,c\5\c5bade02c35ddb65e992196a8dd9db0aaca658ba

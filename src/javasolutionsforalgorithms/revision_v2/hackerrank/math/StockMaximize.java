@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/stockmax/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=7-day-campaign">...</a>
  *
@@ -29,4 +31,24 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  */
 public class StockMaximize {
 
+    /**
+     * Logic is to start from the end and keep track of the max price so far and then calculate the profit
+     * @param prices
+     * @return
+     */
+    public static long stockmax(List<Integer> prices) {
+
+        long profit = 0;
+        int currentProfit = 0;
+        for (int i = prices.size() - 1; i >= 0; i--) {
+            currentProfit = Math.max(currentProfit, prices.get(i)); //100,100
+            profit += Math.max(0, currentProfit - prices.get(i));   //0,98,197
+        }
+
+        return profit;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(stockmax(List.of(1, 2, 100)));
+    }
 }

@@ -1,6 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -33,13 +34,12 @@ public class PoisonousPlants {
                 positions.add(i+1);
             }
         }
-
+        System.out.println("Plants = " + ans + " | days = " + days);
         if (positions.isEmpty()) {
             return;
         }
 
         days += 1;
-
         List<Integer> result = new ArrayList<>(removeElements(ans, positions));
 
         positions.clear();
@@ -58,12 +58,19 @@ public class PoisonousPlants {
             result[position] = Integer.MIN_VALUE;
         }
 
-        ans.clear();
+        List<Integer> finalResult = new LinkedList<>();
+
         for (int j : result) {
             if (j != Integer.MIN_VALUE) {
-                ans.add(j);
+                finalResult.add(j);
             }
         }
-        return ans;
+        return finalResult;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> p = List.of(6, 5, 8, 4, 7, 10, 9); // 2
+
+        System.out.println(poisonousPlants(p));
     }
 }

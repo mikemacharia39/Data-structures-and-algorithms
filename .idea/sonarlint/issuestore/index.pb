@@ -284,3 +284,5 @@ Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/StockMaximize.java,
 Qsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/DivisibleSumPairs.java,d\2\d2062b1dc845ad736f3533a6a968a231808dcd51
 
 Osrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/PoisonousPlants.java,c\7\c73e4503d1c42a45996c4def98e2e243cc760bd2
+p
+@src/kotlinsolutionsforalgorithms/revision/general/UsingReadLn.kt,5\6\5601a01933fd98f89bc1d1d9f1b396ccce3545fc

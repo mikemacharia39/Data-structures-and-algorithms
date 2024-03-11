@@ -1,6 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/stockmax/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=7-day-campaign">...</a>
  *
  * Your algorithms have become so good at predicting the market that you now know what the share price of Wooden Orange
  * Toothpicks Inc. (WOT) will be for the next number of days.

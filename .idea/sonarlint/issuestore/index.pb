@@ -280,3 +280,5 @@ Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/backTracking/ThePowerSum.
 Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/GameOfStones.java,9\f\9f7a0ba11ca3b2edaa2373bf9dfedd57889bb091
 }
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/StockMaximize.java,c\5\c5bade02c35ddb65e992196a8dd9db0aaca658ba
+Å
+Qsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/DivisibleSumPairs.java,d\2\d2062b1dc845ad736f3533a6a968a231808dcd51

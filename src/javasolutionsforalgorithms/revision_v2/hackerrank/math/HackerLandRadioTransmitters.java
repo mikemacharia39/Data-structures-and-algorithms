@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.List;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
  *
@@ -24,4 +26,32 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  *
  */
 public class HackerLandRadioTransmitters {
+
+    /**
+     * Explanation:
+     * Time complexity: O(nlogn)
+     * @param x number of houses
+     * @param k distance
+     * @return
+     */
+    public static int hackerlandRadioTransmitters(List<Integer> x, int k) {
+        x.sort(Integer::compareTo);
+        int i = 0;
+        int n = x.size();
+        int result = 0;
+
+        while (i < n) {
+            int loc = x.get(i) + k; // loc is the location of the transmitter
+            while (i < n && x.get(i) <= loc) { // find the next house that is within the range of the transmitter
+                i++;
+            }
+            loc = x.get(i-1) + k;// loc is the location of the transmitter
+            while (i < n && x.get(i) <= loc) {// find the next house that is within the range of the transmitter
+                i++;
+            }
+            result++;
+        }
+
+        return result;
+    }
 }

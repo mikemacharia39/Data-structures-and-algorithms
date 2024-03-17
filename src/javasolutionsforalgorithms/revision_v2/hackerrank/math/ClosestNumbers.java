@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.*;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/closest-numbers/problem">...</a>
  * Sorting is useful as the first step in many different tasks.
@@ -18,4 +20,24 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * answer = [1, 2, 2, 3, 3, 4, 4, 5]
  */
 public class ClosestNumbers {
+
+
+    public static List<Integer> closestNumbers(List<Integer> arr) {
+        arr.sort(Comparator.naturalOrder());
+        int minFreq = Integer.MAX_VALUE;
+        Map<Integer, List<Integer>> result = new HashMap<>();
+        for (int i = 0; i < arr.size()-1; i++) {
+            int diff = arr.get(i+1) - arr.get(i);
+            minFreq = Math.min(minFreq, diff);
+
+            if (result.containsKey(diff)) {
+                result.get(diff).add(arr.get(i));
+                result.get(diff).add(arr.get(i+1));
+            } else {
+                result.put(diff, new ArrayList<>(Arrays.asList(arr.get(i), arr.get(i+1))));
+            }
+        }
+
+        return result.get(minFreq);
+    }
 }

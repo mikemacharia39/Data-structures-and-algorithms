@@ -286,3 +286,5 @@ Qsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/DivisibleSumPairs.ja
 Osrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/PoisonousPlants.java,c\7\c73e4503d1c42a45996c4def98e2e243cc760bd2
 p
 @src/kotlinsolutionsforalgorithms/revision/general/UsingReadLn.kt,5\6\5601a01933fd98f89bc1d1d9f1b396ccce3545fc
+~
+Nsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/ClosestNumbers.java,f\7\f7d05b48ca21c14222136f98efe5e3a6d5a51cfc

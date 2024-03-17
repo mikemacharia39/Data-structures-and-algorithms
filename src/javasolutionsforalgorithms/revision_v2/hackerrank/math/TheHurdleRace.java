@@ -25,4 +25,8 @@ public class TheHurdleRace {
 
         return maxHeight <= k ? 0 : maxHeight - k;
     }
+
+    public static void main(String[] args) {
+        System.out.println(hurdleRace(4, List.of(1, 6, 3, 5, 2))); // 2
+    }
 }

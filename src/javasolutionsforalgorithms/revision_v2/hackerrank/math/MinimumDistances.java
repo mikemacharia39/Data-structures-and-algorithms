@@ -3,6 +3,8 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/minimum-distances/problem">...</a>
+ *
  * The distance between two array values is the number of indices between them.
  * Given an array, find the minimum distance between any pair of equal elements in the array. If no such value exists, return -1.
  *

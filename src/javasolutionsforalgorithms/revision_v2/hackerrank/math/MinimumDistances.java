@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.List;
+
 /**
  * The distance between two array values is the number of indices between them.
  * Given an array, find the minimum distance between any pair of equal elements in the array. If no such value exists, return -1.
@@ -11,4 +13,24 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  */
 public class MinimumDistances {
 
+
+    /**
+     * Unfortunately, this solution DOES NOT work and is not efficient
+     * @param a list of integers
+     * @return the minimum distance between any pair of equal elements in the array
+     */
+    public static int minimumDistances1(List<Integer> a) {
+
+        int n = a.size();
+        int minDistance = Integer.MAX_VALUE;
+        for (int i = 0; i < n-1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (a.get(i) == a.get(j)) {
+                    int diff = j - i;
+                    minDistance = Math.min(minDistance, diff);
+                }
+            }
+        }
+        return (minDistance == Integer.MAX_VALUE) ? -1 : minDistance;
+    }
 }

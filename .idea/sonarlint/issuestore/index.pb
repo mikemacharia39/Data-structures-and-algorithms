@@ -300,3 +300,5 @@ Nsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/ChocolateFeast.java
 Nsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/TheTimeInWords.java,b\2\b2f42e11c663e00694af58c59945508e8262ac8a
 ƒ
 Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/graph/ComponentsInAGraph.java,1\7\1751ee1b87eecad6705124dbac5b7fa34989384d
+€
+Psrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/MinimumDistances.java,a\d\ad6ae467fbf467420aa72c5889f7b1e3ef4c11e1

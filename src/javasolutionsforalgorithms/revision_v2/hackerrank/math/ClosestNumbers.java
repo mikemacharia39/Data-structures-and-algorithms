@@ -21,7 +21,13 @@ import java.util.*;
  */
 public class ClosestNumbers {
 
-
+    /**
+     * Explanation: The logic is to sort the array and then find the minimum difference between the elements
+     * Time complexity = O(nlogn) + O(n) = O(nlogn)
+     * Space complexity = O(n)
+     * @param arr
+     * @return
+     */
     public static List<Integer> closestNumbers(List<Integer> arr) {
         arr.sort(Comparator.naturalOrder());
         int minFreq = Integer.MAX_VALUE;

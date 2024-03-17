@@ -19,4 +19,32 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * After eating that one, he only has 1 wrapper, and his feast ends. Overall, he has eaten 9 bars.
  */
 public class ChocolateFeast {
+
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     * @param n - initial amount of money
+     * @param c - the cost of a chocolate bar
+     * @param m - the number of wrappers he can turn in for a free bar
+     * @return
+     */
+    public static int chocolateFeast(int n, int c, int m) {
+        //int n: Bobby's initial amount of money
+        //int c: the cost of a chocolate bar
+        //int m: the number of wrappers he can turn in for a free bar
+
+        int chocolateBars = n / c;
+        int wrappers = chocolateBars;
+
+        while (wrappers >= m) {
+
+            int additionalChocolate = wrappers/m;
+            wrappers = wrappers % m;
+
+            chocolateBars += additionalChocolate;
+            wrappers += additionalChocolate;
+        }
+
+        return chocolateBars;
+    }
 }

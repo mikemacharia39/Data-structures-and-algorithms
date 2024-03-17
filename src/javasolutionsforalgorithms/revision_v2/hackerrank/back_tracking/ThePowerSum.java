@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.revision_v2.hackerrank.backTracking;
+package javasolutionsforalgorithms.revision_v2.hackerrank.back_tracking;
 
 import java.util.ArrayList;
 import java.util.List;

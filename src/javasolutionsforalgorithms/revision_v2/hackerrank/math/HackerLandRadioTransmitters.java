@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
+ *
  * Hackerland is a one-dimensional city with houses aligned at integral locations along a road.
  * The Mayor wants to install radio transmitters on the roofs of the city's houses.
  * Each transmitter has a fixed range meaning it can transmit a signal to all houses within that number of units distance away.

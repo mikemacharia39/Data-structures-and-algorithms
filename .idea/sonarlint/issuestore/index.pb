@@ -274,8 +274,6 @@ Qsrc/javasolutionsforalgorithms/revision_v2/hackerrank/operators/CatsAndMouse.ja
 Osrc/javasolutionsforalgorithms/revision_v2/general/collection/ReverseStack.java,c\d\cdb3679617870c3f1165ba15a1005e5f9fc31a35
 ˆ
 Xsrc/javasolutionsforalgorithms/revision_v2/leetcode/stack/ImplementQueueUsingStacks.java,7\a\7a1cf8f932563e1b57e17dfb9deeffe0c9cc8d5f
-ƒ
-Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/backTracking/ThePowerSum.java,1\4\14a8f640a6c1cbf88555477b4f8d5241ec41e953
 |
 Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/GameOfStones.java,9\f\9f7a0ba11ca3b2edaa2373bf9dfedd57889bb091
 }
@@ -304,7 +302,5 @@ Ssrc/javasolutionsforalgorithms/revision_v2/hackerrank/graph/ComponentsInAGraph.
 Psrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/MinimumDistances.java,a\d\ad6ae467fbf467420aa72c5889f7b1e3ef4c11e1
 }
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/TheHurdleRace.java,4\9\4964120d591a93358340d97485ce529e2f84e74b
-’
-bsrc/javasolutionsforalgorithms/revision_v2/hackerrank/dynamicProgramming/TheCoinChangeProblem.java,2\2\22ed9dd2c15fdf342eaf58abd3531416fcf59c01
 “
 csrc/javasolutionsforalgorithms/revision_v2/hackerrank/dynamic_programming/TheCoinChangeProblem.java,f\d\fd127613068aa413eb54efd61b458437983a1e6a

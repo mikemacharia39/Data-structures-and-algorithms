@@ -62,7 +62,7 @@ public class TheTimeInWords {
                 sb.append(toWords[remainingTime - 1]);
             }
             sb.append(" ");
-            if (m == 1) {
+            if (remainingTime == 1) {
                 sb.append("minute");
             } else {
                 sb.append("minutes");

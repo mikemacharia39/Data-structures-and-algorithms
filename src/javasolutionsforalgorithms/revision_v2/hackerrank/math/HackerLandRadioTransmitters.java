@@ -1,5 +1,6 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -53,5 +54,37 @@ public class HackerLandRadioTransmitters {
         }
 
         return result;
+    }
+
+    public static int hackerlandRadioTransmitters1(List<Integer> x, int k) {
+        // x= 7 2 4 6 5 9 12 11 = 2,4,5,6,7,9,11,12
+        // k= 2
+
+        x.sort(Comparator.naturalOrder());
+        int transmitters = 0;
+
+        int i = 0;
+        int noOfHouses = x.size();
+        while (i < noOfHouses) {
+            int transmitterLocation = 0;
+
+            transmitterLocation = x.get(i); // the current position of a transmitter when we start
+
+            while (i < noOfHouses && x.get(i) <= transmitterLocation + k) {
+                i++;
+            }
+
+            transmitterLocation = x.get(i - 1);  // Position the transmitter at the rightmost house within range.
+
+            // try position the transmitter at the next house outside the range
+            while(i < noOfHouses && x.get(i) <= transmitterLocation + k) {
+                i++;
+            }
+
+
+            transmitters++;
+        }
+
+        return transmitters;
     }
 }

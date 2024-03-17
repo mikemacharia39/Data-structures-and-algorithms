@@ -3,6 +3,8 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.dynamic_programming;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/coin-change/problem">...</a>
+ *
  * Given an amount and the denominations of coins available, determine how many ways change can be made for amount.
  * There is a limitless supply of each coin type.
  *
@@ -28,10 +30,14 @@ public class TheCoinChangeProblem {
         long[] ways = new long[n+1];
         ways[0] = 1;
         for (long coin : c) {
-            for (int i = (int) coin; i <= n; i++) {
-                ways[i] += ways[i - (int) coin];
+            for (int i = (int) coin; i <= n; i++) { // start from the coin value until the amount
+                ways[i] += ways[i - (int) coin];    // keep track of the different ways to return change
             }
         }
         return ways[n];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getWays(3, List.of(8L, 3L, 2L, 1L)));
     }
 }

@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * A video player plays a game in which the character competes in a hurdle race.
  * Hurdles are of varying heights, and the characters have a maximum height they can jump.
@@ -14,4 +17,12 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * Answer = 2, the highest hurdle is 3 and the character can jump 1 unit, so the character needs to take 2 doses of the potion
  */
 public class TheHurdleRace {
+    public static int hurdleRace(int k, List<Integer> height) {
+
+        int maxHeight = height.stream()
+                .max(Comparator.naturalOrder())
+                .orElse(0);
+
+        return maxHeight <= k ? 0 : maxHeight - k;
+    }
 }

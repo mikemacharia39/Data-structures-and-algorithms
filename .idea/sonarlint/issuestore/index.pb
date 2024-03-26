@@ -320,3 +320,5 @@ s
 Csrc/kotlinsolutionsforalgorithms/hackerrank/math/JesseAndCookies.kt,2\3\232b98f3b8bf6548ddbf6e97779744750f96ca06
 è
 _src/javasolutionsforalgorithms/revision_v2/hackerrank/math/UnsignedIntToBinaryAndViceVersa.java,3\2\32c69de19c6c840d726a8c6447e9e5cb79ce2d77
+|
+Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/FlippingBits.java,4\e\4e95f8c590dd1a090302f4fefd6976494fc6add9

@@ -1,5 +1,7 @@
 package kotlinsolutionsforalgorithms.hackerrank.math
 
+import java.util.*
+
 /**
  * <a href="https://www.hackerrank.com/challenges/jesse-and-cookies/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
  *
@@ -28,9 +30,22 @@ package kotlinsolutionsforalgorithms.hackerrank.math
  * A = {40, 20}
  */
 fun main() {
-
+    cookies(9, arrayOf(2, 7, 3, 6, 4, 6)).also(::println)
 }
 
 fun cookies(k: Int, A: Array<Int>): Int {
 
+    val priorityQueue = PriorityQueue<Int>()
+    priorityQueue.addAll(A)
+    var count = 0
+
+    while (priorityQueue.size > 1 && priorityQueue.peek() < k) {
+        val leastSweet = priorityQueue.poll()
+        val secondLeastSweet = priorityQueue.poll()
+        val newCookie = leastSweet + 2 * secondLeastSweet
+        priorityQueue.add(newCookie)
+        count++
+    }
+
+    return if (priorityQueue.peek() >= k) count else -1
 }

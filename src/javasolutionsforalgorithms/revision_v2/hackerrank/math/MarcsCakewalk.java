@@ -16,12 +16,17 @@ import java.util.List;
  */
 public class MarcsCakewalk {
     public static long marcsCakewalk(List<Integer> calorie) {
-        calorie.sort(Comparator.reverseOrder());
+        List<Integer> copy = new java.util.ArrayList<>(List.copyOf(calorie));
+        copy.sort(Comparator.reverseOrder());
         long sum = 0;
-        for (int i = 0; i < calorie.size(); i++) {
-            sum += (long) (Math.pow(2,i) * calorie.get(i));
+        for (int i = 0; i < copy.size(); i++) {
+            sum += (long) (Math.pow(2,i) * copy.get(i));
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(marcsCakewalk(List.of(5, 10, 7))); // 44
     }
 }

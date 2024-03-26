@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/marcs-cakewalk/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
+ *
  * Marc loves cupcakes, but he also likes to stay fit. Each cupcake has a calorie count,
  * and Marc can walk a distance to expend those calories.
  * If Marc has eaten  cupcakes so far, after eating a cupcake with c calories he must walk at least 2^j * c miles to maintain his weight.

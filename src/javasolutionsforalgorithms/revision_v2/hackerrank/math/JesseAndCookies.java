@@ -1,5 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.math;
 
+import java.util.List;
+import java.util.PriorityQueue;
+
 /**
  * <a href="https://www.hackerrank.com/challenges/jesse-and-cookies/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
  *
@@ -28,4 +31,29 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * A = {40, 20}
  */
 public class JesseAndCookies {
+
+    /**
+     * The logic is to use a priority queue to keep track of the least sweet cookies. The priority queue is usd because it
+     * is a min heap and the least sweet cookie is always at the top. The while loop is used to keep track of the number of
+     * operations required to get the sweetness >= k. The poll() method is used to remove the least sweet cookie and the
+     * peek() method is used to get the least sweet cookie. The add() method is used to add the new cookie with sweetness
+     * @param k the sweetness
+     * @param A the list of cookies
+     * @return the number of operations required to get the sweetness >= k
+     */
+    public static int cookies(int k, List<Integer> A) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(A);
+        int count = 0;
+        while (pq.size() > 1 && pq.peek() < k) {
+            int least = pq.poll();
+            int secondLeast = pq.poll();
+            pq.add(least + 2 * secondLeast);
+            count++;
+        }
+        return pq.peek() >= k ? count : -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(cookies(9, List.of(2, 7, 3, 6, 4, 6))); // 4
+    }
 }

@@ -304,3 +304,5 @@ Psrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/MinimumDistances.jav
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/TheHurdleRace.java,4\9\4964120d591a93358340d97485ce529e2f84e74b
 “
 csrc/javasolutionsforalgorithms/revision_v2/hackerrank/dynamic_programming/TheCoinChangeProblem.java,f\d\fd127613068aa413eb54efd61b458437983a1e6a
+}
+Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/MarcsCakewalk.java,7\6\7662cc7ae6f18e42f1e5e579f9f8f44ee0cbfc89

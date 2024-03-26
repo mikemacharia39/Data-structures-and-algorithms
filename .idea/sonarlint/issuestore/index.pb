@@ -312,3 +312,5 @@ Asrc/kotlinsolutionsforalgorithms/hackerrank/math/MarcsCakewalk.kt,8\5\857e018f
 [src/javasolutionsforalgorithms/revision_v2/hackerrank/collection/CircularArrayRotation.java,4\5\4584f93609062f5a3af097ec070b6334a21fb241
 €
 Psrc/kotlinsolutionsforalgorithms/hackerrank/collections/CircularArrayRotation.kt,a\e\ae514181fbc2a0b7f6094fb9800d3b40e01ba5c7
+n
+>src/kotlinsolutionsforalgorithms/revision/general/UsingFold.kt,b\a\ba9b5a95f8a922ab857fc92538de83c8d7463fe5

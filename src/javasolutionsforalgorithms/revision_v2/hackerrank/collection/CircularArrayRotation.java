@@ -23,7 +23,7 @@ public class CircularArrayRotation {
      * @param queries
      * @return
      */
-    public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
+    public static List<Integer> circularArrayRotation1(List<Integer> a, int k, List<Integer> queries) {
         int n = a.size();
         k = k % n;
         for (int i = 0; i < queries.size(); i++) {
@@ -33,12 +33,12 @@ public class CircularArrayRotation {
         return queries;
     }
 
-    public static List<Integer> circularArrayRotation1(List<Integer> a, int k, List<Integer> queries) {
+    public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
         int n = a.size();
         k = k % n; // if k is greater than n, then k = k % n, else k = k. This is to avoid unnecessary rotations
         List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < k; i++) {
-            result.add(a.get(n - k + i)); // add the elements from the end of the list to the beginning
+        for (int i = 0; i < n; i++) {
+            result.add(a.get((n - k + i)%n)); // get the new index after rotation
         }
 
         List<Integer> ans = new ArrayList<>();

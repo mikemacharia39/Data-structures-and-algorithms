@@ -31,4 +31,29 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.sorting;
  * subarray has expanded to encompass the entire array. The array is now fully sorted.
  */
 public class CorrectnessAndTheLoopInvariant {
+
+    public static void insertionSort(int[] A){
+
+        for (int i = 1; i < A.length; i++) {
+            int value = A[i];
+            int j = i - 1;
+
+            while (j >= 0 && A[j] > value) {
+                A[j + 1] = A[j];
+                j = j - 1;
+            }
+
+            A[j + 1] = value;
+
+            if (i == A.length - 1) {
+                printArray(A);
+            }
+        }
+    }
+
+    private static void printArray(int[] arr) {
+        for (int n : arr) {
+            System.out.print(n + " ");
+        }
+    }
 }

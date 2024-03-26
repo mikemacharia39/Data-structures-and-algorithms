@@ -16,6 +16,11 @@ public class FlippingBits {
 
     // Solution 2
 
+    /**
+     * Time complexity = O(N)
+     * @param n
+     * @return
+     */
     public static long flippingBits(long n) {
 
         long[] bits = new long[32];
@@ -36,6 +41,12 @@ public class FlippingBits {
         return binaryToLong(bits);
     }
 
+    /**
+     * Convert binary to long
+     * Time complexity = O(N)
+     * @param bits
+     * @return
+     */
     private static long binaryToLong(long[] bits) {
 
         long sum = 0;
@@ -46,6 +57,12 @@ public class FlippingBits {
         return sum;
     }
 
+    /**
+     * Convert long to binary
+     * Time complexity = O(logN) because we are dividing the number by 2
+     * @param n
+     * @return
+     */
     private static String longToBinary(long n) {
         if (n <= 1) {
             return Long.toString(n);

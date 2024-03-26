@@ -306,3 +306,5 @@ Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/TheHurdleRace.java,
 csrc/javasolutionsforalgorithms/revision_v2/hackerrank/dynamic_programming/TheCoinChangeProblem.java,f\d\fd127613068aa413eb54efd61b458437983a1e6a
 }
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/MarcsCakewalk.java,7\6\7662cc7ae6f18e42f1e5e579f9f8f44ee0cbfc89
+q
+Asrc/kotlinsolutionsforalgorithms/hackerrank/math/MarcsCakewalk.kt,8\5\857e018fc36a97e9d25cc7774a8405432100e0a3

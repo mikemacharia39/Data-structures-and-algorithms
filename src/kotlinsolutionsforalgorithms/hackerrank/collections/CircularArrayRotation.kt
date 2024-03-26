@@ -12,11 +12,20 @@ package kotlinsolutionsforalgorithms.hackerrank.collections
  *  * For each array, perform a number of right circular rotations and return the values of the elements at the given indices.
  *  */
  */
+
+fun main() {
+    val a = arrayOf(1, 2, 3)
+    val k = 2
+    val queries = arrayOf(0, 1, 2)
+
+    circularArrayRotation(a, k, queries).joinToString(", ").also(::println)
+}
+
 fun circularArrayRotation(a: Array<Int>, k: Int, queries: Array<Int>): Array<Int> {
     val n = a.size
     val newK = k % n
 
-    val rotatedArray = arrayOf<Int>() // Array(n) { 0 } // <--- This is the correct way to initialize an array of size n
+    val rotatedArray = Array(n) { 0 } // Array(n) { 0 } // <--- This is the correct way to initialize an array of size n
 
     for (i in a.indices) {
         val newIndex = (n - newK + i) % n

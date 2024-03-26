@@ -316,3 +316,5 @@ n
 >src/kotlinsolutionsforalgorithms/revision/general/UsingFold.kt,b\a\ba9b5a95f8a922ab857fc92538de83c8d7463fe5
 
 Osrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/JesseAndCookies.java,6\9\693f1fb2bd4daf0586d9abf4bdae475ebdd196b8
+s
+Csrc/kotlinsolutionsforalgorithms/hackerrank/math/JesseAndCookies.kt,2\3\232b98f3b8bf6548ddbf6e97779744750f96ca06

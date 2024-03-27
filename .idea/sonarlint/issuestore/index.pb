@@ -324,3 +324,5 @@ _src/javasolutionsforalgorithms/revision_v2/hackerrank/math/UnsignedIntToBinaryA
 Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/FlippingBits.java,4\e\4e95f8c590dd1a090302f4fefd6976494fc6add9
 ‘
 asrc/javasolutionsforalgorithms/revision_v2/hackerrank/sorting/CorrectnessAndTheLoopInvariant.java,4\3\435a4d5ede5199612748c7ff65ff63cb5c3df6b2
+z
+Jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/Encryption.java,9\1\91ae30665ba748eb7cc1ab2c867dac4a8a6131b9

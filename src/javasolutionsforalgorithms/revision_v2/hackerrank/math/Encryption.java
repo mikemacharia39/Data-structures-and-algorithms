@@ -27,6 +27,15 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  */
 public class Encryption {
 
+    /**
+     * Solution 1
+     * Time complexity = O(n), where n is the length of the string
+     * Space complexity = O(n), because of the string builder
+     * Explanation: The logic is to remove the spaces from the string and then calculate the number of rows and columns
+     * based on the length of the string. Then, we iterate through the columns and add the characters to the string builder.
+     * @param s
+     * @return
+     */
     public static String encryption(String s) {
         s = s.replaceAll(" ", "");
         int len = s.length();
@@ -76,7 +85,7 @@ public class Encryption {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                if (grid[j][i] != 0) {
+                if (grid[j][i] != 0) { // this checks if the character is not empty
                     sb.append(grid[j][i]);
                 }
             }

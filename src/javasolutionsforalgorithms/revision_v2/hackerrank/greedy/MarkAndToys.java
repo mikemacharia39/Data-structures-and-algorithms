@@ -1,5 +1,9 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.greedy;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  * Mark and Jane are very happy after having their first child. Their son loves toys, so Mark wants to buy some.
  * There are a number of different toys lying in front of him, tagged with their prices. Mark has only a certain amount to spend,
@@ -15,4 +19,21 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.greedy;
  */
 public class MarkAndToys {
 
+    public static int maximumToys(List<Integer> prices, int k) {
+        List<Integer> pricesCopy = new ArrayList<>(prices);
+        pricesCopy.sort(Comparator.naturalOrder());
+        int count = 0;
+        for (int price : pricesCopy) {
+            if (k - price >= 0) {
+                k -= price;
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maximumToys(List.of(1, 2, 3, 4), 7));
+    }
 }

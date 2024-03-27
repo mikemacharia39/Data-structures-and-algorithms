@@ -328,3 +328,5 @@ z
 Jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/Encryption.java,9\1\91ae30665ba748eb7cc1ab2c867dac4a8a6131b9
 }
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/MarkAndToys.java,7\d\7d338f94ee894722607407e4cb34836e6b242ba9
+q
+Asrc/kotlinsolutionsforalgorithms/hackerrank/greedy/MarkAndToys.kt,b\a\ba902835968d4b222f91a16ae6c7fe000a771cd5

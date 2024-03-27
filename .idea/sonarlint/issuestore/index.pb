@@ -326,3 +326,5 @@ Lsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/FlippingBits.java,4
 asrc/javasolutionsforalgorithms/revision_v2/hackerrank/sorting/CorrectnessAndTheLoopInvariant.java,4\3\435a4d5ede5199612748c7ff65ff63cb5c3df6b2
 z
 Jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/Encryption.java,9\1\91ae30665ba748eb7cc1ab2c867dac4a8a6131b9
+}
+Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/MarkAndToys.java,7\d\7d338f94ee894722607407e4cb34836e6b242ba9

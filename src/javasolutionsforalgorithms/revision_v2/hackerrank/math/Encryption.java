@@ -47,6 +47,43 @@ public class Encryption {
 
         return sb.toString().trim();
     }
+
+    /**
+     * Solution 2
+     * Time complexity = O(n), where n is the length of the string
+     * Space complexity = O(n), because of the grid we have introduced
+     * @param s
+     * @return
+     */
+    public static String encryption1(String s) {
+        s = s.replace(" ", "");
+        int len = s.length();
+        int row = (int) Math.floor(Math.sqrt(len));
+        int col = (int) Math.ceil(Math.sqrt(len));
+
+        if (row * col < len) {
+            row = col;
+        }
+
+        char[][] grid = new char[row][col];
+        int k = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col && k < len; j++) {
+                grid[i][j] = s.charAt(k++);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < col; i++) {
+            for (int j = 0; j < row; j++) {
+                if (grid[j][i] != 0) {
+                    sb.append(grid[j][i]);
+                }
+            }
+            sb.append(" ");
+        }
+        return sb.toString().trim();
+    }
 }
 
 class Results {
@@ -54,5 +91,8 @@ class Results {
         String s = "if man was meant to stay on the ground god would have given us roots";
 
         System.out.println(Encryption.encryption(s));
+        // solution 2
+
+        System.out.println(Encryption.encryption1(s));
     }
 }

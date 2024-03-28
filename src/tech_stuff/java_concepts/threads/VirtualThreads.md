@@ -32,13 +32,14 @@ To understand virtual threads we need to first understand the difference between
 Thread virtualThread = Thread.ofVirtual().start(() -> {
     System.out.println("Hello from virtual thread");
 });
+virtualThread.join();
 ```
 
 ## How to create a OS thread?
 - We can create OS threads using the `Thread` class.
 
 ```java
-Thread osThread = new Thread(() -> {
+Thread osThread = Thread.ofPlatform(() -> {
     System.out.println("Hello from OS thread");
 });
 osThread.start();

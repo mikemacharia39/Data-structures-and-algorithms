@@ -330,3 +330,9 @@ Jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/Encryption.java,9\1
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/MarkAndToys.java,7\d\7d338f94ee894722607407e4cb34836e6b242ba9
 q
 Asrc/kotlinsolutionsforalgorithms/hackerrank/greedy/MarkAndToys.kt,b\a\ba902835968d4b222f91a16ae6c7fe000a771cd5
+^
+.src/tech_stuff/java_concepts/VirtualThreads.md,1\2\126b186dacb0c9d79182c99c557304fb6812405a
+o
+?src/tech_stuff/java_concepts/threads/IntroToVirtualThreads.java,7\9\7926d47a675f8663bf94968acb0474dffafa7932
+f
+6src/tech_stuff/java_concepts/threads/VirtualThreads.md,1\1\115e07df6aa2aae62f594b6a5c2e952d31c53938

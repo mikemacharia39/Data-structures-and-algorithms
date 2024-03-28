@@ -3,6 +3,10 @@
 
 To understand virtual threads we need to first understand the difference between OS threads(platform thread) and virtual threads.
 
+The feature of virtual threads is available on java 21 and above.
+
+Further notes can be found here https://youtu.be/CY_6yq11DEM
+
 ## OS Threads(Platform Threads)
 - OS threads are managed by the OS kernel.
 - OS threads are heavyweight threads.

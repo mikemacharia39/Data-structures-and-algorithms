@@ -10,10 +10,10 @@ public class IntroToVirtualThreads {
      * <a href="https://youtu.be/CY_6yq11DEM">...</a>
      */
     public static void main(String[] args) throws InterruptedException {
-        Thread platformThread = Thread.ofPlatform().unstarted(() -> System.out.println("Hello from platform thread: " + Thread.currentThread().getName()));
+        Thread platformThread = Thread.ofPlatform().unstarted(() -> System.out.println("Hello from platform thread: " + Thread.currentThread()));
         platformThread.start();
 
-        Thread virtualThread = Thread.ofVirtual().unstarted(() -> System.out.println("Hello from virtual thread: " + Thread.currentThread().getName()));
+        Thread virtualThread = Thread.ofVirtual().unstarted(() -> System.out.println("Hello from virtual thread: " + Thread.currentThread()));
         virtualThread.start();
 
         platformThread.join(); // wait for the platform thread to finish

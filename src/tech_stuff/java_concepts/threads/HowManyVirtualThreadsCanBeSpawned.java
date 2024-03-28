@@ -17,6 +17,8 @@ import java.util.stream.IntStream;
  * # Pools: 1
  * # Platform threads: 8
  * # Virtual threads: 10,000,000
+ *
+ * Please note you have to use jdk 19 or later to run this code.
  */
 public class HowManyVirtualThreadsCanBeSpawned {
 
@@ -24,7 +26,7 @@ public class HowManyVirtualThreadsCanBeSpawned {
         Set<String> poolNames = ConcurrentHashMap.newKeySet();
         Set<String> platformThreadNames = ConcurrentHashMap.newKeySet();
 
-        List<Thread> virtualThreads = IntStream.range(0, 100000).mapToObj(i -> Thread.ofVirtual().unstarted(() -> {
+        List<Thread> virtualThreads = IntStream.range(0, 1000000).mapToObj(i -> Thread.ofVirtual().unstarted(() -> {
             String poolName = readPoolName();
             String platformThreadName = readPlatformThreadName();
             poolNames.add(poolName);

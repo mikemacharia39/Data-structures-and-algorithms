@@ -20,6 +20,8 @@ Further notes can be found here https://youtu.be/CY_6yq11DEM
      A new virtual thread can be attached to the same OS thread. 
      Once the previous virtual thread is unblocked, it can be attached to any other OS thread.
 - A virtual thread cannot be detached from OS thread if it is running in a synchronized block.
+- When a virtual thread is blocked, the stack of the virtual thread is stored in the heap memory. 
+     Blocking a virtual thread is never free but it is much cheaper than blocking a platform thread.
 - Virtual threads are lightweight threads.
 - Virtual threads are cheap to create and destroy.
 - Virtual threads are scheduled by the JVM.

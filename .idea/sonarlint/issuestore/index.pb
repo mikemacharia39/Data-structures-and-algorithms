@@ -338,3 +338,5 @@ f
 6src/tech_stuff/java_concepts/threads/VirtualThreads.md,1\1\115e07df6aa2aae62f594b6a5c2e952d31c53938
 z
 Jsrc/tech_stuff/java_concepts/threads/VirtualThreadsSwitchingOsThreads.java,c\f\cf7ed7d136554a561931d5f42c80c5db609b2acc
+{
+Ksrc/tech_stuff/java_concepts/threads/HowManyVirtualThreadsCanBeSpawned.java,d\b\db6117a9c15e7d2e762fcd02e66bc62886a01e11

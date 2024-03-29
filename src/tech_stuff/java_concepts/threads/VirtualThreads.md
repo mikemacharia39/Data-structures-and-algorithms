@@ -24,6 +24,7 @@ Further notes can be found here https://youtu.be/CY_6yq11DEM
      Blocking a virtual thread is never free but it is much cheaper than blocking a platform thread.
 - Do not use virtual threads for running in memory computations but rather use them for IO bound tasks. This is because 
      it is more expensive to run a task in a virtual thread than a platform thread. See https://youtu.be/5E0LU85EnTI?t=1649.
+- Virtual threads allow for more throughput than platform threads. This is because virtual threads are cheaper to create and destroy.
 - Virtual threads are lightweight threads.
 - Virtual threads are cheap to create and destroy.
 - Virtual threads are scheduled by the JVM.

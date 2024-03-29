@@ -1,5 +1,7 @@
 package tech_stuff.java_concepts.threads;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
@@ -17,6 +19,8 @@ import java.util.stream.IntStream;
  * # Pools: 1
  * # Platform threads: 8
  * # Virtual threads: 10,000,000
+ *
+ * How many platform threads do we have? One for each core.
  *
  * Please note you have to use jdk 19 or later to run this code.
  */
@@ -49,6 +53,8 @@ public class HowManyVirtualThreadsCanBeSpawned {
         System.out.println("# Pools: " + poolNames.size());
         System.out.println("# Platform threads: " + platformThreadNames.size());
         System.out.println("# Virtual threads: " + virtualThreads.size());
+        double ratioOfCPUToPlatformThreads = (double) platformThreadNames.size() / Runtime.getRuntime().availableProcessors();
+        System.out.println("# CPU usage: " + (BigDecimal.valueOf(ratioOfCPUToPlatformThreads * 100)).setScale(2, RoundingMode.CEILING) + "%");
     }
 
     private static String readPoolName() {

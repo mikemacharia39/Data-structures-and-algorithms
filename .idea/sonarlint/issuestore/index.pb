@@ -97,19 +97,11 @@ r
 Bsrc/javasolutionsforalgorithms/hackerrank/list/BeautifulPairs.java,4\8\480ce2ed4c59a18c4c81f3990fe7725385417e57
 m
 =src/javasolutionsforalgorithms/general/NextWordPredictor.java,b\1\b144f54c80d02753b94bd983954a89cb7ee33e73
-\
-,src/databases_concepts/mysql/mysql_tests.sql,3\e\3e6fd10e7c95c6514562efe9fa39a70f235f34ce
-[
-+src/databases_concepts/mongo/2. concepts.md,7\5\75e308f87c310442aa4b061f3c974c666d42da0d
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-Y
-)src/databases_concepts/mongo/1. basics.md,e\a\eae46803ffde60e6ea449c6b87e4637de527282d
 
 Osrc/javasolutionsforalgorithms/leettests/trees/LargestPerfectTreeInSubtree.java,d\e\dea3f575c01c89b6b0eedc80df39cc257e6bfd06
-b
-2src/databases_concepts/mongo/3. create_and_drop.md,2\5\25b1525841503ac63799c47eea88f6147cd71e06
 y
 Isrc/javasolutionsforalgorithms/general/ExtractNumbersFromStringArray.java,0\7\07e74c1603596e38010de7f786381cf5aaa15dc7
 €
@@ -164,8 +156,6 @@ Bsrc/javasolutionsforalgorithms/leettests/maps/JewelsAndStones.java,2\0\209076a
 Lsrc/javasolutionsforalgorithms/revision_v2/google/arrays/InsertInterval.java,4\d\4d1360f0dbf16b05e1498f16adfb414400e0d223
 —
 gsrc/javasolutionsforalgorithms/revision_v2/leetcode/math/MinimumSumofFourDigitNumberAfterSplitting.java,2\c\2c44e0f49514f6d358547aa96b609f9d99bddeec
-t
-Dsrc/databases_concepts/mysql/leetcode/unique_subject_per_teacher.sql,f\0\f09fc7fd047d3242e17bc6e1b055e85844f8bf0f
 }
 Msrc/javasolutionsforalgorithms/revision_v2/leetcode/string/ShuffleString.java,9\0\904a92a2bc1ad0e1d061f2e4f0364b9ef131ea16
 €
@@ -330,8 +320,6 @@ Jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/math/Encryption.java,9\1
 Msrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/MarkAndToys.java,7\d\7d338f94ee894722607407e4cb34836e6b242ba9
 q
 Asrc/kotlinsolutionsforalgorithms/hackerrank/greedy/MarkAndToys.kt,b\a\ba902835968d4b222f91a16ae6c7fe000a771cd5
-^
-.src/tech_stuff/java_concepts/VirtualThreads.md,1\2\126b186dacb0c9d79182c99c557304fb6812405a
 o
 ?src/tech_stuff/java_concepts/threads/IntroToVirtualThreads.java,7\9\7926d47a675f8663bf94968acb0474dffafa7932
 f
@@ -342,3 +330,9 @@ Jsrc/tech_stuff/java_concepts/threads/VirtualThreadsSwitchingOsThreads.java,c\f
 Ksrc/tech_stuff/java_concepts/threads/HowManyVirtualThreadsCanBeSpawned.java,d\b\db6117a9c15e7d2e762fcd02e66bc62886a01e11
 p
 @src/tech_stuff/java_concepts/threads/HypotheticalServerCall.java,9\9\99c3e167f488ac6d8a18acbb057e62e3fc7dd663
+j
+:src/tech_stuff/databases_concepts/mongo/notes/1. basics.md,1\e\1e9ba9ecf6237c34fc5a729ffca5b72addae4368
+l
+<src/tech_stuff/databases_concepts/mongo/notes/2. concepts.md,a\1\a1010bda76f72aa4f9c8d7b6ef580ea4110168f1
+s
+Csrc/tech_stuff/databases_concepts/mongo/notes/3. create_and_drop.md,5\9\5943b974fdd1fbd96a63a5ae29ab4bac6cdd04b5

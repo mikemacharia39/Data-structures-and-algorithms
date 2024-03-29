@@ -31,3 +31,21 @@ db.students.find()
 use school
 db.students.findOne()
 ````
+
+## To add many documents to a collection
+
+````
+use school
+db.students.insertMany([
+    {
+        name: "Jane",
+        age: 25,
+        subjects: ["Math", "Business"]
+    },
+    {
+        name: "Doe",
+        age: 35,
+        subjects: ["Economics", "Science"]
+    }
+])
+````

@@ -24,3 +24,10 @@ show collections
 use school
 db.students.find()
 ````
+
+## To view one document in a collection
+
+````
+use school
+db.students.findOne()
+````

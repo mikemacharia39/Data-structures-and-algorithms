@@ -340,3 +340,5 @@ z
 Jsrc/tech_stuff/java_concepts/threads/VirtualThreadsSwitchingOsThreads.java,c\f\cf7ed7d136554a561931d5f42c80c5db609b2acc
 {
 Ksrc/tech_stuff/java_concepts/threads/HowManyVirtualThreadsCanBeSpawned.java,d\b\db6117a9c15e7d2e762fcd02e66bc62886a01e11
+p
+@src/tech_stuff/java_concepts/threads/HypotheticalServerCall.java,9\9\99c3e167f488ac6d8a18acbb057e62e3fc7dd663

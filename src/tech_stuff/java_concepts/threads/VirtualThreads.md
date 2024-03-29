@@ -1,4 +1,4 @@
-# Virtual Threads
+# Virtual Threads: https://openjdk.org/jeps/444
 - Virtual threads are lightweight threads that are scheduled by the JVM rather than the OS.
 
 To understand virtual threads we need to first understand the difference between OS threads(platform thread) and virtual threads.

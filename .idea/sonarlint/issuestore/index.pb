@@ -344,3 +344,5 @@ x
 Hsrc/tech_stuff/databases_concepts/mongo/notes/5. sorting_and_limiting.md,a\3\a31ba21dcc0b804762e282324a4590fae4ffcdc0
 v
 Fsrc/tech_stuff/databases_concepts/mongo/notes/6. updating_documents.md,e\3\e3db31ce371a4bbd426bf97ffcbee2254d950c8b
+v
+Fsrc/tech_stuff/databases_concepts/mongo/notes/7. deleting_documents.md,b\2\b24c776953c830938f4259a581a328a9435e188a

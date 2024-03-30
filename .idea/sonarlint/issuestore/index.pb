@@ -352,3 +352,5 @@ u
 Esrc/tech_stuff/databases_concepts/mongo/notes/9. logical_operators.md,2\4\2448f5d3808c63575ba2046ef4feddb723307868
 q
 Asrc/tech_stuff/databases_concepts/mongo/notes/10. create_index.md,0\f\0f4f183efbe1a2cdeca5438a594ce993cab2a832
+r
+Bsrc/tech_stuff/databases_concepts/mongo/notes/4. add_collection.md,c\e\cedd24fdbe388afaa18cc01a748d649773fabc9f

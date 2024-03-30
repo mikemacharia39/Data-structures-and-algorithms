@@ -346,3 +346,5 @@ v
 Fsrc/tech_stuff/databases_concepts/mongo/notes/6. updating_documents.md,e\3\e3db31ce371a4bbd426bf97ffcbee2254d950c8b
 v
 Fsrc/tech_stuff/databases_concepts/mongo/notes/7. deleting_documents.md,b\2\b24c776953c830938f4259a581a328a9435e188a
+~
+Nsrc/tech_stuff/databases_concepts/mongo/notes/8. comparison_value_operators.md,7\a\7a6981226a339362ec7c5aa0abf95fc43d19f8a5

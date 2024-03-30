@@ -338,3 +338,5 @@ s
 Csrc/tech_stuff/databases_concepts/mongo/notes/3. create_and_drop.md,5\9\5943b974fdd1fbd96a63a5ae29ab4bac6cdd04b5
 o
 ?src/tech_stuff/databases_concepts/mongo/notes/add_collection.md,9\8\98b2faa1ba62ce657b8ad7b6087195e8bcab5c36
+n
+>src/tech_stuff/databases_concepts/mongo/notes/5. data_types.md,b\c\bca9bad909eef83315dcdd424b299d40e1c389f6

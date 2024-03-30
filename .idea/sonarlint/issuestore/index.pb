@@ -342,3 +342,5 @@ n
 >src/tech_stuff/databases_concepts/mongo/notes/5. data_types.md,b\c\bca9bad909eef83315dcdd424b299d40e1c389f6
 x
 Hsrc/tech_stuff/databases_concepts/mongo/notes/5. sorting_and_limiting.md,a\3\a31ba21dcc0b804762e282324a4590fae4ffcdc0
+v
+Fsrc/tech_stuff/databases_concepts/mongo/notes/6. updating_documents.md,e\3\e3db31ce371a4bbd426bf97ffcbee2254d950c8b

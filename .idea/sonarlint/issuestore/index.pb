@@ -350,3 +350,5 @@ Fsrc/tech_stuff/databases_concepts/mongo/notes/7. deleting_documents.md,b\2\b24
 Nsrc/tech_stuff/databases_concepts/mongo/notes/8. comparison_value_operators.md,7\a\7a6981226a339362ec7c5aa0abf95fc43d19f8a5
 u
 Esrc/tech_stuff/databases_concepts/mongo/notes/9. logical_operators.md,2\4\2448f5d3808c63575ba2046ef4feddb723307868
+q
+Asrc/tech_stuff/databases_concepts/mongo/notes/10. create_index.md,0\f\0f4f183efbe1a2cdeca5438a594ce993cab2a832

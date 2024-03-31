@@ -354,3 +354,5 @@ q
 Asrc/tech_stuff/databases_concepts/mongo/notes/10. create_index.md,0\f\0f4f183efbe1a2cdeca5438a594ce993cab2a832
 r
 Bsrc/tech_stuff/databases_concepts/mongo/notes/4. add_collection.md,c\e\cedd24fdbe388afaa18cc01a748d649773fabc9f
+u
+Esrc/tech_stuff/java_concepts/frameworks/springboot/good_api_design.md,3\8\3822dfcf1af119cf085de09a2e8a45f64b22a162

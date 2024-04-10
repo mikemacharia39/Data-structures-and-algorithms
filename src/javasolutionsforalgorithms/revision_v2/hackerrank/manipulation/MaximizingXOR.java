@@ -13,8 +13,28 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.manipulation;
  */
 public class MaximizingXOR {
 
+    /**
+     * The logic is to find the xor of all the numbers between l and r and then find the maximum xor
+     *
+     * The XOR operator is ^ in Java. It is used to compare two binary numbers. If the bits are different, it returns 1, else 0.
+     *
+     * Time complexity = O(N^2)
+     * @param l
+     * @param r
+     * @return
+     */
     public static int maximizingXor(int l, int r) {
-        // Write your code here
+        int max =0;
+        for(int i = l; i<=r; i++){
+            for(int j=l; j<=r; j++){
+                int result = i^j; // ^ is the xor operator
+                max=Math.max(result, max);
+            }
+        }
+        return max;
+    }
 
+    public static void main(String[] args) {
+        System.out.println(maximizingXor(11, 12));
     }
 }

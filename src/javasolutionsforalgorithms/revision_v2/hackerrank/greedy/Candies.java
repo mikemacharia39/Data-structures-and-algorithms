@@ -50,4 +50,8 @@ public class Candies {
         return sum;
     }
 
+    public static void main(String[] args) {
+        System.out.println(candies(6, List.of(2, 6, 4, 5, 6, 2)));
+    }
+
 }

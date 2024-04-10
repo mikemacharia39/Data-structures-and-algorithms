@@ -360,3 +360,5 @@ z
 Jsrc/tech_stuff/databases_concepts/mongo/notes/11. mongodb_authorization.md,0\3\036ec71d62e26f38fe683ec6903025935041145c
 y
 Isrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/Candies.java,2\8\28912726002c71130c7d9e85f19636b4aaeeea9e
+…
+Usrc/javasolutionsforalgorithms/revision_v2/hackerrank/manipulation/MaximizingXOR.java,c\c\ccc97c31d68eebd21cf3c7f6b8ee3827779f3b70

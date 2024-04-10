@@ -358,3 +358,5 @@ u
 Esrc/tech_stuff/java_concepts/frameworks/springboot/good_api_design.md,3\8\3822dfcf1af119cf085de09a2e8a45f64b22a162
 z
 Jsrc/tech_stuff/databases_concepts/mongo/notes/11. mongodb_authorization.md,0\3\036ec71d62e26f38fe683ec6903025935041145c
+y
+Isrc/javasolutionsforalgorithms/revision_v2/hackerrank/greedy/Candies.java,2\8\28912726002c71130c7d9e85f19636b4aaeeea9e

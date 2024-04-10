@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.hackerrank.manipulation;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/maximizing-xor/problem">...</a>
+ *
  * Given two integers, l and r, find the maximal value of a xor b, where a and b satisfy the following condition:
  * l <= a <= b <= r
  * For example if l = 11 and r = 12, then,

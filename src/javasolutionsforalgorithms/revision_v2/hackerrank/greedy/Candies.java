@@ -3,6 +3,8 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.greedy;
 import java.util.List;
 
 /**
+ * <a href="https://www.hackerrank.com/challenges/candies/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
+ *
  * Alice is a kindergarten teacher. She wants to give some candies to the children in her class.
  * All the children sit in a line and each of them has a rating score according to his or her performance in the class.
  * Alice wants to give at least 1 candy to each child.

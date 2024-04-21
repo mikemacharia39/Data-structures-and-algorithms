@@ -14,6 +14,23 @@ package javasolutionsforalgorithms.revision_v2.leetcode.subarray;
  */
 public class MaximumAverageSubArray1 {
 
+    public double findMaxAverage_good(int[] nums, int k) {
+        int sum = 0;
+
+        for (int i = 0; i < k; i++) { // add all values until length k
+            sum += nums[i];
+        }
+
+        int maxSum = sum;
+
+        for (int j = k; j < nums.length; j++) {
+            sum += nums[j] - nums[j - k]; // subtract the right and left values
+            maxSum = Math.max(maxSum, sum); // get the largest sum
+        }
+
+        return (double) maxSum/k;
+    }
+
     public double findMaxAverage1(int[] nums, int k) {
         double max = -100000;
         for (int i = 0; i < nums.length-k + 1; i++) {

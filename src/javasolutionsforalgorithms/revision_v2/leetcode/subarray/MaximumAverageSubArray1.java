@@ -14,6 +14,12 @@ package javasolutionsforalgorithms.revision_v2.leetcode.subarray;
  */
 public class MaximumAverageSubArray1 {
 
+    /**
+     * Time complexity: O(n)
+     * @param nums
+     * @param k
+     * @return
+     */
     public double findMaxAverage(int[] nums, int k) {
         int sum = 0;
         int left = 0;

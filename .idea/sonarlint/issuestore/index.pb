@@ -366,3 +366,7 @@ y
 Isrc/javasolutionsforalgorithms/revision_v2/hackerrank/graph/EvenTree.java,b\7\b74daa17af42318000264ad3b8985d7780343074
 ‰
 Ysrc/javasolutionsforalgorithms/revision_v2/leetcode/subarray/MaximumAverageSubArray1.java,1\8\181e1620875f05322ca13734432e4eaa909591ab
+}
+Msrc/kotlinsolutionsforalgorithms/leetcode/subaarray/MaximumAverageSubArray.kt,5\d\5de0575df08b0328101bf8cc0dc5463ea1ba44e9
+r
+Bsrc/kotlinsolutionsforalgorithms/leetcode/arrays/DuplicateZeros.kt,3\b\3bb7633972d5ba44022fb5df6a26838405f5795c

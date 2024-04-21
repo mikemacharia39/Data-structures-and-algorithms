@@ -336,8 +336,6 @@ l
 <src/tech_stuff/databases_concepts/mongo/notes/2. concepts.md,a\1\a1010bda76f72aa4f9c8d7b6ef580ea4110168f1
 s
 Csrc/tech_stuff/databases_concepts/mongo/notes/3. create_and_drop.md,5\9\5943b974fdd1fbd96a63a5ae29ab4bac6cdd04b5
-o
-?src/tech_stuff/databases_concepts/mongo/notes/add_collection.md,9\8\98b2faa1ba62ce657b8ad7b6087195e8bcab5c36
 n
 >src/tech_stuff/databases_concepts/mongo/notes/5. data_types.md,b\c\bca9bad909eef83315dcdd424b299d40e1c389f6
 x
@@ -366,3 +364,5 @@ Usrc/javasolutionsforalgorithms/revision_v2/hackerrank/manipulation/MaximizingXO
 jsrc/javasolutionsforalgorithms/revision_v2/hackerrank/manipulation/SwapTwoNumbersWithoutUsingOperator.java,b\d\bdd858a632caf94e2bccddf66123dc8a1c8d99d9
 y
 Isrc/javasolutionsforalgorithms/revision_v2/hackerrank/graph/EvenTree.java,b\7\b74daa17af42318000264ad3b8985d7780343074
+‰
+Ysrc/javasolutionsforalgorithms/revision_v2/leetcode/subarray/MaximumAverageSubArray1.java,1\8\181e1620875f05322ca13734432e4eaa909591ab

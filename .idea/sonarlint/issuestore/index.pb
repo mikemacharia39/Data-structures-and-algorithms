@@ -370,3 +370,5 @@ Ysrc/javasolutionsforalgorithms/revision_v2/leetcode/subarray/MaximumAverageSubA
 Msrc/kotlinsolutionsforalgorithms/leetcode/subaarray/MaximumAverageSubArray.kt,5\d\5de0575df08b0328101bf8cc0dc5463ea1ba44e9
 r
 Bsrc/kotlinsolutionsforalgorithms/leetcode/arrays/DuplicateZeros.kt,3\b\3bb7633972d5ba44022fb5df6a26838405f5795c
+
+Osrc/javasolutionsforalgorithms/revision_v2/leetcode/stack/ValidParentheses.java,b\f\bff90d70d9eb980d6960d3b9e1e7bb46eec97690

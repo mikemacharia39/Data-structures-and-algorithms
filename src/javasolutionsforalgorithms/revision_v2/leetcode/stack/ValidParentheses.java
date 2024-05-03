@@ -1,5 +1,7 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.stack;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 /**
@@ -26,7 +28,43 @@ import java.util.Stack;
  * Output: false
  */
 public class ValidParentheses {
+
     public boolean isValid(String s) {
+        Deque<Character> stack = new ArrayDeque<>();
+
+        for (char c : s.toCharArray()) {
+            switch (c) {
+                case ')':
+                    if (!stack.isEmpty() && stack.peek() == '(') {
+                        stack.pop();
+                    } else {
+                        stack.push(c); //similar to stack.addFirst()
+                    }
+                    break;
+                case ']':
+                    if (!stack.isEmpty() && stack.peek() == '[') {
+                        stack.pop();
+                    } else {
+                        stack.push(c);
+                    }
+                    break;
+                case '}':
+                    if (!stack.isEmpty() && stack.peek() == '{') {
+                        stack.pop();
+                    } else {
+                        stack.push(c);
+                    }
+                    break;
+                default:
+                    stack.push(c);
+            }
+        }
+
+        return stack.isEmpty();
+    }
+
+
+    public boolean isValid1(String s) {
         Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()) {
             switch (c) {
@@ -57,5 +95,9 @@ public class ValidParentheses {
         }
 
         return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+
     }
 }

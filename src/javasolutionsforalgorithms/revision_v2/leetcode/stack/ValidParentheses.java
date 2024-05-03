@@ -2,6 +2,7 @@ package javasolutionsforalgorithms.revision_v2.leetcode.stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Scanner;
 import java.util.Stack;
 
 /**
@@ -98,6 +99,21 @@ public class ValidParentheses {
     }
 
     public static void main(String[] args) {
+        String input = "()[]{}}";
+        ValidParentheses obj = new ValidParentheses();
+        System.out.println(obj.isValid(input));
 
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a set of parentheses: ");
+            String input1 = scanner.nextLine();
+            System.out.println(obj.isValid(input1));
+
+            System.out.println("Do you want to continue? (Y/N)");
+            String response = scanner.nextLine();
+            if (response.equalsIgnoreCase("N")) {
+                break;
+            }
+        }
     }
 }

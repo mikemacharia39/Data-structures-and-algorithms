@@ -2,6 +2,7 @@
   <library name="json">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/All my Library/json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files/Java/All my Library/json.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

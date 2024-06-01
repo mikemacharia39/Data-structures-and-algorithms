@@ -376,3 +376,5 @@ Osrc/javasolutionsforalgorithms/revision_v2/leetcode/stack/ValidParentheses.java
 Ssrc/javasolutionsforalgorithms/revision_v2/leetcode/linkedlist/LinkedListCycle.java,1\9\19efda297887f40ce14cd23a95b7d391a465b2e1
 „
 Tsrc/javasolutionsforalgorithms/revision_v2/leetcode/linkedlist/LinkedListCycle2.java,a\3\a3f903c2e76b6c8d2de6637770f1f0f21e5dbc1a
+p
+@src/javasolutionsforalgorithms/leettests/CountryPopulations.java,c\2\c2e534a81e9727edabec077ffe70e5610a53d863

@@ -67,6 +67,7 @@ public class IntersectionOfTwoLinkedLists {
     }
 
     /**
+     * <a href="https://leetcode.com/explore/learn/card/linked-list/214/two-pointer-technique/1215/discuss/">...</a>
      * In order to solve this problem with only O(1) extra space, we'll need to find another way to align the two linked lists.
      * More importantly, we need to find a way to line up the ends of the two lists.
      * And the easiest way to do that is to concatenate them in opposite orders, A+B and B+A. This way, the ends of the two original

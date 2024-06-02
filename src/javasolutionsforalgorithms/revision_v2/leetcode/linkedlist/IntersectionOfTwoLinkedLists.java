@@ -21,4 +21,49 @@ package javasolutionsforalgorithms.revision_v2.leetcode.linkedlist;
  * while the nodes with value 8 in A and B (3rd node in A and 4th node in B) point to the same location in memory
  */
 public class IntersectionOfTwoLinkedLists {
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
+    }
+
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if (headA == null && headB == null) {
+            return null;
+        }
+
+        int lenA = nodeLength(headA);
+        int lenB = nodeLength(headB);
+
+        // move the longer list to the same length as the shorter list
+        while (lenA > lenB) {
+            headA = headA.next;
+            lenA--;
+        }
+
+        while (lenB > lenA) {
+            headB = headB.next;
+            lenB--;
+        }
+
+        // move both lists until they intersect
+        while (headA != headB) {
+            headA = headA.next;
+            headB = headB.next;
+        }
+        return headA;
+    }
+
+    private int nodeLength(ListNode node) {
+        int len = 0;
+
+        while (node != null) {
+            node = node.next;
+            len++;
+        }
+        return len;
+    }
 }

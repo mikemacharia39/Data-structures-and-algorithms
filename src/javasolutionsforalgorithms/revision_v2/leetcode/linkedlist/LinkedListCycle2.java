@@ -41,6 +41,18 @@ public class LinkedListCycle2 {
         return null;
     }
 
+    /**
+     *
+     * You can solve this problem using Floyd's cycle-finding algorithm,
+     * also known as the "tortoise and the hare" algorithm.
+     * This algorithm uses two pointers, one that moves two steps at a time (fast), and another that moves one step at a time (slow).
+     * If there is a cycle, these two pointers will meet at some point.
+     * After the fast and slow pointers meet, we reset the slow pointer to the head of the list and keep the fast pointer at the
+     * meeting point. Then, we move both pointers one step at a time.
+     * The point where they meet again is the start of the cycle.
+     * @param head
+     * @return
+     */
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
             return null;
@@ -49,15 +61,22 @@ public class LinkedListCycle2 {
         ListNode slow = head;
         ListNode fast = head;
 
-        while (fast != null && fast.next != null) {
+        // Find the meeting point
+        do {
+            if (fast == null || fast.next == null) {
+                return null; // No cycle
+            }
             slow = slow.next;
             fast = fast.next.next;
+        } while (slow != fast);
 
-            if (slow == fast) {
-                break;
-            }
-            head = head.next;
+        // Find the start of the cycle
+        slow = head;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
         }
+
         return slow;
     }
 
@@ -65,12 +84,14 @@ public class LinkedListCycle2 {
         LinkedListCycle2 obj = new LinkedListCycle2();
         ListNode head = new ListNode(3);
         head.next = new ListNode(2);
-        head.next.next = new ListNode(0);
+        head.next.next = new ListNode(8);
         head.next.next.next = new ListNode(-4);
         System.out.println("The Value: " + obj.detectCycle(head).val);
 
         // Test 2
         ListNode head2 = new ListNode(1);
         head2.next = new ListNode(2);
+        head2.next.next = head2;
+        System.out.println("The Value: " + obj.detectCycle(head2).val);
     }
 }

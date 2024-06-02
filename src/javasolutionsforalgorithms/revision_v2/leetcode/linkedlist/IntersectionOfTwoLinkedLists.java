@@ -30,6 +30,14 @@ public class IntersectionOfTwoLinkedLists {
         }
     }
 
+    /**
+     * Explanation: Ths involves finding the length of both list node and adjusting both such that each start at the same
+     * length.
+     * Then checking the node where the 2 are equal
+     * @param headA ListNode
+     * @param headB ListNode
+     * @return intersection
+     */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null && headB == null) {
             return null;

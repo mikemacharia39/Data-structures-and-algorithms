@@ -34,6 +34,7 @@ public class IntersectionOfTwoLinkedLists {
      * Explanation: Ths involves finding the length of both list node and adjusting both such that each start at the same
      * length.
      * Then checking the node where the 2 are equal
+     * Time complexity: O(N) the longest length
      * @param headA ListNode
      * @param headB ListNode
      * @return intersection
@@ -63,6 +64,25 @@ public class IntersectionOfTwoLinkedLists {
             headB = headB.next;
         }
         return headA;
+    }
+
+    /**
+     * In order to solve this problem with only O(1) extra space, we'll need to find another way to align the two linked lists.
+     * More importantly, we need to find a way to line up the ends of the two lists.
+     * And the easiest way to do that is to concatenate them in opposite orders, A+B and B+A. This way, the ends of the two original
+     * lists will align on the second half of each merged list.
+     *
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+        ListNode a = headA, b = headB;
+        while (a != b) {
+            a = a == null ? headB : a.next;
+            b = b == null ? headA : b.next;
+        }
+        return a;
     }
 
     private int nodeLength(ListNode node) {

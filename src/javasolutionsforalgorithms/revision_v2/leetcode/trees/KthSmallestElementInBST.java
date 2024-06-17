@@ -46,10 +46,15 @@ public class KthSmallestElementInBST {
         inorder(root.right, nodes);
     }
 
+    /**
+     * This is a more optimized solution where we don't need to store all the elements in a list
+     * We can just keep track of the counter and the value of the kth element
+     * @param root
+     * @param k
+     * @return
+     */
     public int kthSmallest(TreeNode root, int k) {
-
         help(root, k);
-
         return val;
     }
 

@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+ * <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/">...</a>
+ * Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of
+ * all the values of the nodes in the tree.
  */
 public class KthSmallestElementInBST {
+
+    int counter = 0;
+    int val;
+
     private static class TreeNode {
         int val;
         TreeNode left;
@@ -22,7 +28,7 @@ public class KthSmallestElementInBST {
      * @param k
      * @return
      */
-    public int kthSmallest(TreeNode root, int k) {
+    public int kthSmallest1(TreeNode root, int k) {
         if (root == null) {
             return -1;
         }
@@ -38,6 +44,27 @@ public class KthSmallestElementInBST {
         inorder(root.left, nodes);
         nodes.add(root.val);
         inorder(root.right, nodes);
+    }
+
+    public int kthSmallest(TreeNode root, int k) {
+
+        help(root, k);
+
+        return val;
+    }
+
+    public void help(TreeNode root, int k) {
+        if (root == null) {
+            return;
+        }
+
+        help(root.left, k);
+        counter++;
+        if (counter == k) {
+            val = root.val;
+            return;
+        }
+        help(root.right, k);
     }
 
     public static void main(String[] args) {

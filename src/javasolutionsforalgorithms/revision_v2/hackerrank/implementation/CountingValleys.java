@@ -11,6 +11,20 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.implementation;
  * A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a
  * step up to sea level.
  * Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.
+ *
+ * Sample Input
+ * steps = 8
+ * path = UDDDUDUU
+ *
+ * Sample Output
+ * 1
+ *
+ * Explanation
+ * If we represent _ as sea level, a step up as /, and a step down as \, the hike can be drawn as:
+ *
+ * _/\      _
+ *    \    /
+ *     \/\/
  */
 public class CountingValleys {
 }

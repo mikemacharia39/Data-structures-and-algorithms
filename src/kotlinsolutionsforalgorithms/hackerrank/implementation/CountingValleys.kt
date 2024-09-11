@@ -47,3 +47,11 @@ class CountingValleys {
         return timesGoneToSeaLevelFromValley
     }
 }
+
+fun main() {
+    val countingValleys = CountingValleys()
+    val steps = 8
+    val path = "UDDDUDUU"
+    val result = countingValleys.countingValleys(steps, path)
+    println(result)
+}

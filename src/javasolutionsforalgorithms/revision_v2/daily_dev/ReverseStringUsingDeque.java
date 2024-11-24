@@ -2,6 +2,7 @@ package javasolutionsforalgorithms.revision_v2.daily_dev;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Iterator;
 
 /**
  * This class demonstrates how to reverse a string using Deque.
@@ -25,8 +26,27 @@ public class ReverseStringUsingDeque {
         return sb.toString();
     }
 
+    public static String reverseStringUsingDequeWithIterator(String str) {
+        Deque<Character> deque = new ArrayDeque<>();
+        StringBuilder sb = new StringBuilder();
+
+        for (Character c : str.toCharArray()) {
+            // Inserts the specified element at the front of this deque if it is possible to do so
+            deque.addFirst(c); // you can use deque.offerFirst(c) as well which is much safer
+        }
+
+        Iterator<Character> iterator = deque.iterator();
+        while (iterator.hasNext()) {
+            sb.append(iterator.next());
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         String reversedString = reverseStringUsingDeque("Hello World");
         System.out.println("Reversed string: " + reversedString);
+
+        String reversedString2 = reverseStringUsingDequeWithIterator("Hello World");
+        System.out.println("Reversed string 2: " + reversedString2);
     }
 }

@@ -1,5 +1,25 @@
 package javasolutionsforalgorithms.revision_v2.general.dynamic_programming;
 
+/**
+ * Given a 2d matrix, find the maximum sum, given that you can only check the difference between adjacent elements to the right and bottom or diagonally right. The starting point can be anywhere provided you are able to get the max difference. e.g.
+ *
+ * [
+ * [7, 4, 5],
+ * [8, 2, 1]
+ * ]
+ * Starting at [0, 0], In the below the maximum sum is -1 because 8 - 7 = 1
+ *
+ * Example 2:
+ * [
+ * [7, 2, 5],
+ * [6, 15, 6],
+ * [6, 9, 3],
+ * [2, 8, 16]
+ * ]
+ * Starting at [0,1], the maximum size is 14, because, [15 - 2 = 13] + [9 - 15 = 6] + [16 - 9 = 7] = 14
+ *
+ * The maximum sum is the difference between any of the elements to the right, bottom or diagonally right.
+ */
 public class MaxPathSum {
     public static void main(String[] args) {
         int[][] matrix1 = {
@@ -13,8 +33,8 @@ public class MaxPathSum {
                 {2, 8, 16}
         };
         int[][] matrix3 = {
-                {7, 4, 5},
-                {6, 3, 7}
+                {7, 5, 4},
+                {6, 3, 1}
         };
 
         System.out.println("Max sum for matrix1: " + findMaxSum(matrix1)); // Output should be 1
@@ -36,8 +56,9 @@ public class MaxPathSum {
     }
 
     private static int calculateMaxSum(int[][] matrix, int row, int col) {
-        int maxSum = 0;
+        // initialize maxSum to the current element
         int currentValue = matrix[row][col];
+        int maxSum =  0;
 
         if (row + 1 < matrix.length) {
             // Check the element below

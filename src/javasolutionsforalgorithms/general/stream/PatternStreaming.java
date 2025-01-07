@@ -20,8 +20,20 @@ public class PatternStreaming {
                 .sum();
     }
 
+    public static String usingIndexReturnTheWord(String input, int index) {
+        var pattern = Pattern.compile("\\s+");
+
+        return pattern.splitAsStream(input)
+                .filter(s -> !s.isEmpty())
+                .skip(index)
+                .findFirst()
+                .orElse("");
+    }
+
     public static void main(String[] args) {
         String input = "This is a test";
-        log.log(Level.INFO, "Count of words in line: {0}", countSplitStream(input));
+        log.log(Level.INFO, "Count of characters in line: {0}", countSplitStream(input));
+
+        log.log(Level.INFO, "Word at index 3: {0}", usingIndexReturnTheWord(input, 3));
     }
 }

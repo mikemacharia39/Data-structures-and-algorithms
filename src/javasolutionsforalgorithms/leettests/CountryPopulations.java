@@ -21,7 +21,6 @@ import java.net.URL;
 public class CountryPopulations {
 
     private static HttpURLConnection con;
-    //private static JSONArray arr;
     static void getCountries(String s, int p) throws MalformedURLException {
         int total = 0;
 

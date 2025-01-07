@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.general;
+package javasolutionsforalgorithms.general.stream;
 
 
 import java.util.*;

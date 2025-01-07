@@ -20,6 +20,15 @@ public class GroupingInStreams {
                 );
     }
 
+    public static Map<String, Long> countriesWithTheLeastPopulation(List<Country> countries) {
+        Map<String, Long> populationByCountry = populationByCountry(countries);
+
+        return populationByCountry.entrySet().stream()
+                .min(Map.Entry.comparingByValue())
+                .map(entry -> Map.of(entry.getKey(), entry.getValue()))
+                .orElseGet(Map::of);
+    }
+
     private record Country(String name, City city) {
     }
     private record City(String name, Long population) {
@@ -39,5 +48,8 @@ public class GroupingInStreams {
         Map<String, Long> populationByCountry = populationByCountry(countries);
 
         log.log(Level.INFO, "Population by country: {0}", populationByCountry);
+
+        Map<String, Long> countriesWithTheLeastPopulation = countriesWithTheLeastPopulation(countries);
+        log.log(Level.INFO, "Countries with the least population: {0}", countriesWithTheLeastPopulation);
     }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LeetCoding.iml" filepath="$PROJECT_DIR$/LeetCoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data-structures-and-algorithms.iml" filepath="$PROJECT_DIR$/Data-structures-and-algorithms.iml" />
     </modules>
   </component>
 </project>

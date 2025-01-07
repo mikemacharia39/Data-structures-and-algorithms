@@ -1,6 +1,9 @@
 # The Cheat Sheet
 https://medium.com/@vrkunduri/cheatsheets-for-developers-1bf378aafcb0
 
+# Guides and other educational content to help guide developers in picking up a path and guide their learnings
+https://roadmap.sh/
+
 # System Design Concepts
 https://interviewnoodle.com/top-50-system-design-terminologies-you-must-know-3c78f5fb99c1
 

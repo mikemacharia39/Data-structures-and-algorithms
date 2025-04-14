@@ -27,7 +27,7 @@ public class DifferenceMaxAndMinOfNo {
 
         // the digits array will contain the count of each digit in the number
         while (n > 0) {
-            digits[n % 10]++;
+            digits[n % 10]++; // increment the count of the digit in a specific index
             n /= 10;
         }
 
@@ -38,7 +38,7 @@ public class DifferenceMaxAndMinOfNo {
         int ans = 0;
         for (int i = 0; i < digits.length; i++) {
             if (digits[i] > 0) {
-                while (digits[i]-- > 0) {
+                while (digits[i]-- > 0) { // loop through, while the count of the digit is greater than 0, reduce digits
                     ans = ans * 10 + i;
                 }
             }

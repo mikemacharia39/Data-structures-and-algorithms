@@ -11,7 +11,7 @@ public class ReplacementInBinaryString {
 
     public static void main(String[] args) {
         String binaryString = "1100111001";
-        int minOperations = minOperations(binaryString);
+        int minOperations = minOperations2(binaryString);
         System.out.println("Minimum operations required: " + minOperations);
     }
 
@@ -26,6 +26,21 @@ public class ReplacementInBinaryString {
             }
         }
 
+        return operations;
+    }
+
+    public static int minOperations2(String binaryString) {
+        int n = binaryString.length();
+        int operations = 0;
+
+        int start = 0;
+
+        while (start < n - 1) {
+            if (binaryString.charAt(start) != binaryString.charAt(start + 1)) {
+                operations++;
+            }
+            start += 2;
+        }
         return operations;
     }
 }

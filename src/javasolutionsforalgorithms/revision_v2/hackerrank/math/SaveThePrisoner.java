@@ -16,7 +16,19 @@ package javasolutionsforalgorithms.revision_v2.hackerrank.math;
  * The prisoner to be warned sits in chair number 3.
  */
 public class SaveThePrisoner {
-
+    /**
+     * s + m - 1: Represents the number of steps taken from the starting position s to reach the last candy.
+     * We subtract 1 because the first candy is given to prisoner s itself.
+     *
+     * % n: Wraps around the circle if we go past the last prisoner.
+     *
+     * If (s + m - 1) % n == 0, it means it landed exactly on the last prisoner (prisoner number n), otherwise return the result.
+     *
+     * @param n number of prisoners
+     * @param m count of sweets
+     * @param s starting position
+     * @return affected prisoner
+     */
     public static int saveThePrisoner(int n, int m, int s) {
         // Calculate the position of the last candy
         int lastCandyPosition = (s + m - 1) % n;

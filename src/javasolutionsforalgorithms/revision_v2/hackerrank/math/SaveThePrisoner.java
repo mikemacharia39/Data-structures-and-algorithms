@@ -36,4 +36,22 @@ public class SaveThePrisoner {
         // If the last candy position is 0, it means the last candy goes to the last prisoner
         return lastCandyPosition == 0 ? n : lastCandyPosition;
     }
+
+    /**
+     * Shifts s to 0-based index by doing s - 1
+     *
+     * Adds m - 1 steps
+     *
+     * Modulo n to wrap around
+     *
+     * Adds 1 to convert back to 1-based indexing
+     *
+     * @param n number of prisoners
+     * @param m count of sweets
+     * @param s starting position
+     * @return affected prisoner
+     */
+    public static int saveThePrisoner2(int n, int m, int s) {
+        return ((s - 1 + m - 1) % n) + 1;
+    }
 }

@@ -17,3 +17,5 @@ helps in designing classes that are more focused and have a clear purpose.
 Entities must depend on abstractions, not on concretions.
 The Dependency Inversion Principle states that high-level modules should not depend on low-level modules. Both should depend on
 abstractions. This principle helps in designing classes that are loosely coupled and easier to test and maintain.
+Example:\
+Suppose we have 2 entities: A and B. Let’s say A depends on B, but we want it the other way around. In that case, we can introduce an abstract interface C between them to act as an Uno Reverse Card. 

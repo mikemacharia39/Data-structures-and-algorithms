@@ -6,3 +6,6 @@ https://blog.amigoscode.com/p/16-api-terms-you-should-know?ref=dailydev
 
 ## What is clean architecture?
 https://dev.to/moh_moh701/part-1-what-is-clean-architecture-4bn1?ref=dailydev
+
+## Roadmap.sh
+https://roadmap.sh/

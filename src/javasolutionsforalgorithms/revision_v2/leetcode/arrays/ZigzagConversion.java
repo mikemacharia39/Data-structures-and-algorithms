@@ -14,6 +14,20 @@ package javasolutionsforalgorithms.revision_v2.leetcode.arrays;
  *
  * string convert(string s, int numRows);
  *
+ * Example 2:
+ * Input: s = "PAYPALISHIRING", numRows = 4
+ * Output: "PINALSIGYAHRPI"
+ * Explanation:
+ * P     I    N
+ * A   L S  I G
+ * Y A   H R
+ * P     I
+ *
+ *
+ * Example 3:
+ * Input: s = "A", numRows = 1
+ * Output: "A"
+ *
  */
 public class ZigzagConversion {
 

@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/zigzag-conversion/description/">...</a>
+ *
  * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
  *
  * P   A   H   N
@@ -15,6 +17,12 @@ package javasolutionsforalgorithms.revision_v2.leetcode.arrays;
  */
 public class ZigzagConversion {
 
+    /**
+     * <a href="https://www.youtube.com/watch?v=pEku6cp_J80">...</a>
+     * @param s
+     * @param numRows
+     * @return
+     */
     public static String convert(String s, int numRows) {
         // use string builders to save the pattern row-wise
         StringBuilder[] stringBuilders = new StringBuilder[numRows];
@@ -45,5 +53,12 @@ public class ZigzagConversion {
             result.append(stringBuilders[i].toString());
         }
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "PAYPALISHIRING";
+        int numRows = 3;
+        System.out.println("Zigzag conversion of " + s + " with " + numRows + " rows is: " + convert(s, numRows));
+        // Output: PAHNAPLSIIGYIR
     }
 }

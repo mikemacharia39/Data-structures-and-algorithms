@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * <a href="https://leetcode.com/problems/intersection-of-two-arrays-ii/description/?envType=problem-list-v2&envId=array">...</a>
+ *
  * Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
  *
  * Example 1:

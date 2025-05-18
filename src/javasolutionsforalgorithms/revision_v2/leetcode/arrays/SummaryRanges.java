@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <a href="https://leetcode.com/problems/summary-ranges/description/?envType=problem-list-v2&envId=array">...</a>
+ *
  * You are given a sorted unique integer array nums.
  *
  * A range [a,b] is the set of all integers from a to b (inclusive).

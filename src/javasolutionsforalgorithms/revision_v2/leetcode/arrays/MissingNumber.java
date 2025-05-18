@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/missing-number/description/?envType=problem-list-v2&envId=array">...</a>
+ *
  * Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
  *
  * Example 1:

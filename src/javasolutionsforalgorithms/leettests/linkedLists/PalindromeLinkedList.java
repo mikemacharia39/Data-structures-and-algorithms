@@ -84,4 +84,16 @@ public class PalindromeLinkedList {
         }
         return prev;
     }
+
+    public static void main(String[] args) {
+        PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
+
+        ListNode root;
+        root = new ListNode(1);
+        root.next = new ListNode(2);
+        root.next.next = new ListNode(2);
+        root.next.next.next = new ListNode(1);
+
+        System.out.println("Is palindrome: " + palindromeLinkedList.isPalindrome(root));
+    }
 }

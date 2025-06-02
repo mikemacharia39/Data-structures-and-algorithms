@@ -15,6 +15,85 @@ package javasolutionsforalgorithms.revision_v2.leetcode.bitwise;
  */
 public class DivideTwoIntegers {
 
+    /**
+     * Solution 3:
+     * This solution uses a combination of bitwise operations and subtraction to perform division.
+     * @param dividend
+     * @param divisor
+     * @return
+     */
+    public int divide(int dividend, int divisor) {
+        if(dividend == divisor) return 1;
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
+            return Integer.MAX_VALUE;
+        }
+        if(divisor == 1) return dividend;
+        if(dividend == -1) return -dividend;
+        int sign = 1;
+        if(dividend>0 && divisor<0) sign = -1;
+        if(dividend<0 && divisor>0) sign = -1;
+
+        long n = Math.abs((long)dividend);
+        long d = Math.abs((long)divisor);
+        int ans = 0;
+        while(n>=d)
+        {
+            int p = 0;
+            while(n >= d<<p)
+                p++;
+
+            p--;
+            n -= d<<p;
+            ans += 1<<p;
+        }
+        if(ans>=Math.pow(2,31) && sign==1) return Integer.MAX_VALUE;
+        if(ans>=Math.pow(2,31) && sign==-1) return Integer.MIN_VALUE;
+
+        return ans*sign;
+    }
+
+    /**
+     * Solution 2:
+     * This solution uses bitwise operations to perform division more efficiently.
+     * It finds the largest power of 2 that can be multiplied by the divisor without exceeding the dividend,
+     * then subtracts that from the dividend and adds the corresponding power of 2 to the quotient.
+     * This approach is more efficient than the brute force method, especially for large numbers.
+     * @param dividend
+     * @param divisor
+     * @return
+     */
+    public int divide_improved(int dividend, int divisor) {
+        long absDividend = Math.abs((long) dividend);
+        long absDivisor = Math.abs((long) divisor);
+
+        if (dividend == Integer.MIN_VALUE && divisor == -1) {
+            return result(dividend, divisor, Integer.MAX_VALUE);
+        } else if (dividend == Integer.MIN_VALUE && divisor == 1) {
+            return result(dividend, divisor, Integer.MIN_VALUE);
+        }
+
+        int answer = 0;
+
+        /**
+         * Bitwise Division Using Left Shift (<<)
+         * Instead of repeatedly subtracting divisor from dividend,
+         * double the divisor at each step using left shifts (d << p).
+         * Find the largest power of 2^p where divisor * 2^p is still ≤ dividend.
+         * Subtract divisor * 2^p from dividend and add 2^p to the quotient.
+         */
+        while (absDividend >= absDivisor) {
+            int doubler = 0;
+            while (absDividend >= absDivisor<<doubler) {
+                doubler++;
+                doubler--;
+
+                absDividend -= absDivisor<<doubler;
+                answer += 1<<doubler;
+            }
+        }
+
+        return result(dividend, divisor, answer);
+    }
 
     /**
      * Solution 1:

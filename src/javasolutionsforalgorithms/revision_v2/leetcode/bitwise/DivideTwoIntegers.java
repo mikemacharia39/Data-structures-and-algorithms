@@ -16,7 +16,7 @@ package javasolutionsforalgorithms.revision_v2.leetcode.bitwise;
 public class DivideTwoIntegers {
 
     /**
-     * Solution 3:
+     * Solution 3: <a href="https://leetcode.com/problems/divide-two-integers/solutions/6539835/simple-1ms-solution-learn-from-explanation-java-c-python/">...</a>
      * This solution uses a combination of bitwise operations and subtraction to perform division.
      * @param dividend
      * @param divisor

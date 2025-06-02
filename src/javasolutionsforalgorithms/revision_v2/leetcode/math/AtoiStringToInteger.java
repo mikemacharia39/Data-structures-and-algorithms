@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.math;
 
 /**
+ * <a href="https://leetcode.com/problems/string-to-integer-atoi/">...</a>
+ *
  * Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
  * <p>
  * The algorithm for myAtoi(string s) is as follows:

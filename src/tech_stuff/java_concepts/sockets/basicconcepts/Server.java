@@ -1,4 +1,4 @@
-package tech_stuff.java_concepts.sockets;
+package tech_stuff.java_concepts.sockets.basicconcepts;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,25 +12,25 @@ public class Server {
         System.out.println("Starting Server...");
         try {
             ServerSocket serverSocket = new ServerSocket(9999);
+            System.out.println("Server started and listening on port " + serverSocket.getLocalPort());
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
 
-            Socket clientSocket = serverSocket.accept();
+                System.out.println("Client connected: " + clientSocket.getInetAddress().getHostAddress());
 
-            System.out.println("Client connected: " + clientSocket.getInetAddress().getHostAddress());
+                InputStream inputStream = clientSocket.getInputStream();
 
-            InputStream inputStream = clientSocket.getInputStream();
+                OutputStream outputStream = clientSocket.getOutputStream();
 
-            OutputStream outputStream = clientSocket.getOutputStream();
+                byte[] buffer = new byte[1024];
+                inputStream.read(buffer);
 
-            byte[] buffer = new byte[1024];
-            inputStream.read(buffer);
+                System.out.println("Received from client: " + new String(buffer).trim());
 
-            System.out.println("Received from client: " + new String(buffer).trim());
+                outputStream.write("Hello World From Server!".getBytes());
 
-            outputStream.write("Hello World From Server!".getBytes());
-
-            clientSocket.close();
-
-            serverSocket.close();
+                clientSocket.close();
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

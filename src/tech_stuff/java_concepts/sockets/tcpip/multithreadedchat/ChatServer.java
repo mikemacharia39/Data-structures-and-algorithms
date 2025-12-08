@@ -41,6 +41,7 @@ public class ChatServer {
         }
     }
 
+    // this is single threaded because we are using scanner to take input from server side user
     /*private static void handleClientConnection(final Socket clientSocket) throws IOException {
         // We need to handle multiple clients concurrently
         final InputStream inputStream = clientSocket.getInputStream();
@@ -78,7 +79,8 @@ public class ChatServer {
     }
 
 
-    static class handleChats implements Runnable {
+    // traditional way of creating thread by implementing Runnable interface
+    private static class handleChats implements Runnable {
         private final Socket clientSocket;
 
         public handleChats(Socket clientSocket) {

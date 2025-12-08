@@ -1,4 +1,4 @@
-package tech_stuff.java_concepts.sockets.basicconcepts;
+package tech_stuff.java_concepts.sockets.tcpip.basicconcepts;
 
 import java.io.IOException;
 import java.io.InputStream;

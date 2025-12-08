@@ -1,4 +1,4 @@
-package tech_stuff.java_concepts.sockets.singlethreadedsimplechat;
+package tech_stuff.java_concepts.sockets.tcpip.singlethreadedsimplechat;
 
 import java.io.IOException;
 import java.io.InputStream;

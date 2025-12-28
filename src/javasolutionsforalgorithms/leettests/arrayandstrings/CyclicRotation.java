@@ -38,7 +38,7 @@ public class CyclicRotation {
 
         CyclicRotation rotation = new CyclicRotation();
 
-        int[] array = {};
+        int[] array = {3, 8, 9, 7, 6};
 
         System.out.println("Original: " + Arrays.toString(array));
 

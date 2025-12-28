@@ -18,12 +18,12 @@ public class FirstDuplicate {
         int firstDuplicate = -1;
 
         Set<Integer> set = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (set.contains(nums[i])) {
-                firstDuplicate = nums[i];
+        for (int num : nums) {
+            if (set.contains(num)) {
+                firstDuplicate = num;
                 break;
             } else {
-                set.add(nums[i]);
+                set.add(num);
             }
         }
 

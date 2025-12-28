@@ -1,4 +1,4 @@
-package javasolutionsforalgorithms.branches;
+package javasolutionsforalgorithms.branchcompany;
 
 import java.util.ArrayList;
 import java.util.HashMap;

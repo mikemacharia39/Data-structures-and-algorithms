@@ -38,7 +38,7 @@ public class IfPermutationCanFormPalindrome {
      */
     private boolean solution(String str) {
 
-        if (str == null || str.length() == 0) {
+        if (str == null || str.isEmpty()) {
             return false;
         }
 
@@ -51,6 +51,6 @@ public class IfPermutationCanFormPalindrome {
             }
         }
 
-        return set.size() == 0 || set.size() == 1;
+        return set.isEmpty() || set.size() == 1;
     }
 }

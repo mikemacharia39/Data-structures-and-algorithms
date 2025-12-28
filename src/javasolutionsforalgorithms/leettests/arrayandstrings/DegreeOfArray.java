@@ -33,11 +33,7 @@ public class DegreeOfArray {
 
         HashMap<Integer, Integer> numDegree = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            if (numDegree.containsKey(nums[i])) {
-                numDegree.put(nums[i], numDegree.get(nums[i])+1);
-            } else {
-                numDegree.put(nums[i], 1);
-            }
+            numDegree.put(nums[i], numDegree.getOrDefault(nums[i], 0) + 1);
         }
 
         // Loop through hashmap, while comparing the degree of and

@@ -1,6 +1,8 @@
 package javasolutionsforalgorithms.revision_v2.leetcode.arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/transformed-array/description/">...</a>
+ *
  * You are given an integer array nums that represents a circular array. Your task is to create a new array result of the same size, following these rules:
  *
  * For each index i (where 0 <= i < nums.length), perform the following independent actions:
